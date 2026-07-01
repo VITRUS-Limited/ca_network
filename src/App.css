@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  /* 品牌標誌性顏色 */
+  --color-primary: #034E72;        /* 深海藍綠 - 代表嚴謹與科學實證的健康體系 */
+  --color-accent: #B8D333;         /* 螢光青綠 - 代表細胞活力、熱情共學與事業生機 */
+  --color-accent-hover: #9fb824;   /* 螢光青綠滑標色 */
+  --color-text-dark: #1e293b;      /* 優雅的深石灰字體 */
+  --color-bg-light: #f8fafc;       /* 乾淨無菌感的微亮背景色 */
+}
+
+/* 1. 磨砂玻璃面板 (Glassmorphism Effects) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-dark-panel {
+  background: rgba(3, 78, 114, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 2. 螢光綠呼吸發光動畫 (Glow Effect) */
+.accent-pulse {
+  box-shadow: 0 0 15px rgba(184, 211, 51, 0.4);
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(184, 211, 51, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(184, 211, 51, 0.7);
+  }
+}
+
+/* 3. 仿 Precision Nutrition 精緻影片網格微交互 */
+.video-grid-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-grid-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.video-grid-card img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-grid-card:hover img {
+  transform: scale(1.08);
+}
+
+/* 4. 完美隱藏滾動條且不影響功能 (適用於 Flutter 橫向滑動卡片) */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+/* 5. 模組載入動畫 (Fade-in & Scale-in Utility Animations) */
+.animate-fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
