@@ -1,6 +1,6 @@
 import React from 'react';
 import { Play, Video, Image as ImageIcon } from 'lucide-react';
-import { HIGHLIGHTS } from '../data/mockData';
+import { HIGHLIGHTS } from '../data/mockData.js';
 
 export default function Highlights({ setPlayingVideo }) {
   return (

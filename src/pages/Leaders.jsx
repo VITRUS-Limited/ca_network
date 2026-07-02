@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { LEADERS } from '../data/mockData';
+import { LEADERS } from '../data/mockData.js';
 
 export default function Leaders({ setSelectedLeader }) {
   return (

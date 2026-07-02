@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, BookOpen, Award, Image as ImageIcon, Bell, Play, HelpCircle, MessageSquare, ChevronRight } from 'lucide-react';
-import { LEADERS, SUCCESS_STORIES, HIGHLIGHTS, MOCK_QUIZ } from '../data/mockData';
+import { LEADERS, SUCCESS_STORIES, HIGHLIGHTS, MOCK_QUIZ } from '../data/mockData.js';
 
 export default function MobileSimulator({ mobileTab, setMobileTab, selectedAnswer, showQuizResult, handleAnswerQuiz, setSelectedStory, setSelectedLeader, setPlayingVideo }) {
     return (

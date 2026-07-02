@@ -1,6 +1,6 @@
-import React from 'react';
+import 'react';
 import { Award, ChevronRight, Activity, BookOpen, Users, TrendingUp, ArrowUpRight, Play } from 'lucide-react';
-import { LEADERS, SUCCESS_STORIES, HIGHLIGHTS } from '../data/mockData';
+import { LEADERS, SUCCESS_STORIES, HIGHLIGHTS } from '../data/mockData.js';
 
 export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory, setSelectedLeader }) {
     return (
