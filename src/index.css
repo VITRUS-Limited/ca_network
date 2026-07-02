@@ -54,16 +54,30 @@ body {
   margin: 0;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+/*#root {*/
+/*  width: 1126px;*/
+/*  max-width: 100%;*/
+/*  margin: 0 auto;*/
+/*  text-align: center;*/
+/*  border-inline: 1px solid var(--border);*/
+/*  min-height: 100svh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/* 🎯 修改後的滿版設定 */
+html, body, #root {
+  width: 100%;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden; /* 防止左右出現無謂的滾動條 */
+}
+
+body {
+  /* 將底色改為網格原本設計的淡灰色，取代原本預設的黑底 */
+  background-color: #f8fafc;
 }
 
 h1,

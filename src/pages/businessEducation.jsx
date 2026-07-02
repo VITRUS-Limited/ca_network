@@ -2,7 +2,7 @@ import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { LEADERS } from '../data/mockData.js';
 
-export default function Leaders({ setSelectedLeader }) {
+export default function BusinessEducation({ setSelectedLeader }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn">
       <div className="max-w-3xl mb-12 space-y-4">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 
-export default function Academy() {
+export default function NutritionEducation() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn">
             <div className="max-w-3xl mb-12 space-y-4">

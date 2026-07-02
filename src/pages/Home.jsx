@@ -7,6 +7,7 @@ export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory, 
         <div>
             {/* HERO SECTION */}
             <section className="relative bg-[#034E72] text-white pt-16 pb-24 overflow-hidden">
+                {/* Background Deco */}
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#B8D333]/10 rounded-full filter blur-3xl"></div>
                 <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-center">
                     <div className="lg:col-span-5 space-y-6 text-left relative z-10">
@@ -15,11 +16,11 @@ export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory, 
                             <span className="text-xs font-semibold tracking-wide text-slate-100">深耕香港 40 載 · 專注健康教育</span>
                         </div>
                         <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-                            我們不只給您答案 <br />
+                            為您生活添色彩 <br />
                             <span className="text-[#B8D333] relative inline-block mt-2">
-                更教會您如何健康
-                <span className="absolute bottom-1 left-0 right-0 h-1.5 bg-[#B8D333]/20 rounded"></span>
-              </span>
+                            Helping people live better, healthier lives
+                                <span className="absolute bottom-1 left-0 right-0 h-1.5 bg-[#B8D333]/20 rounded"></span>
+                            </span>
                         </h1>
                         <p className="text-slate-200 text-base md:text-lg leading-relaxed">
                             相比於一次性的保健品銷售，我們更注重「知識賦能」。CA Network 創立四十餘年，透過嚴謹的「營養班學習體系」，引導您主動理解身體密碼，攜手高階專業導師，打造不復胖、不生病的長效體質。
