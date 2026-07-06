@@ -3,6 +3,7 @@ import './App.css';
 
 // 導入分拆後的各個獨立頁面檔案
 import Home from './pages/Home';
+import AboutUs from "./pages/AboutUs.jsx";
 import NutritionEducation from './pages/nutritionEducation.jsx';
 import BusinessEducation from './pages/businessEducation.jsx';
 import Highlights from './pages/Highlights';
@@ -97,13 +98,14 @@ export default function App() {
 
                   {/* Tab */}
                   <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-semibold text-slate-500">
-                    {['home', 'nutrition', 'business', 'highlights'].map(tab => (
+                    {['home', 'aboutUs', 'nutrition', 'business', 'highlights'].map(tab => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
                             className={`py-2 relative transition-colors hover:text-[#034E72] ${activeTab === tab ? 'text-[#034E72]' : ''}`}
                         >
                           {tab === 'home' && '首頁'}
+                          {tab === 'aboutUs' && '關於我們'}
                           {tab === 'nutrition' && '健康教育'}
                           {tab === 'business' && '創業教育'}
                           {tab === 'highlights' && '活動花絮'}
@@ -131,10 +133,49 @@ export default function App() {
               </header>
 
               {activeTab === 'home' && <Home setActiveTab={setActiveTab} setPlayingVideo={setPlayingVideo} setSelectedStory={setSelectedStory} setSelectedLeader={setSelectedLeader} />}
+              {activeTab === 'aboutUs' && <AboutUs/>}
               {activeTab === 'nutrition' && <NutritionEducation />}
               {activeTab === 'business' && <BusinessEducation setSelectedLeader={setSelectedLeader} />}
               {activeTab === 'highlights' && <Highlights setPlayingVideo={setPlayingVideo} />}
               {activeTab === 'tool' && <Tool calcHeight={calcHeight} setCalcHeight={setCalcHeight} calcWeight={calcWeight} setCalcWeight={setCalcWeight} calcAge={calcAge} setCalcAge={setCalcAge} calcResult={calcResult} handleCalculate={handleCalculate} handleResetCalculator={handleResetCalculator} setActiveTab={setActiveTab} />}
+
+              <footer className="bg-slate-50 text-[#034E72] pt-16 text-left border-t border-white/10">
+                <div className="max-w-7xl mx-auto mb-16 px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+                  <div className="space-y-4">
+                    <div className="text-xl font-extrabold text-[#034E72]">CA Network</div>
+                    <p className="text-xs leading-relaxed text-[#034E72]">
+                      為您生活添色彩
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-[#034E72] text-xs font-bold uppercase tracking-widest mb-4">教育體系</h4>
+                    <ul className="space-y-2.5 text-xs text-slate-400 font-medium">
+                      <li><button onClick={() => setActiveTab('academy')} className="hover:text-white transition-colors">基礎家庭營養班</button></li>
+                      <li><button onClick={() => setActiveTab('academy')} className="hover:text-white transition-colors">CA Fitness 體重管理計畫</button></li>
+                      <li><button onClick={() => setActiveTab('academy')} className="hover:text-white transition-colors">心血管健康管理專題班</button></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4">關於我們</h4>
+                    <ul className="space-y-2.5 text-xs text-slate-400 font-medium">
+                      <li><button onClick={() => setActiveTab('leaders')} className="hover:text-white transition-colors">導師名人堂</button></li>
+                      <li><button onClick={() => setActiveTab('highlights')} className="hover:text-white transition-colors">活動花絮</button></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4">健康宣言</h4>
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      「大健康領域不是純粹的銷售遊戲，它是對生命的關懷。我們堅信知識是改變身體唯一的鑰匙。」
+                    </p>
+                  </div>
+                </div>
+
+                {/* 版權宣告 */}
+                <div className="mt-8 pt-4 pb-4 border-t bg-[#034E72] border-white/5 text-center text-[11px] text-slate-400">
+                  <p>Copyright © {new Date().getFullYear()} CA Network Hong Kong Limited. All rights reserved</p>
+                </div>
+              </footer>
+
             </div>
         )}
 

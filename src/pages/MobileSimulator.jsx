@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, BookOpen, Award, Image as ImageIcon, Bell, Play, HelpCircle, MessageSquare, ChevronRight } from 'lucide-react';
-import { LEADERS, SUCCESS_STORIES, HIGHLIGHTS, MOCK_QUIZ } from '../data/mockData.js';
+import { LEADERS, SUCCESS_STORIES, IMAGESANDVIDEOS, MOCK_QUIZ } from '../data/mockData.js';
 
 export default function MobileSimulator({ mobileTab, setMobileTab, selectedAnswer, showQuizResult, handleAnswerQuiz, setSelectedStory, setSelectedLeader, setPlayingVideo }) {
     return (
@@ -57,7 +57,7 @@ export default function MobileSimulator({ mobileTab, setMobileTab, selectedAnswe
 
                     {mobileTab === 'learn' && <div className="p-4"><h3 className="font-bold text-sm">40年健康培訓班課程目錄</h3></div>}
                     {mobileTab === 'leaders' && <div className="p-4 grid grid-cols-2 gap-2">{LEADERS.map(l => <div key={l.id} onClick={() => setSelectedLeader(l)} className="bg-white p-2 rounded-xl border text-center cursor-pointer"><img src={l.image} className="h-20 w-full object-cover rounded-lg" /><p className="text-xs font-bold mt-1">{l.name.split(' ')[0]}</p></div>)}</div>}
-                    {mobileTab === 'events' && <div className="p-4 space-y-2">{HIGHLIGHTS.map(h => <div key={h.id} onClick={() => h.type === 'video' ? setPlayingVideo(h) : null} className="bg-white rounded-xl overflow-hidden border"><img src={h.image} className="h-24 w-full object-cover" /><p className="text-xs font-bold p-2">{h.title}</p></div>)}</div>}
+                    {mobileTab === 'events' && <div className="p-4 space-y-2">{IMAGESANDVIDEOS.map(h => <div key={h.id} onClick={() => h.type === 'video' ? setPlayingVideo(h) : null} className="bg-white rounded-xl overflow-hidden border"><img src={h.image} className="h-24 w-full object-cover" /><p className="text-xs font-bold p-2">{h.title}</p></div>)}</div>}
                 </div>
 
                 {/* TAB BAR */}

@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Atom, Award, ChevronRight, Activity, BookOpen, Users, TrendingUp, ArrowUpRight, Play } from 'lucide-react';
-import { SUCCESS_STORIES, HIGHLIGHTS } from '../data/mockData.js';
+import { SUCCESS_STORIES, IMAGESANDVIDEOS } from '../data/mockData.js';
 
 const TRUST_SLIDES = [
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2.jpg?alt=media&token=49e38b20-2915-4ec2-b242-3665549599d2",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS3.JPG?alt=media&token=fca92ee4-684c-4437-aa26-198688867b80",
+    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS4.png?alt=media&token=0e092130-389c-47b3-a980-372bb98952ce",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCAQ%20opening.jpg?alt=media&token=aafbc721-1706-4557-ad99-e8d3839297ae",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition.jpg?alt=media&token=bf6c3af8-a2c6-4633-ae3b-c725101c3a24",
-    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition%20class%201.JPG?alt=media&token=9171698d-687f-48f3-8c86-2dc6dc695bc4",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition%20Class.png?alt=media&token=d605da43-7769-4c63-8594-609f74f1b4c9",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next%20Beach.jpg?alt=media&token=8554df80-70b5-4d5e-ae31-a537d0b75aa8",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Elite.jpg?alt=media&token=35434884-ef58-400d-a072-583f2479c388",
@@ -76,9 +76,9 @@ export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory }
                     {/* 右側影片網格 */}
                     <div className="lg:col-span-7 grid grid-cols-12 gap-4 relative">
                         <div className="absolute inset-0 bg-radial-gradient from-[#B8D333]/15 to-transparent filter blur-2xl -z-10"></div>
-                        <div onClick={() => setPlayingVideo(HIGHLIGHTS[0])} className="col-span-8 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer animate-fadeIn">
+                        <div onClick={() => setPlayingVideo(IMAGESANDVIDEOS[0])} className="col-span-8 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer animate-fadeIn">
                             <video
-                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2Fca_network_introduction_video.mp4?alt=media&token=dfda5eb9-81d1-4bf8-ac29-db5a77ceeb4b" //
+                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2Fca_network_introduction_video.mp4?alt=media&token=dfda5eb9-81d1-4bf8-ac29-db5a77ceeb4b"
                                 autoPlay      // 自動播放
                                 muted         // 必須靜音，否則會被瀏覽器封鎖
                                 loop          // 無限循環播放
@@ -88,7 +88,7 @@ export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory }
                             {/*<div className="absolute inset-0 bg-gradient-to-t from-[#034E72]/85 to-transparent"></div>*/}
                             <div className="absolute bottom-3 left-3 flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                                <span className="text-[10px] uppercase font-bold text-white bg-[#034E72]/60 px-2 py-0.5 rounded backdrop-blur-sm">關於我們</span>
+                                <span className="text-[10px] uppercase font-bold text-white">認識耀升</span>
                             </div>
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/40">
                                 <Play size={40} className="text-[#B8D333] fill-[#B8D333]" />
@@ -140,11 +140,11 @@ export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory }
                 {/* 內容區塊 (需設定 z-10 以浮在背景之上) */}
                 <div className="max-w-5xl mx-auto px-4 text-center relative z-10 text-white">
                     <div className="inline-block text-[#B8D333] font-black tracking-widest text-xs bg-white/5 backdrop-blur-lg px-4 py-1.5 rounded-full mb-6 border border-[#B8D333]/30">
-                        THE LEGACY & TRUST · 傳承與信任
+                        WELLNESS & FUTURE  ‧  健康與未來
                     </div>
 
                     <p className="text-slate-200 mt-4 text-lg leading-relaxed max-w-7xl mx-auto drop-shadow-md">
-                        在過去的 40 年間，我們透過分享健康創富的經驗，凝聚社會各階層，激勵大家相信和突破自己，創造更美好的優質生活。
+                        讓健康成為日常，讓突破成為力量。攜手同行，活出更精彩的人生。
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -152,9 +152,9 @@ export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory }
                             <div className="w-12 h-12 rounded-2xl bg-[#B8D333] flex items-center justify-center text-[#034E72] shadow-lg group-hover:scale-110 transition-transform">
                                 <BookOpen size={24} />
                             </div>
-                            <h3 className="text-xl font-bold">40年教案打磨</h3>
+                            <h3 className="text-xl font-bold">專業沉澱 ‧ 實踐健康</h3>
                             <p className="text-sm text-slate-300 leading-relaxed">
-                                融合頂尖營養學與香港在地飲食習慣，發展出具備高度執行性的知識地圖。
+                                結合頂尖營養科學與香港在地生活習慣，我們打造出高效、易實踐的健康知識地圖。40 年來，已陪伴無數在地個案成功轉變，用真實成果印證專業。
                             </p>
                         </div>
 
@@ -162,9 +162,9 @@ export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory }
                             <div className="w-12 h-12 rounded-2xl bg-[#B8D333] flex items-center justify-center text-[#034E72] shadow-lg group-hover:scale-110 transition-transform">
                                 <Users size={24} />
                             </div>
-                            <h3 className="text-xl font-bold">小班督導共學機制</h3>
+                            <h3 className="text-xl font-bold">共創 ‧ 共享 ‧ 共嬴</h3>
                             <p className="text-sm text-slate-300 leading-relaxed">
-                                學員在直銷導師引導下組成群組拍照打卡，完成知行合一的日常飲食健康習慣。
+                                結合團隊的多元優勢與大健康市場的豐厚資源，我們共享市場資訊、技術支援與創業培訓，透過緊密的團隊協作，共同開拓市場版圖，共享回報與成果。
                             </p>
                         </div>
 
@@ -172,45 +172,15 @@ export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory }
                             <div className="w-12 h-12 rounded-2xl bg-[#B8D333] flex items-center justify-center text-[#034E72] shadow-lg group-hover:scale-110 transition-transform">
                                 <TrendingUp size={24} />
                             </div>
-                            <h3 className="text-xl font-bold">專業導師商業賦能</h3>
+                            <h3 className="text-xl font-bold">培育領袖 ‧ 助人自助</h3>
                             <p className="text-sm text-slate-300 leading-relaxed">
-                                當您重塑自己的健康，團隊系統能輔能您開啟終身受人尊敬的大健康展業之路。
+                                我們建立系統化的培訓與孵化機制，將成功的創業經驗轉化為可複製的系統，在協助夥伴提升自我能力的同時，也能帶領他人前進，實現互利共贏。
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* CA FITNESS STORIES SECTION */}
-            <section className="py-20 bg-slate-50 border-t border-slate-100 text-left">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                        <div className="space-y-2">
-                            <div className="inline-block text-[#034E72] font-black text-xs bg-[#B8D333]/30 px-3 py-1 rounded-full">FLAGSHIP PROGRAM · 皇牌體重管理</div>
-                            <h2 className="text-3xl font-black text-slate-900">CA Fitness 體重管理：科學控體，找回自信</h2>
-                        </div>
-                        <button onClick={() => setActiveTab('academy')} className="text-[#034E72] font-extrabold text-sm hover:text-[#B8D333] transition-colors flex items-center gap-1.5">
-                            查看健康班簡介 <ChevronRight size={16} />
-                        </button>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {SUCCESS_STORIES.map((story) => (
-                            <div key={story.id} onClick={() => setSelectedStory(story)} className="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col sm:flex-row gap-6 items-center sm:items-start group">
-                                <img src={story.image} alt={story.name} className="w-24 h-24 rounded-2xl object-cover shrink-0" />
-                                <div className="space-y-3">
-                                    <div className="flex items-center justify-between">
-                                        <span className="text-xs font-bold text-[#034E72] bg-[#034E72]/5 px-2.5 py-1 rounded-full">{story.period}</span>
-                                        <ArrowUpRight size={18} className="text-slate-400 group-hover:text-[#B8D333] transition-colors" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-slate-900">{story.name}</h3>
-                                    <p className="text-xs text-[#034E72] font-semibold">「{story.quote}」</p>
-                                    <p className="text-xs text-slate-500 line-clamp-2">{story.summary}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
         </div>
     );
 }
