@@ -79,7 +79,7 @@ export default function App() {
         {viewMode === 'desktop' && (
             <div className="animate-fadeIn">
               <header className="w-full bg-white/95 backdrop-blur-md sticky top-13.25 z-40 shadow-sm border-b border-slate-100 select-none">
-                <div className="max-w-7xl mx-auto px-3 h-20 grid grid-cols-3 items-center">
+                <div className="max-w-7xl mx-auto px-6 h-20 grid grid-cols-[1fr_auto_1fr] items-center">
 
                   {/* Logo */}
                   <div className="flex justify-start">
@@ -97,22 +97,29 @@ export default function App() {
 
                   {/* Tab */}
                   <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-semibold text-slate-500">
-                    {['home', 'nutrition', 'business', 'highlights', 'tool'].map(tab => (
+                    {['home', 'nutrition', 'business', 'highlights'].map(tab => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
                             className={`py-2 relative transition-colors hover:text-[#034E72] ${activeTab === tab ? 'text-[#034E72]' : ''}`}
                         >
                           {tab === 'home' && '首頁'}
-                          {tab === 'nutrition' && '營養教育'}
+                          {tab === 'nutrition' && '健康教育'}
                           {tab === 'business' && '創業教育'}
                           {tab === 'highlights' && '活動花絮'}
-                          {tab === 'tool' && '智能健康評估'}
                           {activeTab === tab && (
                               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#B8D333]"></span>
                           )}
                         </button>
                     ))}
+                    <a
+                        href="https://canetwork.me"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="py-2 transition-colors hover:text-[#034E72]"
+                    >
+                      e-Learning
+                    </a>
                   </nav>
 
                   {/* 右側平衡 */}
