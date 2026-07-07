@@ -5,10 +5,12 @@ export default function NutritionEducation() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn">
             <div className="max-w-3xl mb-12 space-y-4">
-                <span className="text-xs font-black tracking-widest text-[#034E72] bg-[#B8D333]/30 px-3 py-1 rounded-full uppercase">教育是唯一的答案</span>
-                <h1 className="text-4xl font-black text-slate-900">40 年磨一劍：CA 營養班教育系統</h1>
+                <span className="text-s font-black tracking-widest text-[#034E72] bg-[#B8D333]/30 px-3 py-1 rounded-full uppercase">健康需要管理，管理需要知識</span>
+                <h1 className="text-4xl font-black text-slate-900! [webkit-text-fill-color:initial] [text-fill-color:initial]">
+                    CA 營養健康教育系統
+                </h1>
                 <p className="text-slate-500 text-base leading-relaxed">
-                    在香港這座高節奏城市，外賣文化、慢性疲勞、高血脂已是普遍常態。我們的營養課程系統不是一堆死板的概念，而是將臨床實踐與行為心理融為一體的「健康轉化孵化器」。
+                    健康是夢想的起點。一旦失去，找回健康就成了唯一的追求。40年來，我們堅持推動生活化的健康教育，用最日常、易實踐的方式分享營養知識，陪伴大家改善體質、強身健體，甚至逆齡抗衰老。面對現代生活的挑戰，健康需要主動爭取——主動學習、主動實踐，將健康的掌控權握回自己手中，這正是現代人送給自己最棒的生活技能。
                 </p>
             </div>
 
