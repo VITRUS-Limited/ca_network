@@ -35,8 +35,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                             <Award size={14} className="text-[#B8D333]" />
                             <span className="text-xs font-semibold tracking-wide text-slate-100">深耕香港 40 載 · 展望全球大健康市場</span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-                            為您生活添色彩 <br />
+                        <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">為您生活添色彩 <br />
                             <span className="text-[#B8D333] relative inline-block mt-2">
                             Helping people live better, healthier lives
                                 <span className="absolute bottom-1 left-0 right-0 h-1.5 bg-[#B8D333]/20 rounded"></span>
@@ -76,6 +75,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                     {/* 右側影片網格 */}
                     <div className="lg:col-span-7 grid grid-cols-12 gap-4 relative">
                         <div className="absolute inset-0 bg-radial-gradient from-[#B8D333]/15 to-transparent filter blur-2xl -z-10"></div>
+                        {/* 第一影格 */}
                         <div onClick={() => setPlayingVideo(IMAGESANDVIDEOS[0])} className="col-span-8 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer animate-fadeIn">
                             <video
                                 src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2Fca_network_introduction_video.mp4?alt=media&token=dfda5eb9-81d1-4bf8-ac29-db5a77ceeb4b"
@@ -83,7 +83,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                                 muted         // 必須靜音，否則會被瀏覽器封鎖
                                 loop          // 無限循環播放
                                 playsInline   // 防止 iPhone/iOS 自動彈出全螢幕播放，維持在格子內
-                                className="w-full h-full object-cover opacity-75"
+                                className="w-full h-full object-cover opacity-85"
                             />
                             {/*<div className="absolute inset-0 bg-gradient-to-t from-[#034E72]/85 to-transparent"></div>*/}
                             <div className="absolute bottom-3 left-3 flex items-center gap-2">
@@ -94,24 +94,27 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                                 <Play size={40} className="text-[#B8D333] fill-[#B8D333]" />
                             </div>
                         </div>
+                        {/* 第二影格 */}
                         <div className="col-span-4 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">
                             <img
-                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20office.jpg?alt=media&token=7d3ce7d6-d609-4195-be39-75b852f8080b"
-                                alt="耀升總部開幕" className="w-full h-full object-cover opacity-75"
+                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20office%20small.jpg?alt=media&token=5343180e-32fa-4261-9300-2025357b375c"
+                                alt="耀升總部開幕" className="w-full h-full object-cover opacity-85 [image-rendering:-webkit-optimize-contrast]"
                             />
                             <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100">CAQ 耀升總部啟幕</div>
                         </div>
+                        {/* 第三影格 */}
                         <div className="col-span-4 h-56 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">
                             <img
-                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203.jpg?alt=media&token=c2e07c9e-5e49-4ca4-8f5c-d0549bfa561d"
-                                alt="Anita-Clement FCA2015" className="w-full h-full object-cover opacity-75"
+                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203%20small.jpg?alt=media&token=3892394b-19c4-4f09-81f4-e4d54d778eb1"
+                                alt="Anita-Clement FCA2015" className="w-full h-full object-cover opacity-85 [image-rendering:-webkit-optimize-contrast]"
                             />
-                            <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100">CA Next 年輕團隊</div>
+                            <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100">CA Network 創辦人分享</div>
                         </div>
+                        {/* 第四影格 */}
                         <div className="col-span-8 h-56 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">
                             <img
-                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCANA.jpg?alt=media&token=1100222c-b04a-4348-869a-2920dd84d07c"
-                                alt="耀升國際營養師聯會" className="w-full h-full object-cover opacity-75"
+                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCANA%20small.jpg?alt=media&token=b98f21dd-04c1-45cd-8e7d-e45926fdc472"
+                                alt="耀升國際營養師聯會" className="w-full h-full object-cover opacity-85 [image-rendering:-webkit-optimize-contrast]"
                             />
                             <div className="absolute bottom-3 left-3 flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>

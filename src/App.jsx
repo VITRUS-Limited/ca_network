@@ -110,7 +110,7 @@ export default function App() {
               {activeTab === 'highlights' && <Highlights setPlayingVideo={setPlayingVideo} />}
               {activeTab === 'tool' && <Tool calcHeight={calcHeight} setCalcHeight={setCalcHeight} calcWeight={calcWeight} setCalcWeight={setCalcWeight} calcAge={calcAge} setCalcAge={setCalcAge} setActiveTab={setActiveTab} />}
 
-              <footer className="bg-slate-50 text-[#034E72] pt-16 text-left border-t border-white/10">
+              <footer className="bg-slate-50 text-[#034E72] pt-16 text-left border-t border-white">
                 <div className="max-w-7xl mx-auto mb-16 px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
                   <div className="space-y-4">
                     <div className="text-xl font-extrabold text-[#034E72]">CA Network</div>
