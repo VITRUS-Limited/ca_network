@@ -60,16 +60,16 @@ export default function NutritionEducation() {
                 <div className="bg-white border border-slate-100 rounded-3xl shadow-sm relative overflow-hidden flex flex-col">
                     <div className="w-full h-52 rounded-t-2xl bg-slate-800 overflow-hidden">
                         <img
-                            src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCAF.jpg?alt=media&token=9230a6c7-3cb5-4e48-ba9e-362bf309cb69"
-                            alt="CA Fitness"
+                            src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition%20Class%20Speakers.jpeg?alt=media&token=d20ee795-d7ab-4bb3-ace1-be41026086ad"
+                            alt="CA Nutrition Class Speakers"
                             className="w-full h-full object-cover opacity-75"
                         />
                     </div>
-                    <div className="absolute top-0 left-0 w-2 h-full bg-[#B8D333]"></div>
+                    <div className="absolute top-0 left-0 w-2 h-full bg-slate-900"></div>
                     <div className="p-8 relative flex-1 flex flex-col justify-between">
-                        <div className="text-xs font-bold text-slate-400">標準化、科學化、人性化的體重管理方法</div>
-                        <h3 className="text-xl font-bold text-[#034E72] mt-2 mb-3">CA Fitness 體重管理課程</h3>
-                        <p className="text-xs text-slate-500 mb-4">你需要的不是一張餐單，而是一種生活態度。CA Fitness 源自1971年美國南加州，並經持續改進及實踐，合計已成功幫助學員減去數以噸計的脂肪，重拾健康與身形。</p>
+                        <div className="text-xs font-bold text-slate-400">助人自助、教學相長</div>
+                        <h3 className="text-xl font-bold text-[#034E72] mt-2 mb-3">耀升認證營養講師培訓</h3>
+                        <p className="text-xs text-slate-500 mb-4">CA Network 每年均挑選優秀學員，予以進階培訓為認證營養講師，並持續更新我們的營養班師資及豐富內容。除此之後，導師們亦積極參與各社區的營養傳播活動，回饋社會。</p>
                         <ul className="space-y-2 mt-4 text-xs font-semibold text-slate-600">
                             <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#B8D333]" /> 增肌減脂重塑身形</li>
                             <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#B8D333]" /> 優化細胞提升代謝</li>

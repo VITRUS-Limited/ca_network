@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react';
-import { Atom, Award, ChevronRight, Activity, BookOpen, Users, TrendingUp, ArrowUpRight, Play } from 'lucide-react';
-import { SUCCESS_STORIES, IMAGESANDVIDEOS } from '../data/mockData.js';
+import { Atom, Award, ChevronRight, Activity, BookOpen, Users, TrendingUp, Play } from 'lucide-react';
+import { IMAGESANDVIDEOS } from '../data/mockData.js';
 
 const TRUST_SLIDES = [
-    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2.jpg?alt=media&token=49e38b20-2915-4ec2-b242-3665549599d2",
-    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS3.JPG?alt=media&token=fca92ee4-684c-4437-aa26-198688867b80",
-    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS4.png?alt=media&token=0e092130-389c-47b3-a980-372bb98952ce",
+    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2.jpg?alt=media&token=6be0bc94-e40c-4cdd-8ac2-d7aa87a67da9",
+    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS1.JPG?alt=media&token=d1b96e08-ebbd-4a2a-b391-40fff2355ffc",
+    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutritionist%202020.jpeg?alt=media&token=9005a74d-3db5-4f53-843f-3b6236dca934",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCAQ%20opening.jpg?alt=media&token=aafbc721-1706-4557-ad99-e8d3839297ae",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition.jpg?alt=media&token=bf6c3af8-a2c6-4633-ae3b-c725101c3a24",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition%20Class.png?alt=media&token=d605da43-7769-4c63-8594-609f74f1b4c9",
-    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next%20Beach.jpg?alt=media&token=8554df80-70b5-4d5e-ae31-a537d0b75aa8",
-    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Elite.jpg?alt=media&token=35434884-ef58-400d-a072-583f2479c388",
+    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next.jpg?alt=media&token=3c230e67-6d7a-4a3f-9c9d-d17ba63bd57c",
+    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS4.png?alt=media&token=5db4cbb1-5b37-43ae-b21e-7494b577283c",
 
 ];
 
-export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory }) {
+export default function Home({ setActiveTab, setPlayingVideo }) {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
@@ -88,22 +88,31 @@ export default function Home({ setActiveTab, setPlayingVideo, setSelectedStory }
                             {/*<div className="absolute inset-0 bg-gradient-to-t from-[#034E72]/85 to-transparent"></div>*/}
                             <div className="absolute bottom-3 left-3 flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                                <span className="text-[10px] uppercase font-bold text-white">認識耀升</span>
+                                <span className="text-[10px] uppercase font-bold text-white">認識 CA Network</span>
                             </div>
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/40">
                                 <Play size={40} className="text-[#B8D333] fill-[#B8D333]" />
                             </div>
                         </div>
                         <div className="col-span-4 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20office.jpg?alt=media&token=3a535bab-5b9f-4b0f-a08f-bdeda38d9f01" alt="耀升總部開幕" className="w-full h-full object-cover opacity-75" />
+                            <img
+                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20office.jpg?alt=media&token=7d3ce7d6-d609-4195-be39-75b852f8080b"
+                                alt="耀升總部開幕" className="w-full h-full object-cover opacity-75"
+                            />
                             <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100">CAQ 耀升總部啟幕</div>
                         </div>
                         <div className="col-span-4 h-56 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next.jpg?alt=media&token=3c230e67-6d7a-4a3f-9c9d-d17ba63bd57c" alt="年輕團隊" className="w-full h-full object-cover opacity-75" />
+                            <img
+                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203.jpg?alt=media&token=c2e07c9e-5e49-4ca4-8f5c-d0549bfa561d"
+                                alt="Anita-Clement FCA2015" className="w-full h-full object-cover opacity-75"
+                            />
                             <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100">CA Next 年輕團隊</div>
                         </div>
                         <div className="col-span-8 h-56 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCANA.jpg?alt=media&token=1100222c-b04a-4348-869a-2920dd84d07c" alt="耀升國際營養師聯會" className="w-full h-full object-cover opacity-75" />
+                            <img
+                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCANA.jpg?alt=media&token=1100222c-b04a-4348-869a-2920dd84d07c"
+                                alt="耀升國際營養師聯會" className="w-full h-full object-cover opacity-75"
+                            />
                             <div className="absolute bottom-3 left-3 flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                                 <span className="text-[10px] font-bold text-slate-100">CANA 耀升國際營養師聯會</span>

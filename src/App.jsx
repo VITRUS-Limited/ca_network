@@ -12,7 +12,7 @@ import MobileSimulator from './pages/MobileSimulator';
 
 // 導入共用組件
 import Modals from './components/Modals';
-import { Monitor, Smartphone, Calculator, BookOpen } from 'lucide-react';
+import { Monitor, Smartphone } from 'lucide-react';
 
 export default function App() {
   const [viewMode, setViewMode] = useState('desktop');
@@ -28,40 +28,11 @@ export default function App() {
   const [calcHeight, setCalcHeight] = useState('');
   const [calcWeight, setCalcWeight] = useState('');
   const [calcAge, setCalcAge] = useState('');
-  const [calcResult, setCalcResult] = useState(null);
-
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [showQuizResult, setShowQuizResult] = useState(false);
 
   const closeModal = () => {
     setSelectedLeader(null);
     setSelectedStory(null);
     setPlayingVideo(null);
-  };
-
-  const handleCalculate = (e) => {
-    e.preventDefault();
-    if (!calcHeight || !calcWeight) return;
-    const heightInMeters = parseFloat(calcHeight) / 100;
-    const weight = parseFloat(calcWeight);
-    const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(1);
-
-    let category = '健康標準', recommendProgram = '心血管健康管理專題班', advice = '保持良好生活習慣。';
-    if (bmi < 18.5) { category = '體重過輕'; recommendProgram = '基礎家庭營養班'; }
-    else if (bmi >= 24 && bmi < 27) { category = '過重'; recommendProgram = 'CA Fitness 體重管理計畫'; }
-    else if (bmi >= 27) { category = '肥胖'; recommendProgram = 'CA Fitness 12週健康管理計畫'; advice = '建議諮詢資深直銷顧問。'; }
-
-    setCalcResult({ bmi, category, advice, recommendProgram });
-  };
-
-  const handleResetCalculator = () => {
-    setCalcHeight(''); setCalcWeight(''); setCalcAge(''); setCalcResult(null);
-  };
-
-  const handleAnswerQuiz = (option) => {
-    if (showQuizResult) return;
-    setSelectedAnswer(option);
-    setShowQuizResult(true);
   };
 
   return (
@@ -137,7 +108,7 @@ export default function App() {
               {activeTab === 'nutrition' && <NutritionEducation />}
               {activeTab === 'business' && <BusinessEducation setSelectedLeader={setSelectedLeader} />}
               {activeTab === 'highlights' && <Highlights setPlayingVideo={setPlayingVideo} />}
-              {activeTab === 'tool' && <Tool calcHeight={calcHeight} setCalcHeight={setCalcHeight} calcWeight={calcWeight} setCalcWeight={setCalcWeight} calcAge={calcAge} setCalcAge={setCalcAge} calcResult={calcResult} handleCalculate={handleCalculate} handleResetCalculator={handleResetCalculator} setActiveTab={setActiveTab} />}
+              {activeTab === 'tool' && <Tool calcHeight={calcHeight} setCalcHeight={setCalcHeight} calcWeight={calcWeight} setCalcWeight={setCalcWeight} calcAge={calcAge} setCalcAge={setCalcAge} setActiveTab={setActiveTab} />}
 
               <footer className="bg-slate-50 text-[#034E72] pt-16 text-left border-t border-white/10">
                 <div className="max-w-7xl mx-auto mb-16 px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -183,8 +154,7 @@ export default function App() {
         {viewMode === 'mobile' && (
             <MobileSimulator
                 mobileTab={mobileTab} setMobileTab={setMobileTab}
-                selectedAnswer={selectedAnswer} showQuizResult={showQuizResult}
-                handleAnswerQuiz={handleAnswerQuiz} setSelectedStory={setSelectedStory}
+                setSelectedStory={setSelectedStory}
                 setSelectedLeader={setSelectedLeader} setPlayingVideo={setPlayingVideo}
             />
         )}
