@@ -50,7 +50,7 @@ export default function Modals({ selectedLeader, selectedStory, playingVideo, cl
                     {/* 播放器頂部列 */}
                     <div className="p-4 border-b border-white/5 flex justify-between items-center">
                         <span className="text-xs font-bold text-[#B8D333] flex items-center gap-1">
-                          <Video size={12} /> 關於 CA Network
+                          <Video size={12} /> {playingVideo.topic}
                         </span>
                         <button
                             onClick={closeModal}

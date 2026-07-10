@@ -103,7 +103,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                             <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100">CAQ 耀升總部啟幕</div>
                         </div>
                         {/* 第三影格 */}
-                        <div className="col-span-4 h-56 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">
+                        <div className="col-span-4 h-52 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">
                             <img
                                 src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203%20small.jpg?alt=media&token=3892394b-19c4-4f09-81f4-e4d54d778eb1"
                                 alt="Anita-Clement FCA2015" className="w-full h-full object-cover opacity-85 [image-rendering:-webkit-optimize-contrast]"
@@ -111,14 +111,32 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                             <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100">CA Network 創辦人分享</div>
                         </div>
                         {/* 第四影格 */}
-                        <div className="col-span-8 h-56 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">
-                            <img
-                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCANA%20small.jpg?alt=media&token=b98f21dd-04c1-45cd-8e7d-e45926fdc472"
-                                alt="耀升國際營養師聯會" className="w-full h-full object-cover opacity-85 [image-rendering:-webkit-optimize-contrast]"
+                        {/*<div className="col-span-8 h-56 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn">*/}
+                        {/*    <img*/}
+                        {/*        src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCANA%20small.jpg?alt=media&token=b98f21dd-04c1-45cd-8e7d-e45926fdc472"*/}
+                        {/*        alt="耀升國際營養師聯會" className="w-full h-full object-cover opacity-85 [image-rendering:-webkit-optimize-contrast]"*/}
+                        {/*    />*/}
+                        {/*    <div className="absolute bottom-3 left-3 flex items-center gap-2">*/}
+                        {/*        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>*/}
+                        {/*        <span className="text-[10px] font-bold text-slate-100">CANA 耀升國際營養師聯會</span>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
+                        <div onClick={() => setPlayingVideo(IMAGESANDVIDEOS[1])} className="col-span-8 h-52 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer animate-fadeIn">
+                            <video
+                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FFCA%20Anta%20Clement%20YT.mp4?alt=media&token=0afb19eb-3d39-406c-bcd8-a4a9daa47d1d#t=8"
+                                autoPlay      // 自動播放
+                                muted         // 必須靜音，否則會被瀏覽器封鎖
+                                loop          // 無限循環播放
+                                playsInline   // 防止 iPhone/iOS 自動彈出全螢幕播放，維持在格子內
+                                className="w-full h-full object-cover opacity-85"
                             />
+                            {/*<div className="absolute inset-0 bg-gradient-to-t from-[#034E72]/85 to-transparent"></div>*/}
                             <div className="absolute bottom-3 left-3 flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                                <span className="text-[10px] font-bold text-slate-100">CANA 耀升國際營養師聯會</span>
+                                <span className="w-2 h-2 rounded-full bg-[#B8D333] animate-pulse"></span>
+                                <span className="text-[10px] uppercase font-bold text-white">CA Network 創辦人分享</span>
+                            </div>
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/40">
+                                <Play size={40} className="text-[#B8D333] fill-[#B8D333]" />
                             </div>
                         </div>
                     </div>

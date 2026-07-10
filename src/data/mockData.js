@@ -73,19 +73,23 @@ export const SUCCESS_STORIES = [
 export const IMAGESANDVIDEOS = [
     {
         id: 1,
+        topic: '認識 CA Network',
         title: '從平凡到非凡：傅南生與吳彩雲的安利創富故事',
         type: 'video',
         desc: '「真正的成功，是看見身邊的人因你而改變。」CA Network創辦人傅南生與吳彩雲夫婦透過安利平台翻轉命運，憑藉宏大抱負與不懈毅力，締造了全球首戶華人皇冠大使的傳奇，並將這份深具執行力的成功地圖拓展至全球。',
-        duration: '01:30',
-        image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=600',
+        duration: '03:27',
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%202.jpg?alt=media&token=580c529c-6301-419a-95e6-5477b63731f3',
         videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2Fca_network_introduction_video.mp4?alt=media&token=dfda5eb9-81d1-4bf8-ac29-db5a77ceeb4b'
     },
     {
         id: 2,
-        title: 'CA Fitness 戶外健康律動日（添馬公園）',
-        type: 'image',
-        desc: '在維港海風下，以汗水和歡笑擁抱綠色生活。',
-        image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600'
+        topic: 'CA Network 創辦人 | 安利GAR創業者皇冠大使分享',
+        title: '擁抱健康幸福生活',
+        type: 'video',
+        desc: '四十多年前的一個決定，令 CA Network 創辦人 Clement 和 Anita 開啟了豐盛人生的旅程。他們的故事展現了安利不只是創業，而是一種獨特的生活方式。他們以身作則，不僅成就了自己的精彩人生，還始終如一地幫助無數人實現健康幸福生活',
+        duration: '02:59',
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%202.jpg?alt=media&token=580c529c-6301-419a-95e6-5477b63731f3',
+        videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FFCA%20Anta%20Clement%20YT.mp4?alt=media&token=0afb19eb-3d39-406c-bcd8-a4a9daa47d1d'
     },
     {
         id: 3,
