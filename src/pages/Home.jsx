@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Atom, Award, ChevronRight, Activity, BookOpen, Users, TrendingUp, Play } from 'lucide-react';
-import { IMAGES_AND_VIDEOS } from '../data/mockData.js';
+import { IMAGES_AND_VIDEOS } from '../data/Database.js';
 
 const TRUST_SLIDES = [
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2.jpg?alt=media&token=6be0bc94-e40c-4cdd-8ac2-d7aa87a67da9",
@@ -84,7 +84,6 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                                 playsInline   // 防止 iPhone/iOS 自動彈出全螢幕播放，維持在格子內
                                 className="w-full h-full object-cover opacity-85"
                             />
-                            {/*<div className="absolute inset-0 bg-gradient-to-t from-[#034E72]/85 to-transparent"></div>*/}
                             <div className="absolute bottom-3 left-3 flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
                                 <span className="text-[10px] uppercase font-bold text-white">認識 CA Network</span>

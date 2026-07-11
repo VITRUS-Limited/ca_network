@@ -1,5 +1,5 @@
 import 'react';
-import { AboutUsText } from "../data/mockData.js";
+import { AboutUsText } from "../data/Database.js";
 import { PersonStanding, Sparkles, HandHeartIcon, Award } from 'lucide-react';
 
 export default function AboutUs() {

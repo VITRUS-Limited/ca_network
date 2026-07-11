@@ -4,8 +4,8 @@ import './App.css';
 // 導入分拆後的各個獨立頁面檔案
 import Home from './pages/Home';
 import AboutUs from "./pages/AboutUs.jsx";
-import NutritionEducation from './pages/nutritionEducation.jsx';
-import BusinessEducation from './pages/businessEducation.jsx';
+import NutritionEducation from './pages/NutritionEducation.jsx';
+import BusinessEducation from './pages/BusinessEducation.jsx';
 import Highlights from './pages/Highlights';
 import MobileSimulator from './pages/MobileSimulator';
 
@@ -19,13 +19,9 @@ export default function App() {
   const [mobileTab, setMobileTab] = useState('home');
 
   // 全域燈箱彈窗狀態
-  const [selectedLeader, setSelectedLeader] = useState(null);
-  const [selectedStory, setSelectedStory] = useState(null);
   const [playingVideo, setPlayingVideo] = useState(null);
 
   const closeModal = () => {
-    setSelectedLeader(null);
-    setSelectedStory(null);
     setPlayingVideo(null);
   };
 
@@ -97,10 +93,10 @@ export default function App() {
                 </div>
               </header>
 
-              {activeTab === 'home' && <Home setActiveTab={setActiveTab} setPlayingVideo={setPlayingVideo} setSelectedStory={setSelectedStory} setSelectedLeader={setSelectedLeader} />}
+              {activeTab === 'home' && <Home setActiveTab={setActiveTab} setPlayingVideo={setPlayingVideo} />}
               {activeTab === 'aboutUs' && <AboutUs/>}
               {activeTab === 'nutrition' && <NutritionEducation />}
-              {activeTab === 'business' && <BusinessEducation setSelectedLeader={setSelectedLeader} />}
+              {activeTab === 'business' && <BusinessEducation setPlayingVideo={setPlayingVideo} />}
               {activeTab === 'highlights' && <Highlights setPlayingVideo={setPlayingVideo} />}
 
               <footer className="bg-slate-50 text-[#034E72] pt-16 text-left border-t border-white">
@@ -146,14 +142,12 @@ export default function App() {
         {/* 手機 Flutter UI 模擬器渲染路由 */}
         {viewMode === 'mobile' && (
             <MobileSimulator
-                mobileTab={mobileTab} setMobileTab={setMobileTab}
-                setSelectedStory={setSelectedStory}
-                setSelectedLeader={setSelectedLeader} setPlayingVideo={setPlayingVideo}
+                mobileTab={mobileTab} setMobileTab={setMobileTab} setPlayingVideo={setPlayingVideo}
             />
         )}
 
         {/* 全域共享彈出式燈箱 */}
-        <Modals selectedLeader={selectedLeader} selectedStory={selectedStory} playingVideo={playingVideo} closeModal={closeModal} />
+        <Modals playingVideo={playingVideo} closeModal={closeModal} />
 
       </div>
   );

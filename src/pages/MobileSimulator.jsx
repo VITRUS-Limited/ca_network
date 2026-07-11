@@ -1,6 +1,6 @@
 import 'react';
 import { Heart, BookOpen, Award, Image as ImageIcon, Bell, Play, MessageSquare } from 'lucide-react';
-import { LEADERS_FACULTY, IMAGES_AND_VIDEOS } from '../data/mockData.js';
+import { LEADERS_FACULTY, IMAGES_AND_VIDEOS } from '../data/Database.js';
 
 export default function MobileSimulator({ mobileTab, setMobileTab, setSelectedLeader, setPlayingVideo }) {
     return (

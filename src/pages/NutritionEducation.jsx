@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CheckCircle2, ChevronLeft, ChevronRight, Laptop, ExternalLink, GraduationCap, Award, ShieldCheck, Users } from 'lucide-react';
-import { NUTRITION_FACULTY } from "../data/mockData.js";
+import { NUTRITION_FACULTY } from "../data/Database.js";
 
 export default function NutritionEducation() {
     const [currInstructor, setCurrInstructor] = useState(0);
@@ -165,6 +165,7 @@ export default function NutritionEducation() {
                     </div>
                 </div>
 
+                {/* 卡片設計 */}
                 <div className="w-full overflow-hidden rounded-4xl py-4 px-1">
                     <div
                         style={{
@@ -174,24 +175,16 @@ export default function NutritionEducation() {
                     >
                         {NUTRITION_FACULTY.map((faculty) => (
                             <div key={faculty.id} className="w-full md:w-1/3 shrink-0 px-3">
-                                {/* 🎯 營養大師卡：優雅雜誌排版，底層帶有微透光微調 */}
-                                <div className="bg-white border border-slate-100 rounded-4xl overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 p-5 flex flex-col min-h-[380px] justify-between group relative bg-gradient-to-b from-white to-slate-50/40">
-
-                                    {/* 右上角優雅的品牌幾何光暈飾條 */}
+                                <div className="bg-white border border-slate-100 rounded-4xl overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 p-5 flex flex-col min-h-95 justify-between group relative bg-linear-to-b from-white to-slate-50/40">
                                     <div className="absolute top-0 right-0 w-24 h-24 bg-[#B8D333]/30 rounded-bl-[100px] pointer-events-none transition-all duration-500 group-hover:scale-110"></div>
-
-                                    {/* 🍀 異形裁剪頭像區：拋棄死板圓形，改用時尚的盾葉形不對稱裁切 */}
                                     <div className="w-full h-48 rounded-3xl rounded-tl-[56px] overflow-hidden shadow-inner shrink-0 bg-slate-50 relative">
                                         <img
                                             src={faculty.image}
                                             alt={faculty.name}
                                             className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast] transform-gpu group-hover:scale-105 transition-transform duration-700 ease-out"
                                         />
-                                        {/* 淡淡的護眼層濾鏡 */}
                                         <div className="absolute inset-0 bg-[#034E72]/5 mix-blend-multiply pointer-events-none"></div>
                                     </div>
-
-                                    {/* 文字說明區：左對齊高級排版 */}
                                     <div className="flex-1 flex flex-col justify-between pt-5 text-left pl-1">
                                         <div className="space-y-2">
                                             <div className="flex items-center gap-2">
@@ -202,8 +195,6 @@ export default function NutritionEducation() {
                                                 {faculty.title}
                                             </p>
                                         </div>
-
-                                        {/* 底部精緻的裝飾線與微動效 */}
                                         <div className="text-[10px] font-bold text-[#034E72]/70 tracking-widest uppercase border-t border-slate-100 pt-3 flex justify-between items-center select-none">
                                             <span>Certified Expert</span>
                                             <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 font-sans">→</span>
