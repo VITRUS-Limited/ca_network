@@ -25,7 +25,7 @@ export default function NutritionEducation() {
         <div className="max-w-7xl mx-auto px-4 py-12 text-left animate-fadeIn space-y-14 bg-slate-50/50">
 
             {/* ==================== 頂部標題區 ==================== */}
-            <div className="max-w-5xl">
+            <div className="max-w-5xl relative">
                 <span className="inline-block text-s font-black tracking-widest text-[#034E72] bg-[#B8D333]/25 px-4 py-1.5 rounded-full uppercase border border-[#B8D333]/20">
                     健康需要管理，管理需要知識
                 </span>
@@ -55,7 +55,7 @@ export default function NutritionEducation() {
                             <div className="space-y-3">
                                 <div className="text-[14px] font-black tracking-wider text-slate-400 uppercase">改變一生的營養課程</div>
                                 <h3 className="text-2xl font-bold text-[#034E72]">耀升基礎營養班</h3>
-                                <p className="text-sm text-slate-500 leading-relaxed pt-1">CA Network 高瞻遠矚，40年前已創辦實用營養班，從未間斷授課，受惠人數超過10萬人。耀升更設立營養師考牌制度，讓有志人士可以成為認證營養師和營養講師。</p>
+                                <p className="text-sm text-slate-500 leading-relaxed pt-1">CA Network 高瞻遠矚，40年前已創辦實用營養班，教授生活中可運用和實踐的正確健康知識，從未間斷授課，受惠人數超過10萬人。耀升更設立營養師考牌制度，讓有志人士可以成為認證營養師和營養講師。</p>
                             </div>
                             <ul className="space-y-2.5 text-xs font-semibold text-slate-600 pt-5">
                                 <li className="flex items-center gap-2.5"><CheckCircle2 size={15} className="text-[#B8D333] shrink-0" /> <span>營養學基礎</span></li>
@@ -79,7 +79,7 @@ export default function NutritionEducation() {
                             <div className="space-y-3">
                                 <div className="text-[14px] font-black tracking-wider text-slate-400 uppercase">標準化、科學化、人性化的體重管理方法</div>
                                 <h3 className="text-2xl font-bold text-[#034E72]">CA Fitness 體重管理課程</h3>
-                                <p className="text-sm text-slate-500 leading-relaxed pt-1">你需要的不是一張餐單，而是一種生活態度。CA Fitness 源自1971年美國南加州，並經持續改進及實踐，合計已成功幫助學員減去數以噸計的脂肪，重拾健康與身形。</p>
+                                <p className="text-sm text-slate-500 leading-relaxed pt-1">你需要的不是一張餐單，而是一種生活態度。CA Fitness 源自1971年美國南加州，並經持續改進及實踐，多年來合計幫助學員減去數以噸計的脂肪，同時保持甚至增加肌肉量，重拾健康與身形。</p>
                             </div>
                             <ul className="space-y-2.5 text-xs font-semibold text-slate-600 pt-5">
                                 <li className="flex items-center gap-2.5"><CheckCircle2 size={15} className="text-[#B8D333] shrink-0" /> <span>增肌減脂重塑身形</span></li>
@@ -103,7 +103,7 @@ export default function NutritionEducation() {
                             <div className="space-y-3">
                                 <div className="text-[14px] font-black tracking-wider text-slate-400 uppercase">終生受用的健康管理技能</div>
                                 <h3 className="text-2xl font-bold text-[#034E72]">耀升營養專題分享</h3>
-                                <p className="text-sm text-slate-500 leading-relaxed pt-1">除了基礎營養學課程，CA Network 的健康教育系統亦加入各種中醫和自然療法的導師分享授課，擴闊學員眼界，裝備更多健康管理的技能和能力。</p>
+                                <p className="text-sm text-slate-500 leading-relaxed pt-1">除了基礎營養學課程，CA Network 的健康教育系統亦加入各種中醫和自然療法的導師授課，串連各套理論和實踐經驗，擴闊學員眼界，裝備更多健康管理的技能和能力。</p>
                             </div>
                             <ul className="space-y-2.5 text-xs font-semibold text-slate-600 pt-5">
                                 <li className="flex items-center gap-2.5"><CheckCircle2 size={15} className="text-[#B8D333] shrink-0" /> <span>耳穴療法舒緩痛症</span></li>
@@ -174,18 +174,40 @@ export default function NutritionEducation() {
                     >
                         {NUTRITION_FACULTY.map((faculty) => (
                             <div key={faculty.id} className="w-full md:w-1/3 shrink-0 px-3">
-                                <div className="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 p-6 flex flex-col items-center text-center space-y-5 min-h-87.5 justify-center relative group">
-                                    <div className="absolute top-0 inset-x-0 h-1 bg-linear-to-r from-transparent via-[#034E72]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-slate-50 shadow-md shrink-0 bg-slate-50 transform group-hover:scale-102 transition-transform duration-500">
+                                {/* 🎯 營養大師卡：優雅雜誌排版，底層帶有微透光微調 */}
+                                <div className="bg-white border border-slate-100 rounded-4xl overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 p-5 flex flex-col min-h-[380px] justify-between group relative bg-gradient-to-b from-white to-slate-50/40">
+
+                                    {/* 右上角優雅的品牌幾何光暈飾條 */}
+                                    <div className="absolute top-0 right-0 w-24 h-24 bg-[#B8D333]/30 rounded-bl-[100px] pointer-events-none transition-all duration-500 group-hover:scale-110"></div>
+
+                                    {/* 🍀 異形裁剪頭像區：拋棄死板圓形，改用時尚的盾葉形不對稱裁切 */}
+                                    <div className="w-full h-48 rounded-3xl rounded-tl-[56px] overflow-hidden shadow-inner shrink-0 bg-slate-50 relative">
                                         <img
                                             src={faculty.image}
                                             alt={faculty.name}
-                                            className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast] transform-gpu"
+                                            className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast] transform-gpu group-hover:scale-105 transition-transform duration-700 ease-out"
                                         />
+                                        {/* 淡淡的護眼層濾鏡 */}
+                                        <div className="absolute inset-0 bg-[#034E72]/5 mix-blend-multiply pointer-events-none"></div>
                                     </div>
-                                    <div className="space-y-2">
-                                        <h4 className="text-lg font-black text-slate-800 tracking-wide">{faculty.name}</h4>
-                                        <p className="text-xs text-[#034E72] font-semibold bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-100 leading-relaxed">{faculty.title}</p>
+
+                                    {/* 文字說明區：左對齊高級排版 */}
+                                    <div className="flex-1 flex flex-col justify-between pt-5 text-left pl-1">
+                                        <div className="space-y-2">
+                                            <div className="flex items-center gap-2">
+                                                <h4 className="text-xl font-black text-slate-900 tracking-tight">{faculty.name}</h4>
+                                                <span className="w-1.5 h-1.5 rounded-full bg-[#B8D333] animate-pulse"></span>
+                                            </div>
+                                            <p className="text-xs text-slate-500 font-medium leading-relaxed group-hover:text-[#034E72] transition-colors duration-300">
+                                                {faculty.title}
+                                            </p>
+                                        </div>
+
+                                        {/* 底部精緻的裝飾線與微動效 */}
+                                        <div className="text-[10px] font-bold text-[#034E72]/70 tracking-widest uppercase border-t border-slate-100 pt-3 flex justify-between items-center select-none">
+                                            <span>Certified Expert</span>
+                                            <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 font-sans">→</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -286,8 +308,8 @@ export default function NutritionEducation() {
                 </div>
             </div>
 
-            {/* ==================== 6. 耀升雲端系統入口（數位奢華玻璃面板） ==================== */}
-            <div className="bg-gradient-to-br from-[#034E72] to-[#023752] rounded-[40px] text-white p-8 mt-12 md:p-14 relative overflow-hidden shadow-xl border border-white/10 transform-gpu">
+            {/* ==================== 耀升雲端系統入口 ==================== */}
+            <div className="bg-linear-to-br from-[#034E72] to-[#023752] rounded-[40px] text-white p-8 mt-12 md:p-14 relative overflow-hidden shadow-xl border border-white/10 transform-gpu">
 
                 {/* 科技光暈背景層 */}
                 <div className="absolute -right-10 -bottom-10 w-96 h-96 bg-[#B8D333]/10 rounded-full filter blur-3xl animate-pulse"></div>
@@ -326,7 +348,7 @@ export default function NutritionEducation() {
 
                     {/* 右側：iPad/Macbook 風範的網頁殼展示 */}
                     <div className="lg:col-span-6 flex justify-center lg:justify-end w-full mt-6 lg:mt-0">
-                        <div className="relative w-full max-w-[460px] lg:max-w-none md:aspect-video lg:aspect-video bg-slate-950/40 p-1.5 border border-white/15 rounded-2xl overflow-hidden shadow-2xl transform lg:rotate-1 hover:rotate-0 transition-transform duration-500 group">
+                        <div className="relative w-full max-w-115 lg:max-w-none md:aspect-video lg:aspect-video bg-slate-950/40 p-1.5 border border-white/15 rounded-2xl overflow-hidden shadow-2xl transform lg:rotate-1 hover:rotate-0 transition-transform duration-500 group">
                             <div className="w-full h-full rounded-xl overflow-hidden relative">
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2Fe%20learning%20nutrition.png?alt=media&token=96e6dbe7-42fc-4bf3-93fe-a0aeb12745cd"
@@ -334,7 +356,7 @@ export default function NutritionEducation() {
                                     className="w-full h-full object-cover opacity-95 [image-rendering:-webkit-optimize-contrast] transform-gpu group-hover:scale-103 transition-transform duration-700 ease-out"
                                 />
                                 {/* 高級感鏡面玻璃光澤反光 */}
-                                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/10 pointer-events-none"></div>
+                                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/5 to-white/10 pointer-events-none"></div>
                             </div>
                         </div>
                     </div>

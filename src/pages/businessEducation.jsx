@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
-import { TrendingUp, Target, Briefcase, Award, Users, Calendar, ArrowUpRight, ChevronLeft, ChevronRight, Zap, Gem } from 'lucide-react';
-import { NUTRITION_FACULTY } from "../data/mockData.js"; // 💡 沿用或換成您的創業導師數據
+import { TrendingUp, Target, Briefcase, Award, Users, Calendar, ChevronLeft, ChevronRight, Zap, Gem } from 'lucide-react';
+import { LEADERS_FACULTY } from "../data/mockData.js";
 
 export default function BusinessEducation() {
     const [currLeader, setCurrLeader] = useState(0);
-    const totalLeaders = NUTRITION_FACULTY.length;
+    const totalLeaders = LEADERS_FACULTY.length;
 
-    // 創業領袖輪播：每 4 秒自動流暢切換
+    // 領袖輪播：每 3.5 秒自動流暢切換
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrLeader((prev) => (prev + 1) % totalLeaders);
-        }, 4000);
+        }, 3500);
         return () => clearInterval(timer);
     }, [totalLeaders]);
 
@@ -22,48 +22,44 @@ export default function BusinessEducation() {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-20 text-left animate-fadeIn space-y-32 bg-slate-50/30">
+        <div className="max-w-7xl mx-auto px-4 py-12 text-left animate-fadeIn space-y-14 bg-slate-50/30">
 
-            {/* ==================== 1. 頂部創業標題區（新創加速器風範） ==================== */}
-            <div className="max-w-4xl space-y-6 relative">
-
-                <span className="inline-block text-xs font-black tracking-widest text-white bg-[#034E72] px-4 py-1.5 rounded-md uppercase tracking-wider shadow-sm">
-                    Empower Entrepreneurship · 商業賦能
+            {/* ==================== 頂部標題區 ==================== */}
+            <div className="max-w-5xl relative">
+                <span className="inline-block text-s font-black tracking-widest text-white bg-[#034E72] border-white/50 px-4 py-1.5 rounded-md uppercase shadow-sm">
+                    把握現在，擁抱將來，成就非凡人生
                 </span>
-                <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-none [webkit-text-fill-color:initial] [text-fill-color:initial]">
-                    耀升大健康創業與領袖孵化系統
+                <h1 className="text-4xl md:text-5xl font-black text-slate-900! tracking-tight leading-none [webkit-text-fill-color:initial] [text-fill-color:initial]">
+                    耀升大健康創業與領袖培育系統
                 </h1>
-                <p className="text-slate-500 text-base md:text-lg leading-relaxed max-w-3xl">
-                    在輕資產創業時代，選擇比努力更重要。CA Network 40 年來建立了一套成熟的「大健康商業閉環」。我們不談空洞的財商理論，而是保姆級地輔能你從零建立個人健康 IP、裂變私域社群，並保送你對接安利全球跨境直銷大體系，協助平凡人翻轉階層，收穫終身受人尊敬的被動複利收入。
+                <p className="text-slate-500 text-balance md:text-lg leading-relaxed max-w-5xl">
+                    選擇正確的賽道，是輕資產創業時代走向成功的關鍵第一步。CA Network 歷經 40 年的市場淬鍊，將複雜的創業流程化繁為簡，建構出成熟、穩定且可複製的「大健康輕創業系統」。多年來，藉由系統的全面支援，我們協助無數創業者告別單打獨鬥，每年都見證並培育出一批批卓越的領袖，為自己、家人乃至整個團隊，開創出更高品質的生活與事業新格局。
                 </p>
             </div>
 
-            {/* ==================== 2. 三大核心創業課程（階梯上升式斜角卡片） ==================== */}
+            {/* ==================== 三大核心創業課程 ==================== */}
             <div>
                 <div className="grid md:grid-cols-3 gap-8">
 
-                    {/* 課程 01：私域 IP 班 */}
                     <div className="bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl transition-all duration-500 ease-out flex flex-col overflow-hidden group relative">
-                        {/* 頂部斜邊視覺裁切 */}
                         <div className="w-full h-48 bg-slate-950 overflow-hidden relative">
                             <img
                                 src="https://images.unsplash.com/photo-1542744094-2ab25be78b90?auto=format&fit=crop&q=80&w=600"
                                 alt="Digital Branding"
                                 className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out"
                             />
-                            {/* 幾何斜面遮罩 */}
                             <div className="absolute bottom-0 inset-x-0 h-8 bg-white [clip-path:polygon(0_100%,100%_100%,100%_0)]"></div>
                         </div>
-                        <div className="p-8 pt-2 relative flex-1 flex flex-col justify-between space-y-6">
+                        <div className="p-8 pt-2 relative flex-1 flex flex-col justify-between space-y-2">
                             <div className="space-y-3">
-                                <div className="text-[10px] font-black tracking-widest text-[#034E72] uppercase bg-[#034E72]/5 px-2.5 py-1 rounded w-fit">Phase 01 · 起步建流</div>
-                                <h3 className="text-2xl font-black text-slate-800">新創個人健康 IP 與私域班</h3>
-                                <p className="text-xs text-slate-500 leading-relaxed pt-1">教你如何在自媒體與線下社區建立信任感。從一部手機的拍照打卡、飲食記錄分享，到精準獲取大健康剛需精準客戶，完成首批核心社群種子的無感裂變。</p>
+                                <div className="text-[12px] font-black tracking-widest text-[#034E72] uppercase bg-[#034E72]/5 px-2.5 py-1 rounded w-fit">思維認知 ‧ 核心技能</div>
+                                <h3 className="text-2xl font-black text-slate-800">專業培訓班 PTC</h3>
+                                <p className="text-sm text-slate-500 leading-relaxed pt-1"> 最好的創業，是把熱愛的事情做到極致。專業培訓班協助學員裝備必備的創業思維與實操技能，讓建立事業的過程變得自然且豐盛。透過學習前人累積的成功流程，融入溫暖且具凝聚力的創辦人理念，我們不再是單打獨鬥。一起把對健康的追求，化為建立個人事業、成就美好生活的起點！</p>
                             </div>
-                            <ul className="space-y-2 text-xs font-bold text-slate-600 border-t border-slate-50 pt-5">
-                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>個人健康人設（IP）精準定位</span></li>
-                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>社群三餐打卡與高黏著度營運</span></li>
-                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>微信/WhatsApp 信任鏈高效收單</span></li>
+                            <ul className="space-y-2 text-xs font-bold text-slate-600 pt-5">
+                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>創業思維與心法</span></li>
+                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>成功流程與實操技能</span></li>
+                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>融入團隊和公司文化理念</span></li>
                             </ul>
                         </div>
                     </div>
@@ -80,16 +76,16 @@ export default function BusinessEducation() {
                             />
                             <div className="absolute bottom-0 inset-x-0 h-8 bg-white [clip-path:polygon(0_100%,100%_100%,100%_0)]"></div>
                         </div>
-                        <div className="p-8 pt-2 relative flex-1 flex flex-col justify-between space-y-6">
+                        <div className="p-8 pt-2 relative flex-1 flex flex-col justify-between space-y-2">
                             <div className="space-y-3">
-                                <div className="text-[10px] font-black tracking-widest text-[#034E72] uppercase bg-[#B8D333]/30 px-2.5 py-1 rounded w-fit">Phase 02 · 導師賦能</div>
-                                <h3 className="text-2xl font-black text-[#034E72]">大健康直銷展業導師班</h3>
-                                <p className="text-xs text-slate-500 leading-relaxed pt-1">學員完成健康轉化後，如何開啟商業展業？保姆級拆解安利大健康獎金制度、跨國展業工具。培育你具備一對一健康干預與小班大眾演繹能力，助人自助。</p>
+                                <div className="text-[12px] font-black tracking-widest text-[#034E72] uppercase bg-[#B8D333]/30 px-2.5 py-1 rounded w-fit">訂定目標 ‧ 建立團隊</div>
+                                <h3 className="text-2xl font-black text-[#034E72]">達標精英班 ADD</h3>
+                                <p className="text-sm text-slate-500 leading-relaxed pt-1">當身後開始有了並肩作戰的夥伴，領導的責任與榮譽便隨之而來。達標精英班旨在協助已成功起步的事業夥伴重新校準人生藍圖，訂定具體且具感召力的團隊目標。課程將專注於培育夥伴的目標感，以及學會如何用行動引領新人，從一個人前行，蛻變為攜手團隊共創大健康未來的領袖典範。</p>
                             </div>
-                            <ul className="space-y-2 text-xs font-bold text-slate-600 border-t border-slate-50 pt-5">
-                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#034E72] shrink-0" /> <span>安利全球市場制度與複利拆解</span></li>
-                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#034E72] shrink-0" /> <span>大健康工作室實體開展與拓展</span></li>
-                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#034E72] shrink-0" /> <span>認證講師大眾演說與演繹技巧</span></li>
+                            <ul className="space-y-2 text-xs font-bold text-slate-600 pt-5">
+                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#034E72] shrink-0" /> <span>從設定目標到完成目標</span></li>
+                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#034E72] shrink-0" /> <span>建立小團隊的初階領導力</span></li>
+                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#034E72] shrink-0" /> <span>建立團隊協作的思維和能力</span></li>
                             </ul>
                         </div>
                     </div>
@@ -104,16 +100,16 @@ export default function BusinessEducation() {
                             />
                             <div className="absolute bottom-0 inset-x-0 h-8 bg-white [clip-path:polygon(0_100%,100%_100%,100%_0)]"></div>
                         </div>
-                        <div className="p-8 pt-2 relative flex-1 flex flex-col justify-between space-y-6">
+                        <div className="p-8 pt-2 relative flex-1 flex flex-col justify-between space-y-2">
                             <div className="space-y-3">
-                                <div className="text-[10px] font-black tracking-widest text-white uppercase bg-slate-900 px-2.5 py-1 rounded w-fit">Phase 03 · 系統領袖</div>
-                                <h3 className="text-2xl font-black text-slate-800">領袖領導力與系統營運官</h3>
-                                <p className="text-xs text-slate-500 leading-relaxed pt-1">針對中高階展業領袖，傳授大型健康社群矩陣的連鎖複製心法。打造具備高度自動運轉性的「耀升團隊副系統」，實現人在天堂、錢在銀行的終極財務自由。</p>
+                                <div className="text-[12px] font-black tracking-widest text-white uppercase bg-slate-900 px-2.5 py-1 rounded w-fit">培育領袖 ‧ 提升格局</div>
+                                <h3 className="text-2xl font-black text-slate-800">領導力培訓課程 LTC</h3>
+                                <p className="text-sm text-slate-500 leading-relaxed pt-1">站在穩健發展的事業新高點，下一步的卓越在於「裂變與複製」。領導力培訓課程致力於培育具備全面統籌能力的領袖，聚焦於人才發掘與梯隊建構，讓潛力種子蛻變為未來的領袖。課程深化學員「以身作則，以行克難」的觀念，將個人的願景轉化為整個團隊不懈追求並誓必達成的共同目標。</p>
                             </div>
-                            <ul className="space-y-2 text-xs font-bold text-slate-600 border-t border-slate-50 pt-5">
-                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>千人團隊巨型架構之資產管理</span></li>
-                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>跨國跨境市場的連鎖複製機制</span></li>
-                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>核心骨幹培育與複製領袖梯隊</span></li>
+                            <ul className="space-y-2 text-xs font-bold text-slate-600 pt-5">
+                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>建立團隊核心領導力</span></li>
+                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>從個人目標邁向團隊目標</span></li>
+                                <li className="flex items-center gap-2"><Zap size={14} className="text-[#B8D333] shrink-0" /> <span>以身作則成為團隊的榜樣和希望</span></li>
                             </ul>
                         </div>
                     </div>
@@ -121,51 +117,47 @@ export default function BusinessEducation() {
                 </div>
             </div>
 
-            {/* ==================== 3. 🎯 年度大會 Highlight（極具震撼力的殿堂級橫幅） ==================== */}
-            <div className="relative rounded-[40px] overflow-hidden shadow-2xl min-h-[480px] flex items-center bg-slate-950 group">
-                {/* 背景巨幅大圖與深色電影感融合濾鏡 */}
+            {/* ==================== 年度大會 Highlight ==================== */}
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl min-h-120 flex items-center bg-slate-950 group">
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200"
+                        src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2.jpg?alt=media&token=6be0bc94-e40c-4cdd-8ac2-d7aa87a67da9"
                         alt="CA Annual Convention"
                         className="w-full h-full object-cover opacity-35 transition-transform duration-1000 group-hover:scale-102"
                     />
-                    {/* 紅毯/頒獎典禮感的藍金色漸層疊加 */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#022336] via-[#034E72]/90 to-transparent"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-[#022336] via-[#034E72]/90 to-transparent"></div>
                 </div>
 
-                {/* 內部文案佈局 */}
                 <div className="relative z-10 max-w-3xl p-8 md:p-16 space-y-6 text-white text-left">
                     <div className="inline-flex items-center gap-2 bg-[#B8D333] text-[#034E72] px-3.5 py-1.5 rounded-md text-xs font-black uppercase tracking-widest shadow-lg">
                         <Calendar size={14} />
                         <span>Annual Mega Event · 年度盛典</span>
                     </div>
 
-                    <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight drop-shadow-md">
-                        耀升創業年會暨全球表彰盛典
+                    <h2 className="text-3xl! md:text-4xl! mb-3! font-black tracking-tight leading-tight drop-shadow-md">
+                        耀升年度盛典 Moving Up Seminar
                     </h2>
 
                     <p className="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl">
-                        這不只是一場大會，更是無數平凡人晉身大健康領袖的最高榮耀殿堂！年度年會匯聚全球超過十個國家地區的展業夥伴，邀請全球頂尖創業者皇冠大使親臨分享，並為當年在直銷創業路上獲得卓越晉升的夥伴舉辦數萬人紅毯表彰，用最高規格的儀式感為你的夢想加冕。
+                        時代的風口由強者定義，改變的契機由智者把握。耀升年度盛典匯聚全港最具前瞻性的事業夥伴，更邀請耀升核心領袖陣容與海外星級嘉賓親臨現場。這是一場智慧與榮譽的交織，您將親眼見證一個又一個透過平台改寫人生軌跡、實現豐盛生活的真實傳奇。在這裡，我們看見榜樣的力量；在別人的故事裡找到屬於自己的事業啟示與破局信心。我們汲取前行最堅實的底氣與信心，看清大健康產業的宏大未來，並在這場盛宴中，定位下一個領袖座標。
                     </p>
 
-                    <div className="flex flex-wrap gap-4 text-xs font-bold pt-2">
+                    <div className="flex flex-wrap gap-4 text-xs font-bold pt-6">
                         <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10">
                             <Award size={15} className="text-[#B8D333]" />
-                            <span>萬人體育館史詩級表彰舞台</span>
+                            <span>匯聚星級智慧，見證成就非凡</span>
                         </div>
                         <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10">
                             <Gem size={15} className="text-[#B8D333]" />
-                            <span>創業者皇冠大使大師級商業論壇</span>
+                            <span>點燃心中夢想，跨越領袖格局</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* ==================== 4. 動態秒轉創業者名人堂（高階商學院總裁風範） ==================== */}
+            {/* ==================== 動態秒轉領袖名人堂 ==================== */}
             <div className="border-t border-slate-200/60 pt-16 space-y-8 relative">
                 <div className="flex justify-between items-end">
-                    {/* 🎯 汲取之前教訓，使用 inline-block 確保間距完美彈出 */}
                     <div className="space-y-3">
                         <span className="inline-block text-xs font-black text-white uppercase tracking-wider bg-slate-900 px-3 py-1 rounded">
                             Elite Mentor Matrix · 創業者名人堂
@@ -185,33 +177,61 @@ export default function BusinessEducation() {
                 </div>
 
                 {/* 輪播視窗 (全新總裁風卡片樣式) */}
-                <div className="w-full overflow-hidden rounded-[32px] py-4 px-1">
+                <div className="w-full overflow-hidden rounded-4xl py-4 px-1">
                     <div
                         style={{
                             transform: `translateX(calc(-1 * ${currLeader * (typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 33.333)}%))`
                         }}
                         className="flex transition-transform duration-500 ease-in-out will-change-transform"
                     >
-                        {NUTRITION_FACULTY.map((faculty) => (
+                        {LEADERS_FACULTY.map((faculty) => (
                             <div key={faculty.id} className="w-full md:w-1/3 shrink-0 px-3">
-                                {/* 🎯 總裁風外觀：滿版光影質感，文字置底沉澱 */}
-                                <div className="bg-gradient-to-b from-slate-900 to-slate-950 rounded-2xl overflow-hidden shadow-lg border border-slate-800 p-6 flex flex-col items-center text-center space-y-5 min-h-[360px] justify-center relative group">
-                                    <div className="absolute top-0 inset-x-0 h-1 bg-[#B8D333] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="bg-linear-to-b from-slate-800 via-slate-950 to-slate-900 border border-slate-800/80 rounded-[28px] p-5 flex flex-col min-h-102.5 justify-between relative group overflow-hidden transition-all duration-500 ease-out hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">
 
-                                    {/* 方中帶圓的高級幾何頭像框，徹底打破正圓形 */}
-                                    <div className="w-32 h-32 rounded-[28px] overflow-hidden border-2 border-slate-700 shadow-xl shrink-0 bg-slate-900 transform group-hover:rotate-2 group-hover:scale-102 transition-all duration-500">
+                                    <div className="w-full h-52 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 transition-colors duration-500">
                                         <img
                                             src={faculty.image}
                                             alt={faculty.name}
-                                            className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast]"
+                                            className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast] transform-gpu group-hover:scale-102 transition-transform duration-700 ease-out"
                                         />
+
+                                        <div className="absolute top-0 right-0 bg-linear-to-r from-[#034E72]/40 to-slate-950/40 backdrop-blur-md border-b border-l border-white/10 text-[10px] font-bold tracking-widest text-[#B8D333] px-3.5 py-1.5 rounded-bl-xl select-none">
+                                            CORE LEADER
+                                        </div>
                                     </div>
-                                    <div className="space-y-3">
-                                        <h4 className="text-xl font-black text-white tracking-wide">{faculty.name}</h4>
-                                        <p className="text-xs text-[#B8D333] font-bold bg-white/5 border border-white/10 px-3 py-1.5 rounded-md leading-relaxed">
-                                            {faculty.title.replace('註冊營養師', '頂級商業教練').replace('健康教育', '商業賦能')}
-                                        </p>
+
+                                    {/* 📝 中間與底部：洗練的尊榮領袖矩陣 */}
+                                    <div className="flex-1 flex flex-col justify-between pt-6 text-left relative z-10">
+
+                                        {/* 名字與高亮變色 */}
+                                        <div className="space-y-3">
+                                            <div className="flex items-center gap-3">
+                                                <h4 className="text-2xl font-black text-white tracking-tight group-hover:text-[#B8D333] transition-colors duration-300">
+                                                    {faculty.name}
+                                                </h4>
+                                                <span className="w-1.5 h-1.5 rounded-full bg-[#B8D333] shadow-[0_0_8px_#B8D333]"></span>
+                                            </div>
+
+                                            {/* 領袖身份職銜 */}
+                                            <p className="text-xs text-slate-400 font-medium leading-relaxed tracking-wide">
+                                                {faculty.title.replace('註冊營養師', '頂級商業教練').replace('健康教育', '商業展業賦能')}
+                                            </p>
+                                        </div>
+
+                                        {/* 🏆 底部：榮譽傳承印記（移除按鈕與數據，改為高階圖說） */}
+                                        <div className="border-t border-slate-900 pt-4 mt-5 flex items-center justify-between">
+                                            <div className="flex items-center gap-2 text-slate-400 text-[11px] font-bold tracking-wider">
+                                                {/* 引入象徵尊貴價值的寶石圖示 */}
+                                                <Gem size={13} className="text-[#B8D333] shrink-0" />
+                                                <span className="text-slate-400 group-hover:text-slate-300 transition-colors">耀升系統決席委員會席位</span>
+                                            </div>
+                                        </div>
+
                                     </div>
+
+                                    {/* ==================== 懸停時在卡片四周浮現的雙色極光 ==================== */}
+                                    <div className="absolute -right-20 -top-20 w-48 h-48 bg-[#B8D333]/5 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                                    <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-[#034E72]/20 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                                 </div>
                             </div>
                         ))}

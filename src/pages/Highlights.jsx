@@ -1,6 +1,6 @@
-import React from 'react';
+import 'react';
 import { Play, Video, Image as ImageIcon } from 'lucide-react';
-import { IMAGESANDVIDEOS } from '../data/mockData.js';
+import { IMAGES_AND_VIDEOS } from '../data/mockData.js';
 
 export default function Highlights({ setPlayingVideo }) {
   return (
@@ -11,11 +11,11 @@ export default function Highlights({ setPlayingVideo }) {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {IMAGESANDVIDEOS.map((hl) => (
+        {IMAGES_AND_VIDEOS.map((hl) => (
           <div key={hl.id} onClick={() => hl.type === 'video' ? setPlayingVideo(hl) : null} className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-lg transition-all group cursor-pointer">
             <div className="relative h-48 bg-slate-100 overflow-hidden">
               <img src={hl.image} alt={hl.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 via-transparent to-transparent"></div>
               <div className="absolute top-3 right-3 bg-slate-950/60 p-1.5 rounded-full backdrop-blur-sm text-[#B8D333]">
                 {hl.type === 'video' ? <Video size={14} /> : <ImageIcon size={14} />}
               </div>

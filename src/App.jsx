@@ -7,7 +7,6 @@ import AboutUs from "./pages/AboutUs.jsx";
 import NutritionEducation from './pages/nutritionEducation.jsx';
 import BusinessEducation from './pages/businessEducation.jsx';
 import Highlights from './pages/Highlights';
-import Tool from './pages/Tool';
 import MobileSimulator from './pages/MobileSimulator';
 
 // 導入共用組件
@@ -23,11 +22,6 @@ export default function App() {
   const [selectedLeader, setSelectedLeader] = useState(null);
   const [selectedStory, setSelectedStory] = useState(null);
   const [playingVideo, setPlayingVideo] = useState(null);
-
-  // 計算機狀態
-  const [calcHeight, setCalcHeight] = useState('');
-  const [calcWeight, setCalcWeight] = useState('');
-  const [calcAge, setCalcAge] = useState('');
 
   const closeModal = () => {
     setSelectedLeader(null);
@@ -108,7 +102,6 @@ export default function App() {
               {activeTab === 'nutrition' && <NutritionEducation />}
               {activeTab === 'business' && <BusinessEducation setSelectedLeader={setSelectedLeader} />}
               {activeTab === 'highlights' && <Highlights setPlayingVideo={setPlayingVideo} />}
-              {activeTab === 'tool' && <Tool calcHeight={calcHeight} setCalcHeight={setCalcHeight} calcWeight={calcWeight} setCalcWeight={setCalcWeight} calcAge={calcAge} setCalcAge={setCalcAge} setActiveTab={setActiveTab} />}
 
               <footer className="bg-slate-50 text-[#034E72] pt-16 text-left border-t border-white">
                 <div className="max-w-7xl mx-auto mb-16 px-6 grid grid-cols-1 md:grid-cols-4 gap-8">

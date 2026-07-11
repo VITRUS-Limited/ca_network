@@ -1,8 +1,8 @@
-import React from 'react';
-import { Heart, BookOpen, Award, Image as ImageIcon, Bell, Play, HelpCircle, MessageSquare, ChevronRight } from 'lucide-react';
-import { LEADERS, SUCCESS_STORIES, IMAGESANDVIDEOS, MOCK_QUIZ } from '../data/mockData.js';
+import 'react';
+import { Heart, BookOpen, Award, Image as ImageIcon, Bell, Play, MessageSquare } from 'lucide-react';
+import { LEADERS_FACULTY, IMAGES_AND_VIDEOS } from '../data/mockData.js';
 
-export default function MobileSimulator({ mobileTab, setMobileTab, selectedAnswer, showQuizResult, handleAnswerQuiz, setSelectedStory, setSelectedLeader, setPlayingVideo }) {
+export default function MobileSimulator({ mobileTab, setMobileTab, setSelectedLeader, setPlayingVideo }) {
     return (
         <div className="py-12 bg-slate-900 min-h-screen flex items-center justify-center animate-fadeIn px-4">
             <div className="relative w-full max-w-[390px] h-[820px] bg-black rounded-[55px] shadow-2xl border-[10px] border-slate-800 flex flex-col overflow-hidden">
@@ -40,24 +40,12 @@ export default function MobileSimulator({ mobileTab, setMobileTab, selectedAnswe
                                 <a href="#" className="bg-white p-2 rounded-xl border border-slate-100"><MessageSquare size={16} className="mx-auto mb-1 text-orange-500" />諮詢</a>
                             </div>
 
-                            {/* 每日測驗 */}
-                            <div className="mx-4 bg-white p-4 rounded-2xl border border-slate-100 shadow-xs space-y-2">
-                                <div className="flex items-center gap-1.5 text-xs font-black text-[#034E72]"><HelpCircle size={14} /><span>每日健康微測驗</span></div>
-                                <p className="text-[11px] font-bold text-slate-700">{MOCK_QUIZ.question}</p>
-                                <div className="space-y-1.5">
-                                    {MOCK_QUIZ.options.map((opt) => (
-                                        <button key={opt.id} disabled={showQuizResult} onClick={() => handleAnswerQuiz(opt)} className={`w-full text-left px-3 py-2 rounded-xl text-[10px] font-bold border ${showQuizResult ? opt.isCorrect ? 'bg-[#B8D333]/20 border-[#B8D333]' : 'bg-slate-50' : 'bg-slate-50'}`}>
-                                            {opt.id}. {opt.text}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
                         </div>
                     )}
 
                     {mobileTab === 'learn' && <div className="p-4"><h3 className="font-bold text-sm">40年健康培訓班課程目錄</h3></div>}
-                    {mobileTab === 'leaders' && <div className="p-4 grid grid-cols-2 gap-2">{LEADERS.map(l => <div key={l.id} onClick={() => setSelectedLeader(l)} className="bg-white p-2 rounded-xl border text-center cursor-pointer"><img src={l.image} className="h-20 w-full object-cover rounded-lg" /><p className="text-xs font-bold mt-1">{l.name.split(' ')[0]}</p></div>)}</div>}
-                    {mobileTab === 'events' && <div className="p-4 space-y-2">{IMAGESANDVIDEOS.map(h => <div key={h.id} onClick={() => h.type === 'video' ? setPlayingVideo(h) : null} className="bg-white rounded-xl overflow-hidden border"><img src={h.image} className="h-24 w-full object-cover" /><p className="text-xs font-bold p-2">{h.title}</p></div>)}</div>}
+                    {mobileTab === 'leaders' && <div className="p-4 grid grid-cols-2 gap-2">{LEADERS_FACULTY.map(l => <div key={l.id} onClick={() => setSelectedLeader(l)} className="bg-white p-2 rounded-xl border text-center cursor-pointer"><img src={l.image} className="h-20 w-full object-cover rounded-lg" /><p className="text-xs font-bold mt-1">{l.name.split(' ')[0]}</p></div>)}</div>}
+                    {mobileTab === 'events' && <div className="p-4 space-y-2">{IMAGES_AND_VIDEOS.map(h => <div key={h.id} onClick={() => h.type === 'video' ? setPlayingVideo(h) : null} className="bg-white rounded-xl overflow-hidden border"><img src={h.image} className="h-24 w-full object-cover" /><p className="text-xs font-bold p-2">{h.title}</p></div>)}</div>}
                 </div>
 
                 {/* TAB BAR */}
