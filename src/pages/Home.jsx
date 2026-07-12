@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Atom, Award, ChevronRight, Activity, BookOpen, Users, TrendingUp, Play } from 'lucide-react';
-import { IMAGES_AND_VIDEOS } from '../data/Database.js';
+import { VIDEOS } from '../data/Database.js';
 
 const TRUST_SLIDES = [
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2.jpg?alt=media&token=6be0bc94-e40c-4cdd-8ac2-d7aa87a67da9",
@@ -75,7 +75,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                     <div className="lg:col-span-7 grid grid-cols-12 gap-4 relative">
                         <div className="absolute inset-0 bg-radial-gradient from-[#B8D333]/15 to-transparent filter blur-2xl -z-10"></div>
                         {/* 第一影格 */}
-                        <div onClick={() => setPlayingVideo(IMAGES_AND_VIDEOS[0])} className="col-span-8 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer animate-fadeIn">
+                        <div onClick={() => setPlayingVideo(VIDEOS[0])} className="col-span-8 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer animate-fadeIn">
                             <video
                                 src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2Fca_network_introduction_video.mp4?alt=media&token=dfda5eb9-81d1-4bf8-ac29-db5a77ceeb4b"
                                 autoPlay      // 自動播放
@@ -109,7 +109,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                             <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100">CA Network 創辦人分享</div>
                         </div>
                         {/* 第四影格 */}
-                        <div onClick={() => setPlayingVideo(IMAGES_AND_VIDEOS[1])} className="col-span-8 h-52 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer animate-fadeIn">
+                        <div onClick={() => setPlayingVideo(VIDEOS[1])} className="col-span-8 h-52 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer animate-fadeIn">
                             <video
                                 src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FFCA%20Anta%20Clement%20YT.mp4?alt=media&token=0afb19eb-3d39-406c-bcd8-a4a9daa47d1d#t=8"
                                 autoPlay      // 自動播放

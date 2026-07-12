@@ -175,7 +175,7 @@ export default function NutritionEducation() {
                     >
                         {NUTRITION_FACULTY.map((faculty) => (
                             <div key={faculty.id} className="w-full md:w-1/3 shrink-0 px-3">
-                                <div className="bg-white border border-slate-100 rounded-4xl overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 p-5 flex flex-col min-h-95 justify-between group relative bg-linear-to-b from-white to-slate-50/40">
+                                <div className="bg-white border border-slate-100 rounded-4xl overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 p-5 flex flex-col min-h-92 justify-between group relative bg-linear-to-b from-white to-slate-50/40">
                                     <div className="absolute top-0 right-0 w-24 h-24 bg-[#B8D333]/30 rounded-bl-[100px] pointer-events-none transition-all duration-500 group-hover:scale-110"></div>
                                     <div className="w-full h-48 rounded-3xl rounded-tl-[56px] overflow-hidden shadow-inner shrink-0 bg-slate-50 relative">
                                         <img
@@ -186,18 +186,24 @@ export default function NutritionEducation() {
                                         <div className="absolute inset-0 bg-[#034E72]/5 mix-blend-multiply pointer-events-none"></div>
                                     </div>
                                     <div className="flex-1 flex flex-col justify-between pt-5 text-left pl-1">
-                                        <div className="space-y-2">
+                                        <div className="space-y-3">
                                             <div className="flex items-center gap-2">
                                                 <h4 className="text-xl font-black text-slate-900 tracking-tight">{faculty.name}</h4>
                                                 <span className="w-1.5 h-1.5 rounded-full bg-[#B8D333] animate-pulse"></span>
                                             </div>
-                                            <p className="text-xs text-slate-500 font-medium leading-relaxed group-hover:text-[#034E72] transition-colors duration-300">
-                                                {faculty.title}
+                                            <p className="text-sm font-bold text-[#034E72]">
+                                                {faculty.mainTitle}
                                             </p>
-                                        </div>
-                                        <div className="text-[10px] font-bold text-[#034E72]/70 tracking-widest uppercase border-t border-slate-100 pt-3 flex justify-between items-center select-none">
-                                            <span>Certified Expert</span>
-                                            <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 font-sans">→</span>
+                                            <div className="space-y-1.5 border-t border-slate-100 pt-2.5">
+                                                {faculty.title.split('\n').map((subTitle, idx) => (
+                                                    <p
+                                                        key={idx}
+                                                        className="text-xs text-slate-400 font-medium leading-normal group-hover:text-slate-600 transition-colors"
+                                                    >
+                                                        • {subTitle.trim()}
+                                                    </p>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

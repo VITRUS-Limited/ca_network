@@ -1,6 +1,6 @@
 import 'react';
 import { Heart, BookOpen, Award, Image as ImageIcon, Bell, Play, MessageSquare } from 'lucide-react';
-import { LEADERS_FACULTY, IMAGES_AND_VIDEOS } from '../data/Database.js';
+import { LEADERS_FACULTY, VIDEOS } from '../data/Database.js';
 
 export default function MobileSimulator({ mobileTab, setMobileTab, setSelectedLeader, setPlayingVideo }) {
     return (
@@ -45,7 +45,7 @@ export default function MobileSimulator({ mobileTab, setMobileTab, setSelectedLe
 
                     {mobileTab === 'learn' && <div className="p-4"><h3 className="font-bold text-sm">40年健康培訓班課程目錄</h3></div>}
                     {mobileTab === 'leaders' && <div className="p-4 grid grid-cols-2 gap-2">{LEADERS_FACULTY.map(l => <div key={l.id} onClick={() => setSelectedLeader(l)} className="bg-white p-2 rounded-xl border text-center cursor-pointer"><img src={l.image} className="h-20 w-full object-cover rounded-lg" /><p className="text-xs font-bold mt-1">{l.name.split(' ')[0]}</p></div>)}</div>}
-                    {mobileTab === 'events' && <div className="p-4 space-y-2">{IMAGES_AND_VIDEOS.map(h => <div key={h.id} onClick={() => h.type === 'video' ? setPlayingVideo(h) : null} className="bg-white rounded-xl overflow-hidden border"><img src={h.image} className="h-24 w-full object-cover" /><p className="text-xs font-bold p-2">{h.title}</p></div>)}</div>}
+                    {mobileTab === 'events' && <div className="p-4 space-y-2">{VIDEOS.map(h => <div key={h.id} onClick={() => h.type === 'video' ? setPlayingVideo(h) : null} className="bg-white rounded-xl overflow-hidden border"><img src={h.image} className="h-24 w-full object-cover" /><p className="text-xs font-bold p-2">{h.title}</p></div>)}</div>}
                 </div>
 
                 {/* TAB BAR */}

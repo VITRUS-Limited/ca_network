@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import {Award, Calendar, ChevronLeft, ChevronRight, Zap, Gem, Play} from 'lucide-react';
-import {IMAGES_AND_VIDEOS, LEADERS_FACULTY} from "../data/Database.js";
+import {VIDEOS, LEADERS_FACULTY} from "../data/Database.js";
 
 export default function BusinessEducation({ setPlayingVideo}) {
     const [currLeader, setCurrLeader] = useState(0);
@@ -253,13 +253,12 @@ export default function BusinessEducation({ setPlayingVideo}) {
                     <div className="bg-linear-to-br from-slate-700 via-slate-900 to-slate-800 border border-slate-800/60 rounded-4xl p-6 flex flex-col justify-between min-h-115 group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.2)]">
                         <div className="space-y-5">
                             {/* 🎬 高階影片預覽艙 */}
-                            <div onClick={() => setPlayingVideo(IMAGES_AND_VIDEOS[2])} className="w-full h-96 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 select-none">
+                            <div onClick={() => setPlayingVideo(VIDEOS[2])} className="w-full h-96 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 select-none">
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Elite.jpeg?alt=media&token=b6be2be3-04d2-4ddc-9ca5-d1e9ce261f3c"
                                     alt="CA Elite"
                                     className="w-full h-full object-cover opacity-60 group-hover:scale-102 transition-transform duration-700 ease-out"
                                 />
-                                <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent"></div>
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/40">
                                     <Play size={40} className="text-[#B8D333] fill-[#B8D333]" />
                                 </div>
@@ -277,7 +276,7 @@ export default function BusinessEducation({ setPlayingVideo}) {
                         </div>
 
                         {/* 底部尊榮印記文案 */}
-                        <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[11px] font-bold tracking-wider text-slate-500">
+                        <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[12px] font-bold tracking-wider text-slate-500">
                             <span>品味生活 ‧ 財富翻轉</span>
                             <span className="font-serif italic text-slate-700 group-hover:text-[#B8D333]/30 transition-colors">Elite Prestige</span>
                         </div>
@@ -287,13 +286,12 @@ export default function BusinessEducation({ setPlayingVideo}) {
                     <div className="bg-linear-to-br from-slate-700 via-slate-900 to-slate-800 border border-slate-800/60 rounded-4xl p-6 flex flex-col justify-between min-h-115 group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.2)]">
                         <div className="space-y-5">
                             {/* 🎬 潮牌感影片預覽艙 */}
-                            <div onClick={() => setPlayingVideo(IMAGES_AND_VIDEOS[3])} className="w-full h-96 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 select-none">
+                            <div onClick={() => setPlayingVideo(VIDEOS[3])} className="w-full h-96 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 select-none">
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next.jpg?alt=media&token=3c230e67-6d7a-4a3f-9c9d-d17ba63bd57c"
                                     alt="Young Entrepreneurs Next Club"
                                     className="w-full h-full object-cover opacity-60 group-hover:scale-102 transition-transform duration-700 ease-out"
                                 />
-                                <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent"></div>
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/40">
                                     <Play size={40} className="text-[#B8D333] fill-[#B8D333]" />
                                 </div>
@@ -301,77 +299,73 @@ export default function BusinessEducation({ setPlayingVideo}) {
 
                             <div className="space-y-2 text-left">
                                 <div className="flex items-center gap-2">
-                                    <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">年輕人 Next Club</h4>
-                                    <span className="text-[12px] font-bold bg-[#B8D333]/15 text-[#B8D333] px-2 py-0.5 rounded border border-[#B8D333]/20">新創潮牌</span>
+                                    <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">CA NEXT 年輕創玩家</h4>
+                                    <span className="text-[12px] font-bold bg-[#B8D333]/15 text-[#B8D333] px-2 py-0.5 rounded border border-[#B8D333]/20">創業生活化</span>
                                 </div>
                                 <p className="text-xs text-slate-400 leading-relaxed">
-                                    專為 80 後、90 後及 Z 世代熱血創客量身打造！主打增肌減脂、CA Fitness 運動社群與潮牌個人 IP 自媒體經營。我們用最好玩的社群文化、最前衛的數碼爆流工具，協助年輕一代跳脫死薪水，輕資產開啟全球化跨境大健康事業。
+                                    CA NEXT 是專為 U35 及 Z 世代打造的輕資產創業加速器。融合多種運動與興趣的社群，將增肌減脂的健康生活轉化為自媒體 IP，無感裂變私域流量。背靠全球跨境大健康體系，一部手機即可啟動國際生意、翻轉薪水，助年輕人贏回人生的終極自主權！
                                 </p>
                             </div>
                         </div>
 
-                        <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[11px] font-bold tracking-wider text-slate-500">
+                        <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[12px] font-bold tracking-wider text-slate-500">
                             <span>熱血創客 ‧ 自主人生</span>
                             <span className="font-serif italic text-slate-700 group-hover:text-[#B8D333]/30 transition-colors">Future Shapers</span>
                         </div>
                     </div>
 
                     {/* 👩‍🍼 圈層 03：溫暖蛻變 ‧ 媽媽會 (精緻靜態雜誌排版) */}
-                    <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950 border border-slate-800/60 rounded-[32px] p-6 flex flex-col justify-between min-h-[460px] group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">
+                    <div className="bg-linear-to-br from-slate-700 via-slate-900 to-slate-800 border border-slate-800/60 rounded-4xl p-6 flex flex-col justify-between min-h-115 group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">
                         <div className="space-y-5">
-                            {/* 高畫質優雅照片展示艙（無影片，以高質感靜態呈現） */}
-                            <div className="w-full h-48 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0">
-                                <img
-                                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
-                                    alt="CA Moms Association"
-                                    className="w-full h-full object-cover opacity-60 group-hover:scale-101 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                            </div>
+                            <img
+                                src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Mum.jpg?alt=media&token=ee3260d3-3cc2-4782-970e-91fc6fb5975e"
+                                alt="CA Mumtrepreneur"
+                                className="w-full h-96 object-cover opacity-60 group-hover:scale-101 transition-transform duration-700"
+                            />
 
                             <div className="space-y-2 text-left">
                                 <div className="flex items-center gap-2">
-                                    <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">耀升火鳳凰媽媽會</h4>
+                                    <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">CA Mumtrepreneur 創業媽媽群</h4>
                                     <span className="text-[12px] font-bold bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-white/5">家庭支柱</span>
                                 </div>
                                 <p className="text-xs text-slate-400 leading-relaxed">
-                                    媽媽是全家健康的守門員。我們聚焦於嬰幼兒精準營養、產後身形快速修復、家庭日常膳食健康防線。更重要的是，為全職媽媽或職場母親提供一個低風險、時間彈性的共展舞台，讓女性在照顧家庭的同時重拾個人事業尊嚴。
+                                    CA Mumtrepreneur 是專為全職與職場母親打造的家庭事業孵化器。我們以精準營養與產後修復為核心，培育媽媽成為全家健康的守門員。提供低風險、時間彈性的展業舞台，讓女性在全心守護家庭的同時，也能透過一部手機輕資產創業、重拾個人事業尊嚴，優雅綻放自我價值！
                                 </p>
                             </div>
                         </div>
 
-                        <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[11px] font-bold tracking-wider text-slate-500">
+                        <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[12px] font-bold tracking-wider text-slate-500">
                             <span>守護家庭 ‧ 綻放自我</span>
                             <span className="font-serif italic text-slate-700 group-hover:text-[#B8D333]/30 transition-colors">Empowered Moms</span>
                         </div>
                     </div>
 
                     {/* 👵 圈層 04：長青傳承 ‧ 銀髮長壽會 (精緻靜態雜誌排版) */}
-                    <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950 border border-slate-800/60 rounded-[32px] p-6 flex flex-col justify-between min-h-[460px] group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">
+                    <div className="bg-linear-to-br from-slate-700 via-slate-900 to-slate-800 border border-slate-800/60 rounded-4xl p-6 flex flex-col justify-between min-h-115 group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">
                         <div className="space-y-5">
                             <div className="w-full h-48 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0">
                                 <img
-                                    src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=600"
+                                    src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Mum.png?alt=media&token=296890a1-4d81-46f6-a118-85c5fd204b2d"
                                     alt="CA Senior Longevity Club"
                                     className="w-full h-full object-cover opacity-60 group-hover:scale-101 transition-transform duration-700"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                                <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-transparent to-transparent"></div>
                             </div>
 
                             <div className="space-y-2 text-left">
                                 <div className="flex items-center gap-2">
-                                    <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">耀升銀髮長青健康會</h4>
-                                    <span className="text-[12px] font-bold bg-[#034E72] text-slate-300 px-2 py-0.5 rounded border border-white/5">健康長壽</span>
+                                    <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">CA VAP 金融保險精英</h4>
+                                    <span className="text-[12px] font-bold bg-[#034E72] text-slate-300 px-2 py-0.5 rounded border border-white/5">戰略合作</span>
                                 </div>
                                 <p className="text-xs text-slate-400 leading-relaxed">
-                                    鎖定高齡化社會最強剛需！專注心血管健康管理、骨骼關節抗衰老、抗斷崖式衰老調理。我們倡導「尊嚴老去、活力長壽」的生活哲學，讓銀髮族長輩不僅收穫健康，更能將豐富的人生閱歷轉化為健康的傳承財富。
+                                    VAP 是專為金融保險精英打造的「大健康 1+1」增值系統。我們打破單一保單的展業限制，將客戶的「風險保障」延伸至「主動健康管理」。背靠全球跨境大健康體系與專業營養師團隊陪跑，無需專業隔閡，助您在保留本業的前提下，一鍵開啟國際健康生意，創造第二條跨越經濟週期的被動複利收入，實現事業雙軌共贏！
                                 </p>
                             </div>
                         </div>
 
-                        <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[11px] font-bold tracking-wider text-slate-500">
-                            <span>活力長青 ‧ 尊嚴傳承</span>
-                            <span className="font-serif italic text-slate-700 group-hover:text-[#B8D333]/30 transition-colors">Golden Longevity</span>
+                        <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[12px] font-bold tracking-wider text-slate-500">
+                            <span>精英匯聚 ‧ 強強聯手</span>
+                            <span className="font-serif italic text-slate-700 group-hover:text-[#B8D333]/30 transition-colors">Wealth Catalysts</span>
                         </div>
                     </div>
 
