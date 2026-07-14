@@ -16,21 +16,21 @@ export const NUTRITION_FACULTY = [
         id: 2,
         name: '譚雅臻 Annette Tam',
         mainTitle: '耀升香港營養培訓總監',
-        title: '卓越大中華營養培訓總監\n 國家註冊營養師\n 國家食療養生師\n 小小營養師日營創辦人\n 香港公開大學客席營養講師',
+        title: '卓越大中華營養培訓總監\n 國家註冊營養師\n 國家食療養生師\n 香港公開大學客席營養講師\n 小小營養師日營創辦人\n 世界巡迴營養演講2000場',
         image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnnette%20Tam.png?alt=media&token=89bdb86b-279f-45d9-895e-9931c9a11b2a'
     },
     {
         id: 3,
         name: '郭永俊 Thomas Kwok',
-        mainTitle: '耀升營養課程副總監',
-        title: '',
+        mainTitle: '耀升香港營養培訓副總監',
+        title: '國際營養師協會營養師\n 中國膳食營養師\n 修讀美國密歇根州營養學課程\n IPTA健身教練\n 香港都會大學李嘉誠專業進修學院卓越導師\n 協助超過千人減重及改善健康',
         image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FThomas%20Kwok.jpg?alt=media&token=f0ff058a-7ba5-4e47-b1a6-93d1f4e9f48c'
     },
     {
         id: 4,
         name: '黃美好 Mabel Wong',
-        mainTitle: 'CA Fitness 課程總監',
-        title: '',
+        mainTitle: 'CA Fitness 纖體項目總監',
+        title: '國家高級營養師\n 國際美容美體師\n 寵物營養總監\n 享飪導師',
         image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMabel%20Wong.png?alt=media&token=0fed4ca3-0ed1-4c94-a917-63600f16bc40'
     },
     {
