@@ -50,7 +50,7 @@ export const LEADERS_FACULTY = [
         title: 'CA Network 創辦人 | GAR創業者皇冠大使',
         quote: '健康不是一朝一夕的銷售，而是全家一輩子的知識傳承。',
         bio: '大文導師於 1980 年代在香港創辦了首批營養健康培訓班，累積培育超過十萬名市民學員。他堅信透過系統化的健康知識，每個人都能成為自己家庭的健康守護者，並以此作為永續發展的健康事業根基。',
-        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2Fanita.png?alt=media&token=eb44d238-d29d-4b75-be1e-406bec13b16f',
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%202.jpg?alt=media&token=580c529c-6301-419a-95e6-5477b63731f3',
     }
 ];
 

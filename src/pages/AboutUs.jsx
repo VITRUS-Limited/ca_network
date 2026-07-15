@@ -6,7 +6,7 @@ export default function AboutUs() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn space-y-24">
             {/* 封面照片 */}
-            <div className="col-span-4 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn mb-8">
+            <div id="founders-story" className="col-span-4 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn mb-8">
                 <img src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement-combined.png?alt=media&token=36d6bdd9-c812-437b-be28-37d75b2353c2" alt="Anita & Clement" className="w-full h-full object-cover opacity-75" />
             </div>
 
@@ -24,7 +24,7 @@ export default function AboutUs() {
 
 
             {/* 核心價值宣傳 */}
-            <div className="space-y-8 lg:pb-20">
+            <div id="core-value" className="space-y-8 lg:pb-20">
 
                 {/* 文案頂部 */}
                 <div className="max-w-2xl space-y-3">
