@@ -24,7 +24,7 @@ export const NUTRITION_FACULTY = [
         name: '郭永俊 Thomas Kwok',
         mainTitle: '耀升香港營養培訓副總監',
         title: '國際營養師協會營養師\n 中國膳食營養師\n 修讀美國密歇根州營養學課程\n IPTA健身教練\n 香港都會大學李嘉誠專業進修學院卓越導師\n 協助超過千人減重及改善健康',
-        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FThomas%20Kwok.jpg?alt=media&token=f0ff058a-7ba5-4e47-b1a6-93d1f4e9f48c'
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FThomas%20Kwok.jpeg?alt=media&token=b66e2a73-f66a-4eb9-ac3d-efd008921d28'
     },
     {
         id: 4,
