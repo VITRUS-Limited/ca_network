@@ -199,78 +199,78 @@ export default function BusinessEducation({ setPlayingVideo }) {
                 </div>
             </FadeUpSection>
 
-            {/* ==================== 04. 動態秒轉領袖名人堂 ==================== */}
-            <FadeUpSection delay={150}>
-                <div id="biz-mentors" className="border-t border-slate-200/60 pt-16 space-y-8 relative">
-                    <div className="flex justify-between items-end">
-                        <div className="space-y-3">
-                            <span className="inline-block text-xs font-black text-white uppercase tracking-wider bg-slate-900 px-3 py-1 rounded">
-                                Elite Mentor Matrix · 優秀導師矩陣
-                            </span>
-                            <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
-                                耀升系統菁英導師團
-                            </h3>
-                        </div>
-                        <div className="flex gap-2.5 z-10">
-                            <button onClick={handlePrev} className="p-3 rounded-full bg-slate-900 text-white hover:bg-[#034E72] transition-all shadow-md active:scale-95">
-                                <ChevronLeft size={16} />
-                            </button>
-                            <button onClick={handleNext} className="p-3 rounded-full bg-slate-900 text-white hover:bg-[#034E72] transition-all shadow-md active:scale-95">
-                                <ChevronRight size={16} />
-                            </button>
-                        </div>
-                    </div>
+            {/*/!* ==================== 04. 動態秒轉領袖名人堂 ==================== *!/*/}
+            {/*<FadeUpSection delay={150}>*/}
+            {/*    <div id="biz-mentors" className="border-t border-slate-200/60 pt-16 space-y-8 relative">*/}
+            {/*        <div className="flex justify-between items-end">*/}
+            {/*            <div className="space-y-3">*/}
+            {/*                <span className="inline-block text-xs font-black text-white uppercase tracking-wider bg-slate-900 px-3 py-1 rounded">*/}
+            {/*                    Elite Mentor Matrix · 優秀導師矩陣*/}
+            {/*                </span>*/}
+            {/*                <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">*/}
+            {/*                    耀升系統菁英導師團*/}
+            {/*                </h3>*/}
+            {/*            </div>*/}
+            {/*            <div className="flex gap-2.5 z-10">*/}
+            {/*                <button onClick={handlePrev} className="p-3 rounded-full bg-slate-900 text-white hover:bg-[#034E72] transition-all shadow-md active:scale-95">*/}
+            {/*                    <ChevronLeft size={16} />*/}
+            {/*                </button>*/}
+            {/*                <button onClick={handleNext} className="p-3 rounded-full bg-slate-900 text-white hover:bg-[#034E72] transition-all shadow-md active:scale-95">*/}
+            {/*                    <ChevronRight size={16} />*/}
+            {/*                </button>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
 
-                    <div className="w-full overflow-hidden rounded-4xl py-4 px-1">
-                        <div
-                            style={{
-                                transform: `translateX(calc(-1 * ${currLeader * (typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 33.333)}%))`
-                            }}
-                            className="flex transition-transform duration-500 ease-in-out will-change-transform"
-                        >
-                            {LEADERS_FACULTY.map((faculty) => (
-                                <div key={faculty.id} className="w-full md:w-1/3 shrink-0 px-3">
-                                    <div className="bg-linear-to-b from-slate-800 via-slate-800 to-slate-950 border border-slate-800/80 rounded-[28px] p-5 flex flex-col min-h-102.5 justify-between relative group overflow-hidden transition-all duration-500 ease-out hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">
+            {/*        <div className="w-full overflow-hidden rounded-4xl py-4 px-1">*/}
+            {/*            <div*/}
+            {/*                style={{*/}
+            {/*                    transform: `translateX(calc(-1 * ${currLeader * (typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 33.333)}%))`*/}
+            {/*                }}*/}
+            {/*                className="flex transition-transform duration-500 ease-in-out will-change-transform"*/}
+            {/*            >*/}
+            {/*                {LEADERS_FACULTY.map((faculty) => (*/}
+            {/*                    <div key={faculty.id} className="w-full md:w-1/3 shrink-0 px-3">*/}
+            {/*                        <div className="bg-linear-to-b from-slate-800 via-slate-800 to-slate-950 border border-slate-800/80 rounded-[28px] p-5 flex flex-col min-h-102.5 justify-between relative group overflow-hidden transition-all duration-500 ease-out hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">*/}
 
-                                        <div className="w-full h-52 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 transition-colors duration-500">
-                                            <img
-                                                src={faculty.image}
-                                                alt={faculty.name}
-                                                className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast] transform-gpu group-hover:scale-102 transition-transform duration-700 ease-out"
-                                            />
-                                        </div>
+            {/*                            <div className="w-full h-52 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 transition-colors duration-500">*/}
+            {/*                                <img*/}
+            {/*                                    src={faculty.image}*/}
+            {/*                                    alt={faculty.name}*/}
+            {/*                                    className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast] transform-gpu group-hover:scale-102 transition-transform duration-700 ease-out"*/}
+            {/*                                />*/}
+            {/*                            </div>*/}
 
-                                        <div className="flex-1 flex flex-col justify-between pt-6 text-left relative z-10">
-                                            <div className="space-y-3">
-                                                <div className="flex items-center gap-3">
-                                                    <h4 className="text-2xl font-black text-white tracking-tight group-hover:text-[#B8D333] transition-colors duration-300">
-                                                        {faculty.name}
-                                                    </h4>
-                                                    <span className="w-1.5 h-1.5 rounded-full bg-[#B8D333] shadow-[0_0_8px_#B8D333]"></span>
-                                                </div>
+            {/*                            <div className="flex-1 flex flex-col justify-between pt-6 text-left relative z-10">*/}
+            {/*                                <div className="space-y-3">*/}
+            {/*                                    <div className="flex items-center gap-3">*/}
+            {/*                                        <h4 className="text-2xl font-black text-white tracking-tight group-hover:text-[#B8D333] transition-colors duration-300">*/}
+            {/*                                            {faculty.name}*/}
+            {/*                                        </h4>*/}
+            {/*                                        <span className="w-1.5 h-1.5 rounded-full bg-[#B8D333] shadow-[0_0_8px_#B8D333]"></span>*/}
+            {/*                                    </div>*/}
 
-                                                <p className="text-xs text-slate-400 font-medium leading-relaxed tracking-wide">
-                                                    {faculty.title.replace('註冊營養師', '頂級商業教練').replace('健康教育', '商業展業賦能')}
-                                                </p>
-                                            </div>
+            {/*                                    <p className="text-xs text-slate-400 font-medium leading-relaxed tracking-wide">*/}
+            {/*                                        {faculty.title.replace('註冊營養師', '頂級商業教練').replace('健康教育', '商業展業賦能')}*/}
+            {/*                                    </p>*/}
+            {/*                                </div>*/}
 
-                                            <div className="border-t border-slate-900 pt-4 mt-5 flex items-center justify-between">
-                                                <div className="flex items-center gap-2 text-slate-400 text-[11px] font-bold tracking-wider">
-                                                    <Gem size={13} className="text-[#B8D333] shrink-0" />
-                                                    <span className="text-slate-400 group-hover:text-slate-300 transition-colors"></span>
-                                                </div>
-                                            </div>
-                                        </div>
+            {/*                                <div className="border-t border-slate-900 pt-4 mt-5 flex items-center justify-between">*/}
+            {/*                                    <div className="flex items-center gap-2 text-slate-400 text-[11px] font-bold tracking-wider">*/}
+            {/*                                        <Gem size={13} className="text-[#B8D333] shrink-0" />*/}
+            {/*                                        <span className="text-slate-400 group-hover:text-slate-300 transition-colors"></span>*/}
+            {/*                                    </div>*/}
+            {/*                                </div>*/}
+            {/*                            </div>*/}
 
-                                        <div className="absolute -right-20 -top-20 w-48 h-48 bg-[#B8D333]/5 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-                                        <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-[#034E72]/20 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </FadeUpSection>
+            {/*                            <div className="absolute -right-20 -top-20 w-48 h-48 bg-[#B8D333]/5 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>*/}
+            {/*                            <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-[#034E72]/20 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>*/}
+            {/*                        </div>*/}
+            {/*                    </div>*/}
+            {/*                ))}*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</FadeUpSection>*/}
 
             {/* ==================== 05. 市場分眾矩陣 ==================== */}
             <FadeUpSection delay={150}>

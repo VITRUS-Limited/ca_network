@@ -38,7 +38,7 @@ export const NUTRITION_FACULTY = [
         name: '林貴智 Lewis Lam',
         mainTitle: '耀升資深營養講師',
         title: '註冊自然療法治療師\n 美國大溪谷州立大學營養學修業者\n 劉劍鋒氣息形態手診導師\n 國家公共執業營養師',
-        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FLewis%20Lam.jpg?alt=media&token=04f844d7-8620-48f3-a988-233e7e93bd44'
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FLewis%20Lam%20small.jpg?alt=media&token=826c60bf-7fcb-4c9f-8492-5120ec8858bd'
     }
 ];
 
