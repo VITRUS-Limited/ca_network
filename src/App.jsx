@@ -31,10 +31,18 @@ export default function App() {
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased">
 
-            {/* 視圖控制切換列：隱藏手機版 (hidden)，僅在電腦版顯示 (md:flex) */}
-            <div className="sticky h-12 top-0 z-50 bg-[#034E72] text-white border-b border-white/10 px-4 py-2.5 shadow-md hidden md:flex flex-col items-center justify-between gap-3">
+            <div className="sticky h-12 top-0 z-50 bg-[#034E72] text-white border-b border-white/10 px-4 py-2.5 shadow-md flex flex-col items-center justify-between gap-3">
                 <div className="flex items-center gap-2"/>
+                {/*<div className="flex items-center bg-slate-900/40 p-1 rounded-xl border border-white/10">*/}
+                {/*    <button onClick={() => setViewMode('desktop')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold ${viewMode === 'desktop' ? 'bg-[#B8D333] text-slate-950' : 'text-slate-300'}`}><Monitor size={14} />桌面官網</button>*/}
+                {/*    <button onClick={() => { setViewMode('mobile'); setMobileTab('home'); }} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold ${viewMode === 'mobile' ? 'bg-[#B8D333] text-slate-950' : 'text-slate-300'}`}><Smartphone size={14} />Flutter App 模擬</button>*/}
+                {/*</div>*/}
             </div>
+
+            {/*/!* 視圖控制切換列：隱藏手機版 (hidden)，僅在電腦版顯示 (md:flex) *!/*/}
+            {/*<div className="sticky h-12 top-0 z-50 bg-[#034E72] text-white border-b border-white/10 px-4 py-2.5 shadow-md hidden md:flex flex-col items-center justify-between gap-3">*/}
+            {/*    <div className="flex items-center gap-2"/>*/}
+            {/*</div>*/}
 
             {/* 桌面版官網渲染路由[cite: 9] */}
             <div className="animate-fadeIn">
