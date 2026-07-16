@@ -7,7 +7,22 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn space-y-24">
             {/* 封面照片 */}
             <div id="founders-story" className="col-span-4 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn mb-8">
-                <img src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement-combined.png?alt=media&token=36d6bdd9-c812-437b-be28-37d75b2353c2" alt="Anita & Clement" className="w-full h-full object-cover opacity-75" />
+                {/*<img src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement-combined.png?alt=media&token=36d6bdd9-c812-437b-be28-37d75b2353c2" alt="Anita & Clement" className="w-full h-full object-cover opacity-75" />*/}
+                <div className="w-full h-full overflow-hidden rounded-2xl">
+                    {/* 💻 電腦版照片：在 md (768px) 以上顯示，小螢幕 (手機) 隱藏 */}
+                    <img
+                        src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement-combined.png?alt=media&token=36d6bdd9-c812-437b-be28-37d75b2353c2"
+                        alt="Desktop Banner"
+                        className="hidden md:block w-full h-full object-cover"
+                    />
+
+                    {/* 📱 手機版照片：在 md 以上隱藏，小螢幕 (手機) 顯示 */}
+                    <img
+                        src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%20combined%20portrait.jpg?alt=media&token=b1e09dce-a35e-415e-b90a-c32370bd5fb1"
+                        alt="Mobile Banner"
+                        className="block md:hidden w-full h-full object-cover"
+                    />
+                </div>
             </div>
 
             {/* 中心主題文案 */}
