@@ -9,8 +9,8 @@ export const NUTRITION_FACULTY = [
         id: 1,
         name: '傅南生 Clement Fu',
         mainTitle: '耀升營養班創辦人',
-        title: 'CA Network 創辦人',
-        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FClement.png?alt=media&token=5c07eac8-42dc-4646-bfa3-5c8cde9776f3'
+        title: 'CA Network 創辦人\n 安利GAR創業者皇冠大使',
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FClement%202.jpg?alt=media&token=ba991093-89d5-4a6e-82b1-3df78b0377a6'
     },
     {
         id: 2,
@@ -24,14 +24,14 @@ export const NUTRITION_FACULTY = [
         name: '郭永俊 Thomas Kwok',
         mainTitle: '耀升香港營養培訓副總監',
         title: '國際營養師協會營養師\n 中國膳食營養師\n 修讀美國密歇根州營養學課程\n IPTA健身教練\n 香港都會大學李嘉誠專業進修學院卓越導師\n 協助超過千人減重及改善健康',
-        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FThomas%20Kwok.jpeg?alt=media&token=b66e2a73-f66a-4eb9-ac3d-efd008921d28'
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FThomas%20Kwok.jpeg?alt=media&token=79768cc4-7acc-4229-9386-2618f5cc8f79'
     },
     {
         id: 4,
         name: '黃美好 Mabel Wong',
         mainTitle: 'CA Fitness 纖體項目總監',
         title: '國家高級營養師\n 國際美容美體師\n 寵物營養總監\n 享飪導師',
-        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMabel%20Wong.png?alt=media&token=0fed4ca3-0ed1-4c94-a917-63600f16bc40'
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMabel%20Wong.jpg?alt=media&token=5267b96b-a86d-4171-837f-c333bc6efc1a'
     },
     {
         id: 5,

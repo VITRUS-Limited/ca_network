@@ -45,7 +45,7 @@ export default function Footer({ setActiveTab }) {
                             <h2 className="text-2xl font-black text-white tracking-wider">
                                 <span className="text-[#B8D333]">CA</span> NETWORK
                             </h2>
-                            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
+                            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
                                 創立四十餘年，帶領夥伴深耕大健康市場。結合紮實的創富經驗與專業營養知識，協助您建立跨越經濟週期的被動複利收入，實現時間、財富與健康的真正自由。
                             </p>
                         </div>
@@ -53,22 +53,22 @@ export default function Footer({ setActiveTab }) {
                         {/* 快捷聯絡資訊 */}
                         <div className="space-y-3 pt-2 text-xs font-medium text-slate-400">
                             <div className="flex items-center gap-3">
-                                <MapPin size={14} className="text-[#B8D333]" />
+                                <MapPin size={16} className="text-[#B8D333]" />
                                 <span>香港九龍油麻地家樂坊2008室</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <Mail size={14} className="text-[#B8D333]" />
-                                <span>canetwork.hk@gmail.com</span>
+                                <Mail size={16} className="text-[#B8D333]" />
+                                <span>info@canetwork.hk</span>
                             </div>
                         </div>
                     </div>
 
                     {/* ==================== 欄位 2：關於耀升 ==================== */}
                     <div className="lg:col-span-2 text-left space-y-4">
-                        <h4 className="text-sm font-black uppercase tracking-wider text-white border-l-2 border-[#B8D333] pl-2">
+                        <h4 className="text-s font-black uppercase tracking-wider text-white border-l-2 border-[#B8D333] pl-2">
                             關於耀升
                         </h4>
-                        <ul className="space-y-2.5 text-xs font-semibold text-slate-400">
+                        <ul className="space-y-2.5 text-sm font-semibold text-slate-400">
                             <li>
                                 <button onClick={() => handleNavigation('about', 'founders-story')} className="hover:text-[#B8D333] transition-colors flex items-center gap-1">
                                     創辦人故事
@@ -84,10 +84,10 @@ export default function Footer({ setActiveTab }) {
 
                     {/* ==================== 欄位 3：健康教育系統 ==================== */}
                     <div className="lg:col-span-2 text-left space-y-4">
-                        <h4 className="text-sm font-black uppercase tracking-wider text-white border-l-2 border-[#B8D333] pl-2">
+                        <h4 className="text-s font-black uppercase tracking-wider text-white border-l-2 border-[#B8D333] pl-2">
                             健康教育
                         </h4>
-                        <ul className="space-y-2.5 text-xs font-semibold text-slate-400">
+                        <ul className="space-y-2.5 text-sm font-semibold text-slate-400">
                             <li>
                                 <button onClick={() => handleNavigation('nutrition', 'basic-nutrition')} className="hover:text-[#B8D333] transition-colors">
                                     耀升基礎營養班
@@ -123,10 +123,10 @@ export default function Footer({ setActiveTab }) {
 
                     {/* ==================== 欄位 4：創業與領袖系統 ==================== */}
                     <div className="lg:col-span-2 text-left space-y-4">
-                        <h4 className="text-sm font-black uppercase tracking-wider text-white border-l-2 border-[#B8D333] pl-2">
+                        <h4 className="text-s font-black uppercase tracking-wider text-white border-l-2 border-[#B8D333] pl-2">
                             創業教育
                         </h4>
-                        <ul className="space-y-2.5 text-xs font-semibold text-slate-400">
+                        <ul className="space-y-2.5 text-sm font-semibold text-slate-400">
                             <li>
                                 <button onClick={() => handleNavigation('business', 'ptc-course')} className="hover:text-[#B8D333] transition-colors">
                                     專業培訓班 PTC
@@ -152,20 +152,20 @@ export default function Footer({ setActiveTab }) {
                                     創業菁英導師團隊
                                 </button>
                             </li>
-                            <li>
-                                <button onClick={() => handleNavigation('business', 'market-segments')} className="hover:text-[#B8D333] transition-colors">
-                                    耀升社群
-                                </button>
-                            </li>
+                            {/*<li>*/}
+                            {/*    <button onClick={() => handleNavigation('business', 'market-segments')} className="hover:text-[#B8D333] transition-colors">*/}
+                            {/*        耀升社群*/}
+                            {/*    </button>*/}
+                            {/*</li>*/}
                         </ul>
                     </div>
 
                     {/* ==================== 欄位 5：雲端系統與花絮 ==================== */}
                     <div className="lg:col-span-2 text-left space-y-4">
-                        <h4 className="text-sm font-black uppercase tracking-wider text-white border-l-2 border-[#B8D333] pl-2">
+                        <h4 className="text-s font-black uppercase tracking-wider text-white border-l-2 border-[#B8D333] pl-2">
                             快捷資源
                         </h4>
-                        <ul className="space-y-2.5 text-xs font-semibold text-slate-400">
+                        <ul className="space-y-2.5 text-sm font-semibold text-slate-400">
                             <li>
                                 <button onClick={() => handleNavigation('highlights', 'video-gallery')} className="hover:text-[#B8D333] transition-colors">
                                     活動花絮
@@ -188,7 +188,7 @@ export default function Footer({ setActiveTab }) {
                 </div>
 
                 {/* ==================== 底部版權聲明區 ==================== */}
-                <div className="mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-bold text-slate-500">
+                <div className="mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[14px] font-bold text-slate-500">
                     <p>© {currentYear} CA Network. 版權所有</p>
                     <div className="flex gap-6 items-center">
                         <button onClick={() => handleNavigation('home')} className="hover:text-white transition-colors">返回頂部</button>
