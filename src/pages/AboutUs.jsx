@@ -7,7 +7,6 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn space-y-24">
             {/* 封面照片 */}
             <div id="founders-story" className="col-span-4 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn mb-8">
-                {/*<img src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement-combined.png?alt=media&token=36d6bdd9-c812-437b-be28-37d75b2353c2" alt="Anita & Clement" className="w-full h-full object-cover opacity-75" />*/}
                 <div className="w-full h-full overflow-hidden rounded-2xl">
                     {/* 💻 電腦版照片：在 md (768px) 以上顯示，小螢幕 (手機) 隱藏 */}
                     <img
