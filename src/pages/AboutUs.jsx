@@ -11,7 +11,7 @@ export default function AboutUs() {
                 <div className="w-full h-full overflow-hidden rounded-2xl">
                     {/* 💻 電腦版照片：在 md (768px) 以上顯示，小螢幕 (手機) 隱藏 */}
                     <img
-                        src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement-combined.png?alt=media&token=36d6bdd9-c812-437b-be28-37d75b2353c2"
+                        src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%20combined%20landscape.png?alt=media&token=88d5e671-854a-4966-8fa2-31540ca79933"
                         alt="Desktop Banner"
                         className="hidden md:block w-full h-full object-cover"
                     />
