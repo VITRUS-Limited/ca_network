@@ -77,30 +77,50 @@ export const VIDEOS = [
     },
     {
         id: 3,
-        topic: 'CA Elite 耀升中產精英會',
-        title: '品味生活 ‧ 財富翻轉',
+        topic: 'Moving Up Seminar 2022',
+        title: 'MUS 2022',
         type: 'video',
-        desc: '這是專為跨界菁英與管理層量身打造的高階商業圈層。我們打破高薪困身的傳統束縛，用最具協同效應的借力舞台，帶你優雅跨界破局！\n ' +
-            '• 身心財富兼得：將專業閱歷轉化為大健康影響力，在重拾健康的同時，建立跨經濟週期的被動複利收入。\n ' +
-            '• 全球跨境視野：背靠全球大健康網絡，一鍵開啟橫跨上百個市場的國際生意，為人生增添抗風險資產。\n ' +
-            '• 菁英協同陪跑：匯聚醫生、會計師與企業東主等，各展所長、互助協作，帶你告別單打獨鬥，贏回家庭時間自主權！',
-        duration: '03:54',
-        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Elite.jpeg?alt=media&token=b6be2be3-04d2-4ddc-9ca5-d1e9ce261f3c',
-        videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Elite.mp4?alt=media&token=f2c69deb-34c6-4014-9bfc-61486f6ee05b'
+        desc: '四十多年前的一個決定，令 CA Network 創辦人 Clement 和 Anita 開啟了豐盛人生的旅程。他們的故事展現了安利不只是創業，而是一種獨特的生活方式。他們以身作則，不僅成就了自己的精彩人生，還始終如一地幫助無數人實現健康幸福生活',
+        duration: '04:47',
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203%20small.jpg?alt=media&token=3892394b-19c4-4f09-81f4-e4d54d778eb1',
+        videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2022.MOV?alt=media&token=636020d1-a506-4bf7-a7d5-be9121e8e1ec'
     },
     {
         id: 4,
-        topic: 'CA NEXT 耀升年輕創玩家',
-        title: '熱血創客 ‧ 自主人生',
+        topic: 'Moving Up Seminar 2023',
+        title: 'MUS2023',
         type: 'video',
-        desc: '這是專為 U35 及 Z 世代量身打造的輕資產創業孵化器。我們拒絕死板的朝九晚五，用最潮的社群文化、自媒體引流、興趣與運動社群，帶你邊玩邊破圈！\n ' +
-            '• 引爆個人 IP：把你的「增肌減脂」與健康生活，轉化為自媒體吸睛人設，無感裂變私域流量。\n ' +
-            '• 無痛輕資產：背靠全球化大健康骨幹網絡，一部手機就能一鍵開啟跨境電商，跳脫薪金天花板。\n ' +
-            '• 熱血伴隨陪跑：這裡有完整的個人成長與導師孵化地圖，給年輕靈魂一個發揮潛能、無限成長的黃金舞台！',
-        duration: '02:32',
-        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next.jpg?alt=media&token=3c230e67-6d7a-4a3f-9c9d-d17ba63bd57c',
-        videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next.mp4?alt=media&token=6a182876-cbf8-4827-b120-cdd5bd3ce7a0'
+        desc: '四十多年前的一個決定，令 CA Network 創辦人 Clement 和 Anita 開啟了豐盛人生的旅程。他們的故事展現了安利不只是創業，而是一種獨特的生活方式。他們以身作則，不僅成就了自己的精彩人生，還始終如一地幫助無數人實現健康幸福生活',
+        duration: '02:59',
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203%20small.jpg?alt=media&token=3892394b-19c4-4f09-81f4-e4d54d778eb1',
+        videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS%202023%20Macau.mov?alt=media&token=e9435a6c-13f6-4b4b-b622-7823fb8fa302'
     },
+    // {
+    //     id: 3,
+    //     topic: 'CA Elite 耀升中產精英會',
+    //     title: '品味生活 ‧ 財富翻轉',
+    //     type: 'video',
+    //     desc: '這是專為跨界菁英與管理層量身打造的高階商業圈層。我們打破高薪困身的傳統束縛，用最具協同效應的借力舞台，帶你優雅跨界破局！\n ' +
+    //         '• 身心財富兼得：將專業閱歷轉化為大健康影響力，在重拾健康的同時，建立跨經濟週期的被動複利收入。\n ' +
+    //         '• 全球跨境視野：背靠全球大健康網絡，一鍵開啟橫跨上百個市場的國際生意，為人生增添抗風險資產。\n ' +
+    //         '• 菁英協同陪跑：匯聚醫生、會計師與企業東主等，各展所長、互助協作，帶你告別單打獨鬥，贏回家庭時間自主權！',
+    //     duration: '03:54',
+    //     image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Elite.jpeg?alt=media&token=b6be2be3-04d2-4ddc-9ca5-d1e9ce261f3c',
+    //     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Elite.mp4?alt=media&token=f2c69deb-34c6-4014-9bfc-61486f6ee05b'
+    // },
+    // {
+    //     id: 4,
+    //     topic: 'CA NEXT 耀升年輕創玩家',
+    //     title: '熱血創客 ‧ 自主人生',
+    //     type: 'video',
+    //     desc: '這是專為 U35 及 Z 世代量身打造的輕資產創業孵化器。我們拒絕死板的朝九晚五，用最潮的社群文化、自媒體引流、興趣與運動社群，帶你邊玩邊破圈！\n ' +
+    //         '• 引爆個人 IP：把你的「增肌減脂」與健康生活，轉化為自媒體吸睛人設，無感裂變私域流量。\n ' +
+    //         '• 無痛輕資產：背靠全球化大健康骨幹網絡，一部手機就能一鍵開啟跨境電商，跳脫薪金天花板。\n ' +
+    //         '• 熱血伴隨陪跑：這裡有完整的個人成長與導師孵化地圖，給年輕靈魂一個發揮潛能、無限成長的黃金舞台！',
+    //     duration: '02:32',
+    //     image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next.jpg?alt=media&token=3c230e67-6d7a-4a3f-9c9d-d17ba63bd57c',
+    //     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next.mp4?alt=media&token=6a182876-cbf8-4827-b120-cdd5bd3ce7a0'
+    // },
     // {
     //     id: 5,
     //     topic: 'CA Mumtrepreneur 耀升創業媽媽群',

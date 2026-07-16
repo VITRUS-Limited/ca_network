@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Award, Calendar, Zap, Gem, Laptop, ExternalLink } from 'lucide-react';
-import { LEADERS_FACULTY } from "../data/Database.js";
+// import { LEADERS_FACULTY } from "../data/Database.js";
 // import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 // import { VIDEOS } from "../data/Database.js"
 
@@ -41,25 +41,26 @@ const FadeUpSection = ({ children, delay = 0, className = "" }) => {
     );
 };
 
-export default function BusinessEducation({ setPlayingVideo }) {
-    const [currLeader, setCurrLeader] = useState(0);
-    const totalLeaders = LEADERS_FACULTY.length;
+// export default function BusinessEducation({ setPlayingVideo }) {
+    // const [currLeader, setCurrLeader] = useState(0);
+    // const totalLeaders = LEADERS_FACULTY.length;
+    //
+    // // 領袖輪播：每 3.5 秒自動流暢切換
+    // useEffect(() => {
+    //     const timer = setInterval(() => {
+    //         setCurrLeader((prev) => (prev + 1) % totalLeaders);
+    //     }, 3500);
+    //     return () => clearInterval(timer);
+    // }, [totalLeaders]);
+    //
+    // const handlePrev = () => {
+    //     setCurrLeader((prev) => (prev - 1 + totalLeaders) % totalLeaders);
+    // };
+    // const handleNext = () => {
+    //     setCurrLeader((prev) => (prev + 1) % totalLeaders);
+    // };
 
-    // 領袖輪播：每 3.5 秒自動流暢切換
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrLeader((prev) => (prev + 1) % totalLeaders);
-        }, 3500);
-        return () => clearInterval(timer);
-    }, [totalLeaders]);
-
-    const handlePrev = () => {
-        setCurrLeader((prev) => (prev - 1 + totalLeaders) % totalLeaders);
-    };
-    const handleNext = () => {
-        setCurrLeader((prev) => (prev + 1) % totalLeaders);
-    };
-
+export default function BusinessEducation() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-12 text-left space-y-14 bg-slate-50/30 overflow-hidden">
 

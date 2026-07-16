@@ -194,7 +194,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
             <section className="relative py-24 overflow-hidden min-h-150 flex items-center">
 
                 {/* 背景 Slideshow 容器 */}
-                <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 opacity-85">
                     {TRUST_SLIDES.map((url, index) => (
                         <div
                             key={index}
