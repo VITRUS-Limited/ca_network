@@ -268,7 +268,7 @@ export default function NutritionEducation() {
 
                         {/* 卡片 A */}
                         <div className="flex flex-col sm:flex-row gap-5 p-5 rounded-3xl bg-white border border-slate-100 shadow-xs hover:shadow-md hover:border-slate-200/60 transition-all duration-300 group">
-                            <div className="w-full sm:w-52 h-32 rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
+                            <div className="w-full sm:w-52 aspect-video rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutritionist%202020.jpeg?alt=media&token=9005a74d-3db5-4f53-843f-3b6236dca934"
                                     alt="National Nutritionists"
@@ -288,7 +288,7 @@ export default function NutritionEducation() {
 
                         {/* 卡片 B */}
                         <div className="flex flex-col sm:flex-row gap-5 p-5 rounded-3xl bg-white border border-slate-100 shadow-xs hover:shadow-md hover:border-slate-200/60 transition-all duration-300 group">
-                            <div className="w-full sm:w-52 h-32 rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
+                            <div className="w-full sm:w-52 aspect-video rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition%20Class%20Speakers%20small.jpeg?alt=media&token=81f48a31-5878-423e-9bc0-64157232a4fe"
                                     alt="CA Nutrition Class Speakers"
@@ -308,7 +308,7 @@ export default function NutritionEducation() {
 
                         {/* 卡片 C */}
                         <div className="flex flex-col sm:flex-row gap-5 p-5 rounded-3xl bg-white border border-slate-100 shadow-xs hover:shadow-md hover:border-slate-200/60 transition-all duration-300 group">
-                            <div className="w-full sm:w-52 h-32 rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
+                            <div className="w-full sm:w-52 aspect-video rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Fitness%20Coach.jpg?alt=media&token=42cab7af-72f0-4b8f-9199-9bd27d8fb543"
                                     alt="CA Fitness Coach"
@@ -328,7 +328,7 @@ export default function NutritionEducation() {
 
                         {/* 卡片 D */}
                         <div className="flex flex-col sm:flex-row gap-5 p-5 rounded-3xl bg-white border border-slate-100 shadow-xs hover:shadow-md hover:border-slate-200/60 transition-all duration-300 group">
-                            <div className="w-full sm:w-52 h-32 rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
+                            <div className="w-full sm:w-52 aspect-video rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20HMC%20small.jpeg?alt=media&token=4dfb2f63-f4e8-4bf5-b889-2596b38fb614"
                                     alt="CA HMC"

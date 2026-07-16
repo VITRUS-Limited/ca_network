@@ -137,7 +137,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                             {/* 第二影格 */}
                             <div className="col-span-4 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 overflow-hidden relative">
                                 <img
-                                    src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20office%20small.jpg?alt=media&token=5343180e-32fa-4261-9300-2025357b375c"
+                                    src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20office%20small.jpg?alt=media&token=6ae1fac9-e793-40ba-b644-45753b37a3c9"
                                     alt="耀升總部開幕" className="w-full h-full object-cover opacity-85 [image-rendering:-webkit-optimize-contrast]"
                                 />
                                 <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100 z-10">CAQ 耀升總部啟幕</div>
@@ -155,16 +155,16 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                                 {/* 💻 電腦版照片：在 md (768px) 以上顯示，小螢幕 (手機) 隱藏 */}
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203%20small.jpg?alt=media&token=3892394b-19c4-4f09-81f4-e4d54d778eb1"
-                                    alt="Desktop Banner"
+                                    alt="Anita Clement Sharing landscape"
                                     className="hidden md:block w-full h-full object-cover"
                                 />
-
                                 {/* 📱 手機版照片：在 md 以上隱藏，小螢幕 (手機) 顯示 */}
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita%20Clement%20sharing%202.jpg?alt=media&token=74a0f619-a1c1-40e1-94d7-cacb102b908b"
-                                    alt="Mobile Banner"
+                                    alt="Anita Clement Sharing portrait"
                                     className="block md:hidden w-full h-full object-cover"
                                 />
+                                <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100 z-10">CA Network 創辦人分享</div>
                             </div>
 
                             {/* 第四影格 */}
