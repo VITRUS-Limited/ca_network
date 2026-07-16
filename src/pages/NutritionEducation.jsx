@@ -82,7 +82,7 @@ export default function NutritionEducation() {
                         <div id="basic-nutrition" className="bg-white border border-slate-100 rounded-[28px] shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 ease-out flex flex-col overflow-hidden group">
                             <div className="w-full h-56 bg-slate-900 overflow-hidden relative">
                                 <img
-                                    src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition%20Class.png?alt=media&token=d605da43-7769-4c63-8594-609f74f1b4c9"
+                                    src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnnette%20Nutrition%20Class.jpeg?alt=media&token=fed64730-caac-4503-b1d0-d4153c129ef6"
                                     alt="CA Nutrition Class"
                                     className="w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-700 ease-out [image-rendering:-webkit-optimize-contrast]"
                                 />
