@@ -6,7 +6,7 @@ export default function Highlights({ setPlayingVideo }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn">
       <div className="max-w-3xl mb-12 space-y-4">
-        <span className="text-xs font-black tracking-widest text-[#034E72] bg-slate-100 px-3 py-1 rounded-full uppercase">能量共鳴 · 香港社區溫度</span>
+        <span className="text-s font-black tracking-widest text-[#034E72] bg-slate-100 px-3 py-1 rounded-full uppercase">精彩回顧 · 綻放美好生活</span>
         <h1 className="text-4xl font-black text-slate-900!">活動花絮</h1>
       </div>
 
