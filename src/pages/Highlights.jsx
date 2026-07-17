@@ -5,10 +5,12 @@ import { VIDEOS } from '../data/Database.js';
 export default function Highlights({ setPlayingVideo }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn">
-      <div className="max-w-3xl mb-12 space-y-4">
-        <span className="text-s font-black tracking-widest text-[#034E72] bg-slate-100 px-3 py-1 rounded-full uppercase">精彩回顧 · 綻放美好生活</span>
-        <h1 className="text-4xl font-black text-slate-900!">活動花絮</h1>
-      </div>
+        <div className="max-w-5xl relative mb-12">
+            <span className="text-s font-black tracking-widest text-[#034E72] bg-slate-100 px-3 py-1 rounded-full uppercase">精彩回顧 · 綻放美好生活</span>
+            <h1 className="text-4xl md:text-5xl font-black text-slate-900! tracking-tight leading-none [webkit-text-fill-color:initial] [text-fill-color:initial] mt-4">
+                活動花絮
+            </h1>
+        </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {VIDEOS.map((hl) => (
