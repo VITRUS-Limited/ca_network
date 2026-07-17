@@ -96,8 +96,8 @@ export default function NutritionEducation() {
                         <div id="nutri-topics" className="bg-white border border-slate-100 rounded-[28px] shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 ease-out flex flex-col overflow-hidden group">
                             <div className="w-full h-56 bg-slate-900 overflow-hidden relative">
                                 <img
-                                    src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition%20Class.jpeg?alt=media&token=3cc02075-ca09-4989-9d76-0984c867d96e"
-                                    alt="CA Nutrition Class Speakers"
+                                    src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition%20Class%20Thomas.jpeg?alt=media&token=df154448-6d03-46c9-9583-1103aba118cc"
+                                    alt="Special Nutrition Class"
                                     className="w-full h-full object-cover opacity-95 group-hover:scale-105 transition-transform duration-700 ease-out [image-rendering:-webkit-optimize-contrast]"
                                 />
                                 <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent"></div>
