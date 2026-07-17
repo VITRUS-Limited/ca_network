@@ -1,41 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Atom, Award, ChevronRight, Activity, BookOpen, Users, TrendingUp, Play } from 'lucide-react';
 import { VIDEOS } from '../data/Database.js';
-
-// ==================== 滾動視差動畫包裹元件 ====================
-const FadeUpSection = ({ children, delay = 0, className = "" }) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const domRef = useRef();
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.unobserve(entry.target); // 確保動畫只觸發一次
-                }
-            });
-        }, {
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px" // 當元素稍微進入視窗底部 50px 時觸發
-        });
-
-        if (domRef.current) observer.observe(domRef.current);
-        return () => observer.disconnect();
-    }, []);
-
-    return (
-        <div
-            ref={domRef}
-            className={`transform-gpu transition-all duration-1000 ease-out ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-24'
-            } ${className}`}
-            style={{ transitionDelay: `${delay}ms` }}
-        >
-            {children}
-        </div>
-    );
-};
+import FadeUpSection from '../components/FadeUpSection';
 
 const TRUST_SLIDES = [
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2.jpg?alt=media&token=6be0bc94-e40c-4cdd-8ac2-d7aa87a67da9",
@@ -54,7 +20,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % TRUST_SLIDES.length);
-        }, 3000); // 每 3 秒自動切換一張
+        }, 3500); // 每 3.5 秒自動切換一張
         return () => clearInterval(timer);
     }, []);
 

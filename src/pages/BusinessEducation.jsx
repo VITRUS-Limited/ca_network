@@ -1,64 +1,28 @@
-import { useState, useEffect, useRef } from 'react';
+// import { useState, useEffect } from 'react';
 import { Award, Calendar, Zap, Gem, Laptop, ExternalLink } from 'lucide-react';
+import FadeUpSection from '../components/FadeUpSection';
 // import { LEADERS_FACULTY } from "../data/Database.js";
 // import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 // import { VIDEOS } from "../data/Database.js"
 
-// ==================== 新增：滾動視差動畫包裹元件 ====================
-// 這個元件會偵測自己是否進入視窗範圍，進入後自動加上向上浮現的 Tailwind Class
-const FadeUpSection = ({ children, delay = 0, className = "" }) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const domRef = useRef();
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                // 當元素進入畫面 15% 時觸發動畫
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.unobserve(entry.target); // 觸發後解除觀察，確保只彈出一次
-                }
-            });
-        }, {
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px" // 讓元素稍微進入畫面底部多一點才觸發，視覺效果更好
-        });
-
-        if (domRef.current) observer.observe(domRef.current);
-        return () => observer.disconnect();
-    }, []);
-
-    return (
-        <div
-            ref={domRef}
-            className={`transform-gpu transition-all duration-1000 ease-out ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-24'
-            } ${className}`}
-            style={{ transitionDelay: `${delay}ms` }}
-        >
-            {children}
-        </div>
-    );
-};
-
 // export default function BusinessEducation({ setPlayingVideo }) {
-    // const [currLeader, setCurrLeader] = useState(0);
-    // const totalLeaders = LEADERS_FACULTY.length;
-    //
-    // // 領袖輪播：每 3.5 秒自動流暢切換
-    // useEffect(() => {
-    //     const timer = setInterval(() => {
-    //         setCurrLeader((prev) => (prev + 1) % totalLeaders);
-    //     }, 3500);
-    //     return () => clearInterval(timer);
-    // }, [totalLeaders]);
-    //
-    // const handlePrev = () => {
-    //     setCurrLeader((prev) => (prev - 1 + totalLeaders) % totalLeaders);
-    // };
-    // const handleNext = () => {
-    //     setCurrLeader((prev) => (prev + 1) % totalLeaders);
-    // };
+//     const [currLeader, setCurrLeader] = useState(0);
+//     const totalLeaders = LEADERS_FACULTY.length;
+//
+//     // 領袖輪播：每 3.5 秒自動流暢切換
+//     useEffect(() => {
+//         const timer = setInterval(() => {
+//             setCurrLeader((prev) => (prev + 1) % totalLeaders);
+//         }, 3500);
+//         return () => clearInterval(timer);
+//     }, [totalLeaders]);
+//
+//     const handlePrev = () => {
+//         setCurrLeader((prev) => (prev - 1 + totalLeaders) % totalLeaders);
+//     };
+//     const handleNext = () => {
+//         setCurrLeader((prev) => (prev + 1) % totalLeaders);
+//     };
 
 export default function BusinessEducation() {
     return (

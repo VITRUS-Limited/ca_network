@@ -34,7 +34,7 @@ export default function Footer({ setActiveTab }) {
         <footer className="bg-slate-950 text-slate-300 pt-20 pb-8 border-t border-slate-900 relative overflow-hidden">
 
             {/* 高級漸變背景裝飾線 */}
-            <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#B8D333]/40 to-transparent"></div>
+            <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-[#B8D333]/40 to-transparent"></div>
 
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
