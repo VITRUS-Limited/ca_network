@@ -95,6 +95,16 @@ export const VIDEOS = [
         image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203%20small.jpg?alt=media&token=3892394b-19c4-4f09-81f4-e4d54d778eb1',
         videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS%202023%20Macau.mov?alt=media&token=e9435a6c-13f6-4b4b-b622-7823fb8fa302'
     },
+    {
+        id: 5,
+        topic: 'Moving Up Seminar 2026',
+        title: 'MUS2026',
+        type: 'video',
+        desc: '四十多年前的一個決定，令 CA Network 創辦人 Clement 和 Anita 開啟了豐盛人生的旅程。他們的故事展現了安利不只是創業，而是一種獨特的生活方式。他們以身作則，不僅成就了自己的精彩人生，還始終如一地幫助無數人實現健康幸福生活',
+        duration: '04:20',
+        image: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2026.jpg?alt=media&token=788c6bef-47a5-4e82-87f5-cf4bd9d0ef0e',
+        videoUrl: 'https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2026.mp4?alt=media&token=5d17e39e-6f02-4494-afd5-8568f01f1c2f'
+    },
     // {
     //     id: 3,
     //     topic: 'CA Elite 耀升中產精英會',
