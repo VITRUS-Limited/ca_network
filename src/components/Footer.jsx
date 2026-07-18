@@ -63,7 +63,6 @@ export default function Footer({ setActiveTab }) {
                         </div>
 
                         <div className="flex items-center gap-2 pt-5 border-t border-slate-900">
-                            {/* YouTube 按鈕：使用 p-2 和 rounded-full 製作高階按鈕質感 */}
                             <a
                                 href="https://www.facebook.com/canetwork.hk"
                                 target="_blank"
@@ -71,7 +70,7 @@ export default function Footer({ setActiveTab }) {
                                 className="text-[#B8D333] hover:text-white transition-colors p-2 rounded-full bg-white/5 hover:bg-white/10"
                                 title="CA Network Facebook 專頁"
                             >
-                                <div className="w-full h-8 overflow-hidden rounded-2xl">
+                                <div className="w-full h-8 aspect-square overflow-hidden rounded-2xl">
                                     <img
                                         src="/facebook.png"
                                         alt="Desktop Banner"
@@ -88,7 +87,7 @@ export default function Footer({ setActiveTab }) {
                                 className="text-[#B8D333] hover:text-white transition-colors p-2 rounded-full bg-white/5 hover:bg-white/10"
                                 title="CA Network YouTube 頻道"
                             >
-                                <div className="w-full h-8 overflow-hidden rounded-2xl">
+                                <div className="w-full h-8 aspect-square overflow-hidden rounded-2xl">
                                     <img
                                         src="/youtube.png"
                                         alt="Desktop Banner"
