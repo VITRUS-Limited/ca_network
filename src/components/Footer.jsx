@@ -74,7 +74,7 @@ export default function Footer({ setActiveTab }) {
                                     <img
                                         src="/facebook.png"
                                         alt="Desktop Banner"
-                                        className="hidden md:block w-full h-full object-cover"
+                                        className="block w-full h-full object-cover"
                                     />
                                 </div>
                             </a>
@@ -91,14 +91,12 @@ export default function Footer({ setActiveTab }) {
                                     <img
                                         src="/youtube.png"
                                         alt="Desktop Banner"
-                                        className="hidden md:block w-full h-full object-cover"
+                                        className="block w-full h-full object-cover"
                                     />
                                 </div>
                             </a>
                         </div>
                     </div>
-
-
 
                     {/* ==================== 欄位 2：關於耀升 ==================== */}
                     <div className="lg:col-span-2 text-left space-y-4">
