@@ -16,7 +16,7 @@ export default function Highlights({ setPlayingVideo }) {
         {VIDEOS.map((hl) => (
           <div key={hl.id} onClick={() => hl.type === 'video' ? setPlayingVideo(hl) : null} className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-lg transition-all group cursor-pointer">
             <div className="relative h-48 bg-slate-100 overflow-hidden">
-              <img src={hl.image} alt={hl.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={hl.image} alt={hl.title} className="h-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 via-transparent to-transparent"></div>
               <div className="absolute top-3 right-3 bg-slate-950/60 p-1.5 rounded-full backdrop-blur-sm text-[#B8D333]">
                 {hl.type === 'video' ? <Video size={14} /> : <ImageIcon size={14} />}
@@ -29,7 +29,7 @@ export default function Highlights({ setPlayingVideo }) {
             </div>
             <div className="p-4 space-y-2">
               <h3 className="text-sm font-bold text-slate-900 line-clamp-1">{hl.title}</h3>
-              <p className="text-[11px] text-slate-500 line-clamp-2">{hl.desc}</p>
+              <p className="text-[13px] text-slate-500 line-clamp-2">{hl.desc}</p>
             </div>
           </div>
         ))}
