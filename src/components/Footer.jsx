@@ -3,7 +3,7 @@ import { Mail, MapPin, ExternalLink } from 'lucide-react';
 
 export default function Footer({ setActiveTab }) {
     const currentYear = new Date().getFullYear();
-    // 💡 智能導航與滾動引擎：先切換 Tab，再延遲計算座標平滑滾動至對應 ID
+    // 智能導航與滾動引擎：先切換 Tab，再延遲計算座標平滑滾動至對應 ID
     const handleNavigation = (tab, elementId) => {
         setActiveTab(tab);
 
@@ -61,7 +61,45 @@ export default function Footer({ setActiveTab }) {
                                 <span>info@canetwork.hk</span>
                             </div>
                         </div>
+
+                        <div className="flex items-center gap-2 pt-5 border-t border-slate-900">
+                            {/* YouTube 按鈕：使用 p-2 和 rounded-full 製作高階按鈕質感 */}
+                            <a
+                                href="https://www.facebook.com/canetwork.hk"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#B8D333] hover:text-white transition-colors p-2 rounded-full bg-white/5 hover:bg-white/10"
+                                title="CA Network Facebook 專頁"
+                            >
+                                <div className="w-full h-8 overflow-hidden rounded-2xl">
+                                    <img
+                                        src="/facebook.png"
+                                        alt="Desktop Banner"
+                                        className="hidden md:block w-full h-full object-cover"
+                                    />
+                                </div>
+                            </a>
+
+                            {/* Facebook 按鈕 */}
+                            <a
+                                href="https://www.youtube.com/@canetwork5329"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#B8D333] hover:text-white transition-colors p-2 rounded-full bg-white/5 hover:bg-white/10"
+                                title="CA Network YouTube 頻道"
+                            >
+                                <div className="w-full h-8 overflow-hidden rounded-2xl">
+                                    <img
+                                        src="/youtube.png"
+                                        alt="Desktop Banner"
+                                        className="hidden md:block w-full h-full object-cover"
+                                    />
+                                </div>
+                            </a>
+                        </div>
                     </div>
+
+
 
                     {/* ==================== 欄位 2：關於耀升 ==================== */}
                     <div className="lg:col-span-2 text-left space-y-4">
