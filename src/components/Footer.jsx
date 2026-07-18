@@ -54,7 +54,7 @@ export default function Footer({ setActiveTab }) {
                         <div className="space-y-3 pt-2 text-xs font-medium text-slate-400">
                             <div className="flex items-center gap-3">
                                 <MapPin size={16} className="text-[#B8D333]" />
-                                <span>香港九龍油麻地家樂坊2008室</span>
+                                <span>香港九龍油麻地家樂坊20樓2008室</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <Mail size={16} className="text-[#B8D333]" />
