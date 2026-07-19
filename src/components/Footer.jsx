@@ -244,7 +244,7 @@ export default function Footer({ setActiveTab }) {
 
                 {/* ==================== 底部版權聲明區 ==================== */}
                 <div className="mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[14px] font-bold text-slate-500">
-                    <p>© {currentYear} CA Network. 版權所有</p>
+                    <p>© {currentYear} CA Network International Limited. 版權所有</p>
                     <div className="flex gap-6 items-center">
                         <button onClick={() => handleNavigation('home')} className="hover:text-white transition-colors">返回頂部</button>
                     </div>
