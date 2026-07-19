@@ -70,16 +70,14 @@ export default function Footer({ setActiveTab }) {
                                 className="text-[#B8D333] hover:text-white transition-colors p-2 rounded-full bg-white/5 hover:bg-white/10"
                                 title="CA Network Facebook 專頁"
                             >
-                                <div className="w-full h-8 aspect-square overflow-hidden rounded-2xl">
+                                <div className="w-full h-12 aspect-square overflow-hidden rounded-2xl">
                                     <img
-                                        src="/facebook.png"
+                                        src="/facebook.svg"
                                         alt="Desktop Banner"
                                         className="block w-full h-full object-cover"
                                     />
                                 </div>
                             </a>
-
-                            {/* Facebook 按鈕 */}
                             <a
                                 href="https://www.youtube.com/@canetwork5329"
                                 target="_blank"
@@ -87,9 +85,9 @@ export default function Footer({ setActiveTab }) {
                                 className="text-[#B8D333] hover:text-white transition-colors p-2 rounded-full bg-white/5 hover:bg-white/10"
                                 title="CA Network YouTube 頻道"
                             >
-                                <div className="w-full h-8 aspect-square overflow-hidden rounded-2xl">
+                                <div className="w-full h-12 aspect-square overflow-hidden rounded-2xl">
                                     <img
-                                        src="/youtube.png"
+                                        src="/youtube.svg"
                                         alt="Desktop Banner"
                                         className="block w-full h-full object-cover"
                                     />
@@ -112,6 +110,11 @@ export default function Footer({ setActiveTab }) {
                             <li>
                                 <button onClick={() => handleNavigation('about', 'core-value')} className="hover:text-[#B8D333] transition-colors">
                                     核心價值
+                                </button>
+                            </li>
+                            <li>
+                                <button onClick={() => handleNavigation('highlights', 'video-gallery')} className="hover:text-[#B8D333] transition-colors">
+                                    活動花絮
                                 </button>
                             </li>
                         </ul>
@@ -198,14 +201,9 @@ export default function Footer({ setActiveTab }) {
                     {/* ==================== 欄位 5：雲端系統與花絮 ==================== */}
                     <div className="lg:col-span-2 text-left space-y-4">
                         <h4 className="text-s font-black uppercase tracking-wider text-white border-l-2 border-[#B8D333] pl-2">
-                            快捷資源
+                            資源及連結
                         </h4>
-                        <ul className="space-y-2.5 text-sm font-semibold text-slate-400">
-                            <li>
-                                <button onClick={() => handleNavigation('highlights', 'video-gallery')} className="hover:text-[#B8D333] transition-colors">
-                                    活動花絮
-                                </button>
-                            </li>
+                        <ul className="space-y-2.5 text-s font-semibold text-slate-400">
                             <li>
                                 <a
                                     href="https://canetwork.me"
@@ -214,7 +212,29 @@ export default function Footer({ setActiveTab }) {
                                     className="hover:text-[#B8D333] transition-colors flex items-center gap-1 font-bold text-white"
                                 >
                                     <span>24/7 雲端 e-Learning</span>
-                                    <ExternalLink size={11} className="text-[#B8D333]" />
+                                    <ExternalLink size={15} className="text-[#B8D333]" />
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/canetwork.hk"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-[#B8D333] transition-colors flex items-center gap-1 font-bold text-white"
+                                >
+                                    <span>Facebook 官方專頁</span>
+                                    <ExternalLink size={15} className="text-[#B8D333]" />
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.youtube.com/@canetwork5329"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-[#B8D333] transition-colors flex items-center gap-1 font-bold text-white"
+                                >
+                                    <span>Youtube 官方頻道</span>
+                                    <ExternalLink size={15} className="text-[#B8D333]" />
                                 </a>
                             </li>
                         </ul>
