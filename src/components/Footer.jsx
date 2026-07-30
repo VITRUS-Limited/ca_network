@@ -1,8 +1,21 @@
 import 'react';
+import { useState, useRef } from 'react';
 import { Mail, MapPin, ExternalLink } from 'lucide-react';
 
 export default function Footer({ setActiveTab }) {
     const currentYear = new Date().getFullYear();
+    const [showVITRUS, setShowVITRUS] = useState(false);
+    const pressTimerRef = useRef(null);
+    const handlePressStart = () => {
+        pressTimerRef.current = setTimeout(() => {
+            setShowVITRUS(prev => !prev); // 再次長按可自由開啟/隱藏
+        }, 1500);
+    };
+    const handlePressEnd = () => {
+        if (pressTimerRef.current) {
+            clearTimeout(pressTimerRef.current);
+        }
+    };
     // 智能導航與滾動引擎：先切換 Tab，再延遲計算座標平滑滾動至對應 ID
     const handleNavigation = (tab, elementId) => {
         setActiveTab(tab);
@@ -243,10 +256,39 @@ export default function Footer({ setActiveTab }) {
                 </div>
 
                 {/* ==================== 底部版權聲明區 ==================== */}
-                <div className="mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[14px] font-bold text-slate-500">
-                    <p>© {currentYear} CA Network International Limited. 版權所有</p>
-                    <div className="flex gap-6 items-center">
-                        <button onClick={() => handleNavigation('home')} className="hover:text-white transition-colors">返回頂部</button>
+                <div className="mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 font-bold text-slate-500">
+
+                    {/* 版權文案與彩蛋容器 */}
+                    <div className="flex flex-col items-center md:items-start gap-1 text-xs">
+                        <p
+                            onMouseDown={handlePressStart}
+                            onMouseUp={handlePressEnd}
+                            onMouseLeave={handlePressEnd}
+                            onTouchStart={handlePressStart}
+                            onTouchEnd={handlePressEnd}
+                            onTouchCancel={handlePressEnd}
+                            className="select-none cursor-pointer hover:text-slate-400 transition-colors"
+                            title="長按解鎖隱藏彩蛋"
+                        >
+                            © {currentYear} CA Network International Limited. 版權所有
+                        </p>
+
+                        {/* 🌟 隱藏彩蛋：長按後平滑淡入顯示 */}
+                        <span
+                            className={`text-[9px] tracking-widest text-slate-600 font-mono transition-all duration-500 ease-out transform ${
+                                showVITRUS
+                                    ? 'opacity-100 translate-y-0 max-h-6'
+                                    : 'opacity-0 -translate-y-1 max-h-0 overflow-hidden'
+                            }`}
+                        >
+                            powered by VITRUS
+                        </span>
+                    </div>
+
+                    <div className="flex gap-6 items-center text-xs">
+                        <button onClick={() => handleNavigation('home')} className="hover:text-white transition-colors">
+                            返回頂部
+                        </button>
                     </div>
                 </div>
             </div>
