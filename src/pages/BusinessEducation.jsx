@@ -72,13 +72,13 @@ export default function BusinessEducation() {
                             </div>
                         </div>
 
-                        {/* ADD 卡片 */}
+                        {/* GoPT 卡片 */}
                         <div id="add-course" className="bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl transition-all duration-500 ease-out flex flex-col overflow-hidden group relative md:-translate-y-4">
                             <div className="absolute top-0 inset-x-0 h-1.5 bg-[#B8D333] z-20"></div>
                             <div className="w-full h-48 bg-slate-950 overflow-hidden relative">
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FLogo-ADD.jpg?alt=media&token=c2aa6421-4c3a-4133-9309-0547ed9be1c2"
-                                    alt="ADD"
+                                    alt="GoPT"
                                     className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
                                 <div className="absolute bottom-0 inset-x-0 h-8 bg-white [clip-path:polygon(0_101%,101%_101%,101%_0)]"></div>
@@ -86,7 +86,7 @@ export default function BusinessEducation() {
                             <div className="p-8 pt-2 relative flex-1 flex flex-col justify-between space-y-2">
                                 <div className="space-y-3">
                                     <div className="text-[12px] font-black tracking-widest text-[#034E72] uppercase bg-[#B8D333]/30 px-2.5 py-1 rounded w-fit">訂定目標 ‧ 建立團隊</div>
-                                    <h3 className="text-2xl font-black text-slate-800">達標精英班 ADD</h3>
+                                    <h3 className="text-2xl font-black text-slate-800">達標精英班 GoPT</h3>
                                     <p className="text-sm text-slate-500 leading-relaxed pt-1">當身後開始有了並肩作戰的夥伴，領導的責任與榮譽便隨之而來。達標精英班旨在協助已成功起步的事業夥伴重新校準人生藍圖，訂定具體且具感召力的團隊目標。課程將專注於培育夥伴的目標感，以及學會如何用行動引領新人，從一個人前行，蛻變為攜手團隊共創大健康未來的領袖典範。</p>
                                 </div>
                                 <ul className="space-y-2 text-xs font-bold text-slate-600 pt-5">
