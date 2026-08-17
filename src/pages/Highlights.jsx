@@ -4,17 +4,19 @@ import { VIDEOS } from '../data/Database.js';
 
 export default function Highlights({ setPlayingVideo }) {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn">
-      <div className="max-w-3xl mb-12 space-y-4">
-        <span className="text-xs font-black tracking-widest text-[#034E72] bg-slate-100 px-3 py-1 rounded-full uppercase">能量共鳴 · 香港社區溫度</span>
-        <h1 className="text-4xl font-black text-slate-900">活動花絮與高光時刻</h1>
-      </div>
+    <div id="video-gallery" className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn">
+        <div className="max-w-5xl relative mb-12">
+            <span className="text-s font-black tracking-widest text-[#034E72] bg-slate-100 px-3 py-1 rounded-full uppercase">精彩回顧 · 綻放美好生活</span>
+            <h1 className="text-4xl md:text-5xl font-black text-slate-900! tracking-tight leading-none [webkit-text-fill-color:initial] [text-fill-color:initial] mt-4">
+                活動花絮
+            </h1>
+        </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {VIDEOS.map((hl) => (
           <div key={hl.id} onClick={() => hl.type === 'video' ? setPlayingVideo(hl) : null} className="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-lg transition-all group cursor-pointer">
             <div className="relative h-48 bg-slate-100 overflow-hidden">
-              <img src={hl.image} alt={hl.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={hl.image} alt={hl.title} className="h-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 via-transparent to-transparent"></div>
               <div className="absolute top-3 right-3 bg-slate-950/60 p-1.5 rounded-full backdrop-blur-sm text-[#B8D333]">
                 {hl.type === 'video' ? <Video size={14} /> : <ImageIcon size={14} />}
@@ -27,7 +29,7 @@ export default function Highlights({ setPlayingVideo }) {
             </div>
             <div className="p-4 space-y-2">
               <h3 className="text-sm font-bold text-slate-900 line-clamp-1">{hl.title}</h3>
-              <p className="text-[11px] text-slate-500 line-clamp-2">{hl.desc}</p>
+              <p className="text-[13px] text-slate-500 line-clamp-2">{hl.desc}</p>
             </div>
           </div>
         ))}
