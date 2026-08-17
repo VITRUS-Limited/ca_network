@@ -26,7 +26,7 @@ export default function App() {
   };
 
   return (
-      <div className="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased">
+      <div className="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased px-4 sm:px-8 lg:px-12 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]">
 
         {/* 視圖控制切換列 */}
         <div className="sticky top-0 z-50 bg-[#034E72] text-white border-b border-white/10 px-4 py-2.5 shadow-md flex flex-col sm:flex-row items-center justify-between gap-3">
