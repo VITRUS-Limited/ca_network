@@ -31,7 +31,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                 {/* Background Deco */}
                 <div id="trust-pillars" className="absolute top-0 left-1/4 w-96 h-96 bg-[#B8D333]/10 rounded-full filter blur-3xl"></div>
 
-                <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-center">
+                <div className="max-w-7xl mx-auto px-4 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] grid lg:grid-cols-12 gap-12 items-center">
 
                     {/* 左側：文案區 */}
                     <FadeUpSection className="lg:col-span-5 space-y-6 text-left relative z-10">
