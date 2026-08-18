@@ -35,7 +35,7 @@ export default function App() {
                 <header className="w-full bg-white/95 backdrop-blur-md sticky top-0 md:top-12 z-40 shadow-sm border-b border-slate-100 select-none">
 
                     {/* 🎯 Row 1: Logo 區域 (加入 Safe Area 與響應式 Padding) */}
-                    <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] h-16 md:h-20 relative flex md:grid md:grid-cols-[1fr_auto_1fr] items-center justify-center md:justify-between">
+                    <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] h-16 md:h-20 relative flex md:grid md:grid-cols-[1fr_auto_1fr] items-center justify-center md:justify-between">
 
                         <div className="flex justify-center md:justify-start w-full md:w-auto">
                             <div
@@ -85,7 +85,7 @@ export default function App() {
 
                     {/* 🎯 Row 2: 手機版 Tab Bar (加入 Safe Area Padding) */}
                     <nav
-                        className="flex md:hidden items-center justify-start gap-6 text-xs font-bold text-slate-500 border-t border-slate-100 px-10 sm:px-12 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-2.5 overflow-x-auto whitespace-nowrap bg-white/95"
+                        className="flex md:hidden items-center justify-start gap-6 text-xs font-bold text-slate-500 border-t border-slate-100 px-10 sm:px-12 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] py-2.5 overflow-x-auto whitespace-nowrap bg-white/95"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
                         {['home', 'aboutUs', 'nutrition', 'business', 'highlights'].map(tab => (

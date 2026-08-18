@@ -4,7 +4,7 @@ import FadeUpSection from '../components/FadeUpSection';
 export default function BusinessEducation() {
     return (
         /* 🎯 最外層加上 Safe Area 與 Responsive Padding */
-        <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-12 text-left space-y-14 bg-slate-50/30 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] py-12 text-left space-y-14 bg-slate-50/30 overflow-hidden">
 
             {/* 01. 頂部標題區 */}
             <FadeUpSection>
