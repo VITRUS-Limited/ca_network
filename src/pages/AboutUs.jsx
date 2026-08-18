@@ -6,7 +6,7 @@ import { PersonStanding, Sparkles, HandHeartIcon, Award } from 'lucide-react';
 export default function AboutUs() {
     return (
         /* 🎯 最外層加上 Safe Area 與 Responsive Padding */
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-16 text-left animate-fadeIn space-y-24">
+        <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-16 text-left animate-fadeIn space-y-24">
             <FadeUpSection>
                 <div id="founders-story" className="col-span-4 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn mb-8">
                     <div className="w-full h-full overflow-hidden rounded-2xl">

@@ -5,7 +5,7 @@ import { VIDEOS } from '../data/Database.js';
 export default function Highlights({ setPlayingVideo }) {
     return (
         /* 🎯 最外層加上 Safe Area 與 Responsive Padding */
-        <div id="video-gallery" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-16 text-left animate-fadeIn">
+        <div id="video-gallery" className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-16 text-left animate-fadeIn">
             <div className="max-w-5xl relative mb-12">
                 <span className="text-s font-black tracking-widest text-[#034E72] bg-slate-100 px-3 py-1 rounded-full uppercase">精彩回顧 · 綻放美好生活</span>
                 <h1 className="text-4xl md:text-5xl font-black text-slate-900! tracking-tight leading-none [webkit-text-fill-color:initial] [text-fill-color:initial] mt-4">

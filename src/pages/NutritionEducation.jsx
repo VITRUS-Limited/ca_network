@@ -23,7 +23,7 @@ export default function NutritionEducation() {
 
     return (
         /* 🎯 最外層加上 Safe Area 與 Responsive Padding */
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-12 text-left space-y-14 bg-slate-50/50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-12 text-left space-y-14 bg-slate-50/50 overflow-hidden">
 
             {/* 內容區塊均保留原本完美佈局 */}
             <FadeUpSection>
