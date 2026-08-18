@@ -7,7 +7,6 @@ export default function NutritionEducation() {
     const [currInstructor, setCurrInstructor] = useState(0);
     const totalLeaders = NUTRITION_FACULTY.length;
 
-    // 讀秒自動輪播效果 (每 4 秒自動往後轉動一格)
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrInstructor((prev) => (prev + 1) % totalLeaders);
@@ -23,9 +22,10 @@ export default function NutritionEducation() {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-12 text-left space-y-14 bg-slate-50/50 overflow-hidden">
+        /* 🎯 最外層加上 Safe Area 與 Responsive Padding */
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-12 text-left space-y-14 bg-slate-50/50 overflow-hidden">
 
-            {/* ==================== 01. 頂部標題區 ==================== */}
+            {/* 內容區塊均保留原本完美佈局 */}
             <FadeUpSection>
                 <div className="max-w-5xl relative">
                     <span className="inline-block text-s font-black tracking-widest text-[#034E72] bg-[#B8D333]/25 px-4 py-1.5 rounded-full uppercase border border-[#B8D333]/20">
@@ -40,7 +40,7 @@ export default function NutritionEducation() {
                 </div>
             </FadeUpSection>
 
-            {/* ==================== 02. 三大核心課程 ==================== */}
+            {/* 三大核心課程 */}
             <FadeUpSection delay={100}>
                 <div>
                     <div className="grid md:grid-cols-3 gap-8">
@@ -120,7 +120,7 @@ export default function NutritionEducation() {
                 </div>
             </FadeUpSection>
 
-            {/* ==================== 03. 耀升國際營養師聯會 ==================== */}
+            {/* 耀升國際營養師聯會 */}
             <FadeUpSection delay={150}>
                 <div id="cana-union" className="bg-white border border-slate-100 rounded-4xl shadow-xs overflow-hidden grid md:grid-cols-2 min-h-100 group hover:shadow-md transition-all duration-500">
                     <div className="bg-slate-900 relative min-h-70 md:min-h-full overflow-hidden">
@@ -155,7 +155,7 @@ export default function NutritionEducation() {
                 </div>
             </FadeUpSection>
 
-            {/* ==================== 04. 動態秒轉導師名人堂 ==================== */}
+            {/* 導師名人堂 */}
             <FadeUpSection delay={150}>
                 <div id="nutri-faculty" className="pt-2 space-y-6 relative">
                     <div className="flex justify-between items-end">
@@ -173,7 +173,6 @@ export default function NutritionEducation() {
                         </div>
                     </div>
 
-                    {/* 卡片設計 */}
                     <div className="w-full overflow-hidden rounded-4xl py-4 px-1">
                         <div
                             style={{
@@ -222,7 +221,7 @@ export default function NutritionEducation() {
                 </div>
             </FadeUpSection>
 
-            {/* ==================== 05. 進階教練及講師培訓 ==================== */}
+            {/* 進階教練及講師培訓 */}
             <FadeUpSection delay={150}>
                 <div id="advanced-cert" className="pt-2 space-y-6">
                     <div className="max-w-2xl space-y-3">
@@ -232,7 +231,6 @@ export default function NutritionEducation() {
 
                     <div className="grid md:grid-cols-2 gap-8">
 
-                        {/* 卡片 A */}
                         <div className="flex flex-col sm:flex-row gap-5 p-5 rounded-3xl bg-white border border-slate-100 shadow-xs hover:shadow-md hover:border-slate-200/60 transition-all duration-300 group">
                             <div className="w-full sm:w-52 aspect-video rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
                                 <img
@@ -252,7 +250,6 @@ export default function NutritionEducation() {
                             </div>
                         </div>
 
-                        {/* 卡片 B */}
                         <div className="flex flex-col sm:flex-row gap-5 p-5 rounded-3xl bg-white border border-slate-100 shadow-xs hover:shadow-md hover:border-slate-200/60 transition-all duration-300 group">
                             <div className="w-full sm:w-52 aspect-video rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
                                 <img
@@ -272,7 +269,6 @@ export default function NutritionEducation() {
                             </div>
                         </div>
 
-                        {/* 卡片 C */}
                         <div className="flex flex-col sm:flex-row gap-5 p-5 rounded-3xl bg-white border border-slate-100 shadow-xs hover:shadow-md hover:border-slate-200/60 transition-all duration-300 group">
                             <div className="w-full sm:w-52 aspect-video rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
                                 <img
@@ -292,7 +288,6 @@ export default function NutritionEducation() {
                             </div>
                         </div>
 
-                        {/* 卡片 D */}
                         <div className="flex flex-col sm:flex-row gap-5 p-5 rounded-3xl bg-white border border-slate-100 shadow-xs hover:shadow-md hover:border-slate-200/60 transition-all duration-300 group">
                             <div className="w-full sm:w-52 aspect-video rounded-2xl bg-slate-900 overflow-hidden shrink-0 shadow-xs relative">
                                 <img
@@ -316,7 +311,7 @@ export default function NutritionEducation() {
                 </div>
             </FadeUpSection>
 
-            {/* ==================== 06. 耀升雲端系統入口 ==================== */}
+            {/* 耀升雲端系統入口 */}
             <FadeUpSection delay={150}>
                 <div className="bg-linear-to-br from-[#034E72] to-[#023752] rounded-[40px] text-white p-8 mt-12 md:p-14 relative overflow-hidden shadow-xl border border-white/10 transform-gpu">
                     <div className="absolute -right-10 -bottom-10 w-96 h-96 bg-[#B8D333]/10 rounded-full filter blur-3xl animate-pulse"></div>

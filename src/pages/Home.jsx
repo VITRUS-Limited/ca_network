@@ -20,7 +20,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % TRUST_SLIDES.length);
-        }, 3500); // 每 3.5 秒自動切換一張
+        }, 3500);
         return () => clearInterval(timer);
     }, []);
 
@@ -28,12 +28,11 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
         <div className="overflow-hidden">
             {/* ==================== HERO SECTION ==================== */}
             <section className="relative bg-[#034E72] text-white pt-16 pb-24 overflow-hidden">
-                {/* Background Deco */}
                 <div id="trust-pillars" className="absolute top-0 left-1/4 w-96 h-96 bg-[#B8D333]/10 rounded-full filter blur-3xl"></div>
 
-                <div className="max-w-7xl mx-auto px-4 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] grid lg:grid-cols-12 gap-12 items-center">
+                {/* 🎯 加上 safe-area 與 responsive padding */}
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] grid lg:grid-cols-12 gap-12 items-center">
 
-                    {/* 左側：文案區 */}
                     <FadeUpSection className="lg:col-span-5 space-y-6 text-left relative z-10">
                         <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/15">
                             <Award size={14} className="text-[#B8D333]" />
@@ -46,7 +45,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                             </span>
                         </h1>
                         <p className="text-slate-200 text-base md:text-lg leading-relaxed">
-                            CA Network 創立四十餘年，透過豐富紮實的創富經驗和專業實用的營養知識，帶領伙伴深耕大健康市場。透過分享個人及家庭的健康改善經驗，我們共同建立一份永續、有保障及持續增長的資產性收入，同時實現財富、時間、健康自由。
+                            CA Network 創立四十餘年，透過豐富紮實的創富經驗和專業實用的營養知識，帶領伙伴深耕大健康市場。透過分享個人及家庭的健康改善經驗，我們共同建立一份永續、有保障及持續增長的大健康輕創業事業。
                         </p>
                         <div className="pt-4 flex flex-col sm:flex-row gap-4">
                             <button onClick={() => setActiveTab('nutrition')} className="bg-[#B8D333] hover:bg-[#9fb824] text-[#034E72] px-6 py-3.5 rounded-xl font-bold text-sm tracking-wide shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group accent-pulse">
@@ -76,12 +75,10 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                         </div>
                     </FadeUpSection>
 
-                    {/* 右側：影片網格 */}
                     <FadeUpSection delay={150} className="lg:col-span-7">
                         <div className="grid grid-cols-12 gap-4 relative">
                             <div className="absolute inset-0 bg-radial-gradient from-[#B8D333]/15 to-transparent filter blur-2xl -z-10"></div>
 
-                            {/* 第一影格 */}
                             <div onClick={() => setPlayingVideo(VIDEOS[0])} className="col-span-8 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer overflow-hidden relative group">
                                 <video
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2Fca_network_introduction_video.mp4?alt=media&token=dfda5eb9-81d1-4bf8-ac29-db5a77ceeb4b"
@@ -100,7 +97,6 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                                 </div>
                             </div>
 
-                            {/* 第二影格 */}
                             <div className="col-span-4 h-48 video-grid-card rounded-2xl shadow-xl bg-slate-800 overflow-hidden relative">
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20office%20small.jpg?alt=media&token=6ae1fac9-e793-40ba-b644-45753b37a3c9"
@@ -109,22 +105,12 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                                 <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100 z-10">CAQ 耀升總部啟幕</div>
                             </div>
 
-                            {/* 第三影格 */}
-                            {/*<div className="col-span-4 h-52 video-grid-card rounded-2xl shadow-xl bg-slate-800 overflow-hidden relative">*/}
-                            {/*    <img*/}
-                            {/*        src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203%20small.jpg?alt=media&token=3892394b-19c4-4f09-81f4-e4d54d778eb1"*/}
-                            {/*        alt="Anita-Clement FCA2015" className="w-full h-full object-cover opacity-85 [image-rendering:-webkit-optimize-contrast]"*/}
-                            {/*    />*/}
-                            {/*    <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100 z-10">CA Network 創辦人分享</div>*/}
-                            {/*</div>*/}
                             <div className="col-span-4 h-52 video-grid-card rounded-2xl shadow-xl bg-slate-800 overflow-hidden relative">
-                                {/* 💻 電腦版照片：在 md (768px) 以上顯示，小螢幕 (手機) 隱藏 */}
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%203%20small.jpg?alt=media&token=3892394b-19c4-4f09-81f4-e4d54d778eb1"
                                     alt="Anita Clement Sharing landscape"
                                     className="hidden md:block w-full h-full object-cover"
                                 />
-                                {/* 📱 手機版照片：在 md 以上隱藏，小螢幕 (手機) 顯示 */}
                                 <img
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita%20Clement%20sharing%202.jpg?alt=media&token=74a0f619-a1c1-40e1-94d7-cacb102b908b"
                                     alt="Anita Clement Sharing portrait"
@@ -133,7 +119,6 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                                 <div className="absolute bottom-3 left-3 text-[10px] font-bold text-slate-100 z-10">CA Network 創辦人分享</div>
                             </div>
 
-                            {/* 第四影格 */}
                             <div onClick={() => setPlayingVideo(VIDEOS[1])} className="col-span-8 h-52 video-grid-card rounded-2xl shadow-xl bg-slate-800 cursor-pointer overflow-hidden relative group">
                                 <video
                                     src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FFCA%20Anta%20Clement%20YT.mp4?alt=media&token=0afb19eb-3d39-406c-bcd8-a4a9daa47d1d#t=8"
@@ -159,7 +144,6 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
             {/* ==================== TRUST SECTION ==================== */}
             <section className="relative py-24 overflow-hidden min-h-150 flex items-center">
 
-                {/* 背景 Slideshow 容器 */}
                 <div className="absolute inset-0 z-0 opacity-85">
                     {TRUST_SLIDES.map((url, index) => (
                         <div
@@ -175,13 +159,12 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                             />
                         </div>
                     ))}
-                    {/* 深色半透明遮罩 */}
                     <div className="absolute inset-0 bg-[#034E72]/85 mix-blend-multiply"></div>
                     <div className="absolute inset-0 bg-linear-to-b from-[#034E72]/50 via-transparent to-[#034E72]/50"></div>
                 </div>
 
-                {/* 內容區塊 */}
-                <div id="video-gallery" className="max-w-5xl mx-auto px-4 text-center relative z-10 text-white">
+                {/* 🎯 加上 safe-area 與 responsive padding */}
+                <div id="video-gallery" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] text-center relative z-10 text-white">
 
                     <FadeUpSection>
                         <div className="inline-block text-[#B8D333] font-black tracking-widest text-xs bg-white/5 backdrop-blur-lg px-4 py-1.5 rounded-full mb-6 border border-[#B8D333]/30">
@@ -193,12 +176,9 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                         </p>
                     </FadeUpSection>
 
-                    {/* 🎯 關鍵變更：這三個 Box 的磨砂背景、模糊和邊框預設全部隱藏 (bg-white/0 backdrop-blur-none border-transparent) */}
-                    {/* 🎯 當滑鼠停上去時 (hover:)，才會優雅過渡顯現 (hover:bg-white/10 hover:backdrop-blur-md hover:border-white/15) */}
                     <FadeUpSection delay={150}>
                         <div className="grid md:grid-cols-3 gap-12 mt-16">
 
-                            {/* 卡片 1 */}
                             <div className="p-8 rounded-3xl bg-white/0 backdrop-blur-none border border-transparent text-left space-y-4 hover:bg-white/10 hover:backdrop-blur-md hover:border-white/15 transition-all duration-500 ease-out group cursor-pointer">
                                 <div className="w-12 h-12 rounded-2xl bg-[#B8D333] flex items-center justify-center text-[#034E72] shadow-lg group-hover:scale-110 transition-transform duration-500">
                                     <BookOpen size={24} />
@@ -209,7 +189,6 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                                 </p>
                             </div>
 
-                            {/* 卡片 2 */}
                             <div className="p-8 rounded-3xl bg-white/0 backdrop-blur-none border border-transparent text-left space-y-4 hover:bg-white/10 hover:backdrop-blur-md hover:border-white/15 transition-all duration-500 ease-out group cursor-pointer">
                                 <div className="w-12 h-12 rounded-2xl bg-[#B8D333] flex items-center justify-center text-[#034E72] shadow-lg group-hover:scale-110 transition-transform duration-500">
                                     <Users size={24} />
@@ -220,7 +199,6 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                                 </p>
                             </div>
 
-                            {/* 卡片 3 */}
                             <div className="p-8 rounded-3xl bg-white/0 backdrop-blur-none border border-transparent text-left space-y-4 hover:bg-white/10 hover:backdrop-blur-md hover:border-white/15 transition-all duration-500 ease-out group cursor-pointer">
                                 <div className="w-12 h-12 rounded-2xl bg-[#B8D333] flex items-center justify-center text-[#034E72] shadow-lg group-hover:scale-110 transition-transform duration-500">
                                     <TrendingUp size={24} />

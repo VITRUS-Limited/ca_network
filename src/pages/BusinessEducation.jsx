@@ -1,34 +1,12 @@
-// import { useState, useEffect } from 'react';
 import { Award, Calendar, Zap, Gem, Laptop, ExternalLink } from 'lucide-react';
 import FadeUpSection from '../components/FadeUpSection';
-// import { LEADERS_FACULTY } from "../data/Database.js";
-// import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
-// import { VIDEOS } from "../data/Database.js"
-
-// export default function BusinessEducation({ setPlayingVideo }) {
-//     const [currLeader, setCurrLeader] = useState(0);
-//     const totalLeaders = LEADERS_FACULTY.length;
-//
-//     // 領袖輪播：每 3.5 秒自動流暢切換
-//     useEffect(() => {
-//         const timer = setInterval(() => {
-//             setCurrLeader((prev) => (prev + 1) % totalLeaders);
-//         }, 3500);
-//         return () => clearInterval(timer);
-//     }, [totalLeaders]);
-//
-//     const handlePrev = () => {
-//         setCurrLeader((prev) => (prev - 1 + totalLeaders) % totalLeaders);
-//     };
-//     const handleNext = () => {
-//         setCurrLeader((prev) => (prev + 1) % totalLeaders);
-//     };
 
 export default function BusinessEducation() {
     return (
-        <div className="max-w-7xl mx-auto px-4 py-12 text-left space-y-14 bg-slate-50/30 overflow-hidden">
+        /* 🎯 最外層加上 Safe Area 與 Responsive Padding */
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-12 text-left space-y-14 bg-slate-50/30 overflow-hidden">
 
-            {/* ==================== 01. 頂部標題區 ==================== */}
+            {/* 01. 頂部標題區 */}
             <FadeUpSection>
                 <div className="max-w-5xl relative">
                     <span className="inline-block text-s font-black tracking-widest text-white bg-[#034E72] border-white/50 px-4 py-1.5 rounded-md uppercase shadow-sm">
@@ -43,11 +21,10 @@ export default function BusinessEducation() {
                 </div>
             </FadeUpSection>
 
-            {/* ==================== 02. 三大核心創業課程 ==================== */}
+            {/* 02. 三大核心創業課程 */}
             <FadeUpSection delay={100}>
                 <div>
                     <div className="grid md:grid-cols-3 gap-8">
-                        {/* PTC 卡片 */}
                         <div id="ptc-course" className="bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl transition-all duration-500 ease-out flex flex-col overflow-hidden group relative">
                             <div className="absolute top-0 inset-x-0 h-1.5 bg-[#034E72] z-20"></div>
                             <div className="w-full h-48 bg-slate-950 overflow-hidden relative">
@@ -72,7 +49,6 @@ export default function BusinessEducation() {
                             </div>
                         </div>
 
-                        {/* GoPT 卡片 */}
                         <div id="add-course" className="bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl transition-all duration-500 ease-out flex flex-col overflow-hidden group relative md:-translate-y-4">
                             <div className="absolute top-0 inset-x-0 h-1.5 bg-[#B8D333] z-20"></div>
                             <div className="w-full h-48 bg-slate-950 overflow-hidden relative">
@@ -97,7 +73,6 @@ export default function BusinessEducation() {
                             </div>
                         </div>
 
-                        {/* LTC 卡片 */}
                         <div id="ltc-course" className="bg-white border border-slate-100 rounded-3xl shadow-xs hover:shadow-xl transition-all duration-500 ease-out flex flex-col overflow-hidden group relative">
                             <div className="absolute top-0 inset-x-0 h-1.5 bg-slate-950 z-20"></div>
                             <div className="w-full h-48 bg-slate-950 overflow-hidden relative">
@@ -126,7 +101,7 @@ export default function BusinessEducation() {
                 </div>
             </FadeUpSection>
 
-            {/* ==================== 03. 年度大會 Highlight ==================== */}
+            {/* 03. 年度大會 Highlight */}
             <FadeUpSection delay={150}>
                 <div id="mega-event" className="relative rounded-[40px] overflow-hidden shadow-2xl min-h-120 flex items-center bg-slate-950 group">
                     <div className="absolute inset-0">
@@ -166,208 +141,7 @@ export default function BusinessEducation() {
                 </div>
             </FadeUpSection>
 
-            {/*/!* ==================== 04. 動態秒轉領袖名人堂 ==================== *!/*/}
-            {/*<FadeUpSection delay={150}>*/}
-            {/*    <div id="biz-mentors" className="border-t border-slate-200/60 pt-16 space-y-8 relative">*/}
-            {/*        <div className="flex justify-between items-end">*/}
-            {/*            <div className="space-y-3">*/}
-            {/*                <span className="inline-block text-xs font-black text-white uppercase tracking-wider bg-slate-900 px-3 py-1 rounded">*/}
-            {/*                    Elite Mentor Matrix · 優秀導師矩陣*/}
-            {/*                </span>*/}
-            {/*                <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">*/}
-            {/*                    耀升系統菁英導師團*/}
-            {/*                </h3>*/}
-            {/*            </div>*/}
-            {/*            <div className="flex gap-2.5 z-10">*/}
-            {/*                <button onClick={handlePrev} className="p-3 rounded-full bg-slate-900 text-white hover:bg-[#034E72] transition-all shadow-md active:scale-95">*/}
-            {/*                    <ChevronLeft size={16} />*/}
-            {/*                </button>*/}
-            {/*                <button onClick={handleNext} className="p-3 rounded-full bg-slate-900 text-white hover:bg-[#034E72] transition-all shadow-md active:scale-95">*/}
-            {/*                    <ChevronRight size={16} />*/}
-            {/*                </button>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-
-            {/*        <div className="w-full overflow-hidden rounded-4xl py-4 px-1">*/}
-            {/*            <div*/}
-            {/*                style={{*/}
-            {/*                    transform: `translateX(calc(-1 * ${currLeader * (typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 33.333)}%))`*/}
-            {/*                }}*/}
-            {/*                className="flex transition-transform duration-500 ease-in-out will-change-transform"*/}
-            {/*            >*/}
-            {/*                {LEADERS_FACULTY.map((faculty) => (*/}
-            {/*                    <div key={faculty.id} className="w-full md:w-1/3 shrink-0 px-3">*/}
-            {/*                        <div className="bg-linear-to-b from-slate-800 via-slate-800 to-slate-950 border border-slate-800/80 rounded-[28px] p-5 flex flex-col min-h-102.5 justify-between relative group overflow-hidden transition-all duration-500 ease-out hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">*/}
-
-            {/*                            <div className="w-full h-52 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 transition-colors duration-500">*/}
-            {/*                                <img*/}
-            {/*                                    src={faculty.image}*/}
-            {/*                                    alt={faculty.name}*/}
-            {/*                                    className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast] transform-gpu group-hover:scale-102 transition-transform duration-700 ease-out"*/}
-            {/*                                />*/}
-            {/*                            </div>*/}
-
-            {/*                            <div className="flex-1 flex flex-col justify-between pt-6 text-left relative z-10">*/}
-            {/*                                <div className="space-y-3">*/}
-            {/*                                    <div className="flex items-center gap-3">*/}
-            {/*                                        <h4 className="text-2xl font-black text-white tracking-tight group-hover:text-[#B8D333] transition-colors duration-300">*/}
-            {/*                                            {faculty.name}*/}
-            {/*                                        </h4>*/}
-            {/*                                        <span className="w-1.5 h-1.5 rounded-full bg-[#B8D333] shadow-[0_0_8px_#B8D333]"></span>*/}
-            {/*                                    </div>*/}
-
-            {/*                                    <p className="text-xs text-slate-400 font-medium leading-relaxed tracking-wide">*/}
-            {/*                                        {faculty.title.replace('註冊營養師', '頂級商業教練').replace('健康教育', '商業展業賦能')}*/}
-            {/*                                    </p>*/}
-            {/*                                </div>*/}
-
-            {/*                                <div className="border-t border-slate-900 pt-4 mt-5 flex items-center justify-between">*/}
-            {/*                                    <div className="flex items-center gap-2 text-slate-400 text-[11px] font-bold tracking-wider">*/}
-            {/*                                        <Gem size={13} className="text-[#B8D333] shrink-0" />*/}
-            {/*                                        <span className="text-slate-400 group-hover:text-slate-300 transition-colors"></span>*/}
-            {/*                                    </div>*/}
-            {/*                                </div>*/}
-            {/*                            </div>*/}
-
-            {/*                            <div className="absolute -right-20 -top-20 w-48 h-48 bg-[#B8D333]/5 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>*/}
-            {/*                            <div className="absolute -bottom-20 -left-20 w-56 h-56 bg-[#034E72]/20 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                ))}*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</FadeUpSection>*/}
-
-            {/*/!* ==================== 05. 市場分眾矩陣 ==================== *!/*/}
-            {/*<FadeUpSection delay={150}>*/}
-            {/*    <div id="market-segments" className="pt-8 space-y-8">*/}
-            {/*        <div className="max-w-3xl space-y-3">*/}
-            {/*            <span className="inline-block text-xs font-black text-[#B8D333] uppercase tracking-widest bg-[#034E72] px-3 py-1 rounded">*/}
-            {/*                Market Segmentation · 精準市場引流*/}
-            {/*            </span>*/}
-            {/*            <h3 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">*/}
-            {/*                全域圈層精準覆蓋，引爆大健康商業複利*/}
-            {/*            </h3>*/}
-            {/*        </div>*/}
-
-            {/*        <div className="grid md:grid-cols-2 gap-8">*/}
-
-            {/*            <div className="bg-linear-to-br from-slate-700 via-slate-900 to-slate-800 border border-slate-800/60 rounded-4xl p-6 flex flex-col justify-between min-h-115 group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.2)]">*/}
-            {/*                <div className="space-y-5">*/}
-            {/*                    <div onClick={() => setPlayingVideo(VIDEOS[2])} className="cursor-pointer w-full h-96 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 select-none">*/}
-            {/*                        <img*/}
-            {/*                            src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Elite.jpeg?alt=media&token=b6be2be3-04d2-4ddc-9ca5-d1e9ce261f3c"*/}
-            {/*                            alt="CA Elite"*/}
-            {/*                            className="w-full h-full object-cover opacity-60 group-hover:scale-102 transition-transform duration-700 ease-out"*/}
-            {/*                        />*/}
-            {/*                        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/40">*/}
-            {/*                            <Play size={40} className="text-[#B8D333] fill-[#B8D333]" />*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-
-            {/*                    <div className="space-y-2 text-left">*/}
-            {/*                        <div className="flex items-center gap-2">*/}
-            {/*                            <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">CA ELITE 中產精英會</h4>*/}
-            {/*                            <span className="text-[12px] font-bold bg-[#034E72] text-slate-300 px-2 py-0.5 rounded border border-white/5">高淨值商務</span>*/}
-            {/*                        </div>*/}
-            {/*                        <p className="text-xs text-slate-400 leading-relaxed">*/}
-            {/*                            CA Elite 是專為企業高管、商界精英及專業人士例如醫生、律師、會計師等打造的高端商務圈層。我們對接全球大健康平台，將專業閱歷轉化為輕資產創業機會，助您在收穫健康的同時，建立被動複利收入，贏回真正陪伴家庭的時間主權。*/}
-            {/*                        </p>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-
-            {/*                <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[12px] font-bold tracking-wider text-slate-500">*/}
-            {/*                    <span>品味生活 ‧ 財富翻轉</span>*/}
-            {/*                    <span className="font-serif italic text-slate-700 group-hover:text-[#B8D333]/30 transition-colors">Elite Prestige</span>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-
-            {/*            <div className="bg-linear-to-br from-slate-700 via-slate-900 to-slate-800 border border-slate-800/60 rounded-4xl p-6 flex flex-col justify-between min-h-115 group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.2)]">*/}
-            {/*                <div className="space-y-5">*/}
-            {/*                    <div onClick={() => setPlayingVideo(VIDEOS[3])} className="cursor-pointer w-full h-96 bg-slate-900 rounded-2xl overflow-hidden relative border border-white/5 shrink-0 select-none">*/}
-            {/*                        <img*/}
-            {/*                            src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Next.jpg?alt=media&token=3c230e67-6d7a-4a3f-9c9d-d17ba63bd57c"*/}
-            {/*                            alt="Young Entrepreneurs Next Club"*/}
-            {/*                            className="w-full h-full object-cover opacity-60 group-hover:scale-102 transition-transform duration-700 ease-out"*/}
-            {/*                        />*/}
-            {/*                        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/40">*/}
-            {/*                            <Play size={40} className="text-[#B8D333] fill-[#B8D333]" />*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-
-            {/*                    <div className="space-y-2 text-left">*/}
-            {/*                        <div className="flex items-center gap-2">*/}
-            {/*                            <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">CA NEXT 年輕創玩家</h4>*/}
-            {/*                            <span className="text-[12px] font-bold bg-[#B8D333]/15 text-[#B8D333] px-2 py-0.5 rounded border border-[#B8D333]/20">創業生活化</span>*/}
-            {/*                        </div>*/}
-            {/*                        <p className="text-xs text-slate-400 leading-relaxed">*/}
-            {/*                            CA NEXT 是專為 U35 及 Z 世代打造的輕資產創業加速器。融合多種運動與興趣的社群，將增肌減脂的健康生活轉化為自媒體 IP，無感裂變私域流量。背靠全球跨境大健康體系，一部手機即可啟動國際生意、翻轉薪水，助年輕人贏回人生的終極自主權！*/}
-            {/*                        </p>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-
-            {/*                <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[12px] font-bold tracking-wider text-slate-500">*/}
-            {/*                    <span>熱血創客 ‧ 自主人生</span>*/}
-            {/*                    <span className="font-serif italic text-slate-700 group-hover:text-[#B8D333]/30 transition-colors">Future Shapers</span>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-
-            {/*            <div className="bg-linear-to-br from-slate-700 via-slate-900 to-slate-800 border border-slate-800/60 rounded-4xl p-6 flex flex-col justify-between min-h-115 group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">*/}
-            {/*                <div className="space-y-5">*/}
-            {/*                    <img*/}
-            {/*                        src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Mum.jpg?alt=media&token=ee3260d3-3cc2-4782-970e-91fc6fb5975e"*/}
-            {/*                        alt="CA Mumtrepreneur"*/}
-            {/*                        className="w-full h-96 object-cover opacity-60 group-hover:scale-101 transition-transform duration-700"*/}
-            {/*                    />*/}
-
-            {/*                    <div className="space-y-2 text-left">*/}
-            {/*                        <div className="flex items-center gap-2">*/}
-            {/*                            <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">CA Mumtrepreneur 創業媽媽群</h4>*/}
-            {/*                            <span className="text-[12px] font-bold bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-white/5">家庭支柱</span>*/}
-            {/*                        </div>*/}
-            {/*                        <p className="text-xs text-slate-400 leading-relaxed">*/}
-            {/*                            CA Mumtrepreneur 是專為全職與職場母親打造的家庭事業孵化器。我們以精準營養與產後修復為核心，培育媽媽成為全家健康的守門員。提供低風險、時間彈性的展業舞台，讓女性在全心守護家庭的同時，也能透過一部手機輕資產創業、重拾個人事業尊嚴，優雅綻放自我價值！*/}
-            {/*                        </p>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-
-            {/*                <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[12px] font-bold tracking-wider text-slate-500">*/}
-            {/*                    <span>守護家庭 ‧ 綻放自我</span>*/}
-            {/*                    <span className="font-serif italic text-slate-700 group-hover:text-[#B8D333]/30 transition-colors">Empowered Moms</span>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-
-            {/*            <div className="bg-linear-to-br from-slate-700 via-slate-900 to-slate-800 border border-slate-800/60 rounded-4xl p-6 flex flex-col justify-between min-h-115 group transition-all duration-500 hover:border-[#B8D333]/30 hover:shadow-[0_20px_50px_rgba(3,78,114,0.25)]">*/}
-            {/*                <div className="space-y-5">*/}
-            {/*                    <img*/}
-            {/*                        src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20VAP.png?alt=media&token=fcef61b4-729e-47c9-b7e5-def316be6d3d"*/}
-            {/*                        alt="CA VAP"*/}
-            {/*                        className="w-full h-96 object-cover opacity-60 group-hover:scale-101 transition-transform duration-700"*/}
-            {/*                    />*/}
-
-            {/*                    <div className="space-y-2 text-left">*/}
-            {/*                        <div className="flex items-center gap-2">*/}
-            {/*                            <h4 className="text-xl font-black text-white group-hover:text-[#B8D333] transition-colors">CA VAP 金融保險精英</h4>*/}
-            {/*                            <span className="text-[12px] font-bold bg-[#034E72] text-slate-300 px-2 py-0.5 rounded border border-white/5">戰略合作</span>*/}
-            {/*                        </div>*/}
-            {/*                        <p className="text-xs text-slate-400 leading-relaxed">*/}
-            {/*                            CA VAP 是專為金融保險精英打造的「大健康 1+1」增值系統。我們將客戶的「風險保障」延伸至「主動健康管理」。背靠全球跨境大健康體系與專業營養師團隊陪跑，無需專業隔閡，助您在保留本業的同時，一鍵開啟國際健康生意，創造第二條跨越經濟週期的被動複利收入，實現事業雙軌共贏！*/}
-            {/*                        </p>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-
-            {/*                <div className="border-t border-slate-900 pt-4 mt-4 flex items-center justify-between text-[12px] font-bold tracking-wider text-slate-500">*/}
-            {/*                    <span>精英匯聚 ‧ 強強聯手</span>*/}
-            {/*                    <span className="font-serif italic text-slate-700 group-hover:text-[#B8D333]/30 transition-colors">Wealth Catalysts</span>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</FadeUpSection>*/}
-
-            {/* ==================== 06. 耀升雲端系統入口 ==================== */}
+            {/* 06. 耀升雲端系統入口 */}
             <FadeUpSection delay={150}>
                 <div id="learning" className="bg-linear-to-br from-[#034E72] to-[#023752] rounded-[40px] text-white p-8 mt-12 md:p-14 relative overflow-hidden shadow-xl border border-white/10 transform-gpu">
                     <div className="absolute -right-10 -bottom-10 w-96 h-96 bg-[#B8D333]/10 rounded-full filter blur-3xl animate-pulse"></div>

@@ -5,18 +5,16 @@ import { PersonStanding, Sparkles, HandHeartIcon, Award } from 'lucide-react';
 
 export default function AboutUs() {
     return (
-        <div className="max-w-7xl mx-auto px-4 py-16 text-left animate-fadeIn space-y-24">
+        /* 🎯 最外層加上 Safe Area 與 Responsive Padding */
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] py-16 text-left animate-fadeIn space-y-24">
             <FadeUpSection>
-                {/* 封面照片 */}
                 <div id="founders-story" className="col-span-4 video-grid-card rounded-2xl shadow-xl bg-slate-800 animate-fadeIn mb-8">
                     <div className="w-full h-full overflow-hidden rounded-2xl">
-                        {/* 電腦版 */}
                         <img
                             src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%20combined%20landscape.png?alt=media&token=88d5e671-854a-4966-8fa2-31540ca79933"
                             alt="Desktop Banner"
                             className="hidden md:block w-full h-full object-cover"
                         />
-                        {/* 手機版 */}
                         <img
                             src="https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FAnita-Clement%20combined%20portrait.jpg?alt=media&token=b1e09dce-a35e-415e-b90a-c32370bd5fb1"
                             alt="Mobile Banner"
@@ -25,7 +23,6 @@ export default function AboutUs() {
                     </div>
                 </div>
 
-                {/* 中心主題文案 */}
                 <div className="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-2 h-full bg-[#034E72]"></div>
                     <div className="space-y-6 text-slate-600 text-base md:text-lg leading-relaxed font-medium">
@@ -39,17 +36,14 @@ export default function AboutUs() {
             </FadeUpSection>
 
             <FadeUpSection delay={100}>
-                {/* 核心價值宣傳 */}
                 <div id="core-value" className="space-y-8 lg:pb-20">
 
-                    {/* 文案頂部 */}
                     <div className="max-w-2xl space-y-3">
                     <span className="text-s font-black tracking-widest text-[#034E72] bg-[#B8D333]/30 px-3 py-1 rounded-full uppercase">
                         Our Core Values · 我們的核心價值
                     </span>
                     </div>
 
-                    {/* 引入高低交錯波浪感 */}
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-8">
 
                         <div className="bg-white border border-slate-100 p-8 shadow-xs hover:shadow-xl transition-all duration-700 ease-in-out group relative overflow-hidden flex flex-col min-h-75 justify-between
