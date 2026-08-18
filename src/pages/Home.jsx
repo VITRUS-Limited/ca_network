@@ -31,7 +31,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                 <div id="trust-pillars" className="absolute top-0 left-1/4 w-96 h-96 bg-[#B8D333]/10 rounded-full filter blur-3xl"></div>
 
                 {/* 🎯 加上 safe-area 與 responsive padding */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] grid lg:grid-cols-12 gap-12 items-center">
+                <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] grid lg:grid-cols-12 gap-12 items-center">
 
                     <FadeUpSection className="lg:col-span-5 space-y-6 text-left relative z-10">
                         <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/15">
@@ -164,7 +164,7 @@ export default function Home({ setActiveTab, setPlayingVideo }) {
                 </div>
 
                 {/* 🎯 加上 safe-area 與 responsive padding */}
-                <div id="video-gallery" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] text-center relative z-10 text-white">
+                <div id="video-gallery" className="max-w-5xl mx-auto px-10 sm:px-12 lg:px-14 pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] text-center relative z-10 text-white">
 
                     <FadeUpSection>
                         <div className="inline-block text-[#B8D333] font-black tracking-widest text-xs bg-white/5 backdrop-blur-lg px-4 py-1.5 rounded-full mb-6 border border-[#B8D333]/30">

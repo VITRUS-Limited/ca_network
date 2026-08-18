@@ -49,7 +49,7 @@ export default function Footer({ setActiveTab }) {
             {/* 高級漸變背景裝飾線 */}
             <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-[#B8D333]/40 to-transparent"></div>
 
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-10 sm:px-12 lg:px-14">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
 
                     {/* ==================== 欄位 1：品牌精神與訂閱 ==================== */}
@@ -224,7 +224,7 @@ export default function Footer({ setActiveTab }) {
                                     rel="noopener noreferrer"
                                     className="hover:text-[#B8D333] transition-colors flex items-center gap-1 font-bold text-white"
                                 >
-                                    <span>24/7 雲端 e-Learning</span>
+                                    <span>雲端 e-Learning</span>
                                     <ExternalLink size={15} className="text-[#B8D333]" />
                                 </a>
                             </li>
@@ -235,7 +235,7 @@ export default function Footer({ setActiveTab }) {
                                     rel="noopener noreferrer"
                                     className="hover:text-[#B8D333] transition-colors flex items-center gap-1 font-bold text-white"
                                 >
-                                    <span>Facebook 官方專頁</span>
+                                    <span>Facebook 專頁</span>
                                     <ExternalLink size={15} className="text-[#B8D333]" />
                                 </a>
                             </li>
@@ -246,7 +246,7 @@ export default function Footer({ setActiveTab }) {
                                     rel="noopener noreferrer"
                                     className="hover:text-[#B8D333] transition-colors flex items-center gap-1 font-bold text-white"
                                 >
-                                    <span>Youtube 官方頻道</span>
+                                    <span>Youtube 頻道</span>
                                     <ExternalLink size={15} className="text-[#B8D333]" />
                                 </a>
                             </li>
