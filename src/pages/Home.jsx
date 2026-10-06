@@ -5,7 +5,7 @@ import FadeUpSection from '../components/FadeUpSection';
 
 const TRUST_SLIDES = [
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS2.jpg?alt=media&token=6be0bc94-e40c-4cdd-8ac2-d7aa87a67da9",
-    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS1.JPG?alt=media&token=d1b96e08-ebbd-4a2a-b391-40fff2355ffc",
+    "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FMUS1.JPG?alt=media&token=f645c0f1-1ae7-4a57-a598-5d6f476a3a8c",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutritionist%202020.jpeg?alt=media&token=9005a74d-3db5-4f53-843f-3b6236dca934",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCAQ%20opening.jpg?alt=media&token=aafbc721-1706-4557-ad99-e8d3839297ae",
     "https://firebasestorage.googleapis.com/v0/b/ca-hub-e71b8.appspot.com/o/homePage%2FCA%20Nutrition.jpg?alt=media&token=bf6c3af8-a2c6-4633-ae3b-c725101c3a24",
